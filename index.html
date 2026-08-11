@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNERGYMED™ - Advance Solution For Healthcare | PT Sinergi Medika Utama</title>
+  <meta name="description" content="SynergyMed is a leading medical device company based in Jakarta, Indonesia providing advanced healthcare solutions across 9 product business units.">
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <div class="brand-logo" onclick="switchPage('home')">
+        <img src="assets/logo.jpg" alt="SYNERGYMED™" class="site-logo-img">
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><span class="nav-link active" id="nav-home" onclick="switchPage('home')">Home</span></li>
+          <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">About Us</span></li>
+          <li><span class="nav-link" id="nav-product" onclick="switchPage('product')">Products</span></li>
+          <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">News & Event</span></li>
+          <li><span class="nav-link" id="nav-ebrochure" onclick="switchPage('ebrochure')">E-Brochure</span></li>
+          <li><span class="nav-link nav-cta-btn" id="nav-contact" onclick="switchPage('contact')"><i class="fa-solid fa-headset"></i> Contact Us</span></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- ========================================== -->
+    <!-- 1. HOME PAGE VIEW                          -->
+    <!-- ========================================== -->
+    <section id="page-home" class="page-view active">
+      <div class="hero-section">
+        <div class="section-container">
+          <div class="hero-grid">
+            
+            <!-- Hero Medical Imaging Banner -->
+            <div class="hero-image-wrapper">
+              <img src="assets/synergymed_hero_1785816523979.png" alt="SynergyMed Medical Imaging Workstation & Diagnostics">
+            </div>
+
+            <!-- Hero Text Content -->
+            <div class="hero-text-content">
+              <h1 class="hero-title">Advance Solution<br>For Healthcare</h1>
+              <p class="hero-description">
+                <strong>SynergyMed</strong> is committed to providing the latest innovation, excellence in service and competitive pricing for medical devices to improve patient care in Indonesia.
+              </p>
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="switchPage('product')">
+                  <i class="fa-solid fa-boxes-stacked"></i> Explore Product Catalog
+                </button>
+                <button class="btn-secondary" onclick="switchPage('contact')">
+                  <i class="fa-solid fa-headset"></i> Contact Sales
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Units Overview Grid (9 Units) -->
+      <section class="units-overview-section">
+        <div class="section-container">
+          <div class="section-header">
+            <h2 class="section-title">9 Specialized Business Units</h2>
+            <p class="section-subtitle">Delivering comprehensive, end-to-end medical equipment solutions across 9 specialized business divisions for healthcare providers in Indonesia.</p>
+          </div>
+
+          <div class="unit-cards-grid">
+            <!-- 1. Radiation Oncology -->
+            <div class="unit-card" onclick="filterCatalog('Radiation Oncology')">
+              <div class="unit-card-icon"><i class="fa-solid fa-radiation"></i></div>
+              <h3 class="unit-card-title">Radiation Oncology</h3>
+              <p class="unit-card-desc">Advanced Linear Accelerators (LINAC), stereotactic radiosurgery, brachytherapy systems, and oncology treatment planning.</p>
+            </div>
+
+            <!-- 2. Ortho & Neuro -->
+            <div class="unit-card" onclick="filterCatalog('Ortho & Neuro')">
+              <div class="unit-card-icon"><i class="fa-solid fa-bone"></i></div>
+              <h3 class="unit-card-title">Ortho & Neuro</h3>
+              <p class="unit-card-desc">Surgical bone power tools, spinal implants, neurosurgical navigation, joint replacements, and trauma care.</p>
+            </div>
+
+            <!-- 3. Med Supplies -->
+            <div class="unit-card" onclick="filterCatalog('Med Supplies')">
+              <div class="unit-card-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+              <h3 class="unit-card-title">Med Supplies</h3>
+              <p class="unit-card-desc">High-grade sterile medical disposables, surgical drapes, catheters, IV cannulas, and hospital consumables.</p>
+            </div>
+
+            <!-- 4. Medical Imaging -->
+            <div class="unit-card" onclick="filterCatalog('Medical Imaging')">
+              <div class="unit-card-icon"><i class="fa-solid fa-x-ray"></i></div>
+              <h3 class="unit-card-title">Medical Imaging</h3>
+              <p class="unit-card-desc">Advanced MRI 1.5T/3.0T, 128-Slice CT Scanners, Digital Radiography (X-Ray), and Surgical C-Arm systems.</p>
+            </div>
+
+            <!-- 5. Endosurgery -->
+            <div class="unit-card" onclick="filterCatalog('Endosurgery')">
+              <div class="unit-card-icon"><i class="fa-solid fa-video"></i></div>
+              <h3 class="unit-card-title">Endosurgery</h3>
+              <p class="unit-card-desc">4K UHD Laparoscopic towers, flexible endoscopes, CO2 insufflators, and electrosurgical generators.</p>
+            </div>
+
+            <!-- 6. Pain & Rehab -->
+            <div class="unit-card" onclick="filterCatalog('Pain & Rehab')">
+              <div class="unit-card-icon"><i class="fa-solid fa-child-reaching"></i></div>
+              <h3 class="unit-card-title">Pain & Rehab</h3>
+              <p class="unit-card-desc">Physical therapy equipment, extracorporeal shockwave therapy (ESWT), neuro-rehabilitation, and pain relief devices.</p>
+            </div>
+
+            <!-- 7. Critical Care -->
+            <div class="unit-card" onclick="filterCatalog('Critical Care')">
+              <div class="unit-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <h3 class="unit-card-title">Critical Care</h3>
+              <p class="unit-card-desc">ICU Ventilators, Multi-parameter Patient Monitors, Anesthesia Workstations, and Defibrillators.</p>
+            </div>
+
+            <!-- 8. Ultrasound -->
+            <div class="unit-card" onclick="filterCatalog('Ultrasound')">
+              <div class="unit-card-icon"><i class="fa-solid fa-wave-square"></i></div>
+              <h3 class="unit-card-title">Ultrasound</h3>
+              <p class="unit-card-desc">High-definition 3D/4D Color Doppler USG consoles and ultra-portable point-of-care ultrasound devices.</p>
+            </div>
+
+            <!-- 9. Enviro -->
+            <div class="unit-card" onclick="filterCatalog('Enviro')">
+              <div class="unit-card-icon"><i class="fa-solid fa-leaf"></i></div>
+              <h3 class="unit-card-title">Enviro</h3>
+              <p class="unit-card-desc">Autoclave sterilization units, hospital medical waste treatment, cleanroom air purifiers, and environmental controls.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="stats-strip">
+        <div class="section-container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">30+</div>
+              <div class="stat-label">Trusted Global Partners</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">9</div>
+              <div class="stat-label">Business Units</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Nationwide Service Support</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Expert Technical Assistance</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. ABOUT US PAGE VIEW                      -->
+    <!-- ========================================== -->
+    <section id="page-about" class="page-view">
+      <div class="section-container about-section">
+        
+        <!-- 5-Image Showcase Gallery Bar -->
+        <div class="gallery-carousel-strip">
+          <div class="gallery-item">
+            <img src="assets/synergymed_hero_1785816523979.png" alt="Medical Imaging Diagnostics">
+            <div class="gallery-caption">Medical Imaging</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/synergymed_icu.png" alt="Critical Care & ICU Equipment">
+            <div class="gallery-caption">Critical Care ICU</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/synergymed_mri_1785816534955.png" alt="Superconducting MRI System">
+            <div class="gallery-caption">Superconducting MRI</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/synergymed_ct.png" alt="Multi-Slice CT Scanner Diagnostics">
+            <div class="gallery-caption">CT Scan Diagnostics</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/synergymed_surgery_1785816546977.png" alt="Operating Theater & Laparoscopy">
+            <div class="gallery-caption">Operating Theater</div>
+          </div>
+        </div>
+
+        <!-- Header Overview -->
+        <div class="about-header">
+          <span class="about-tag"><i class="fa-solid fa-hospital"></i> About PT Sinergi Medika Utama</span>
+          <h2 class="about-main-title">Advance Solution For Healthcare</h2>
+          <p class="about-main-subtitle">SynergyMed is a premier medical device company based in Jakarta, committed to providing advanced medical technologies, excellence in service, and competitive solutions across Indonesia.</p>
+        </div>
+
+        <!-- 4 Key Strengths Cards (Quick Scannable Highlights) -->
+        <div class="about-highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="highlight-info">
+              <h4>Headquartered in Jakarta</h4>
+              <p>Distributing certified medical devices to hospitals and clinics across the Indonesian archipelago.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div class="highlight-info">
+              <h4>30+ Global Partners</h4>
+              <p>Collaborating with leading global manufacturers to bring world-class healthcare innovations.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+            <div class="highlight-info">
+              <h4>9 Business Units</h4>
+              <p>Comprehensive solutions spanning Oncology, Ortho, Surgery, ICU, Rehab, Imaging, and CSSD.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="highlight-info">
+              <h4>Multidisciplinary Team</h4>
+              <p>Composed of certified nurses, medical physicists, electromedical specialists, and engineers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two-Column Structured Narrative -->
+        <div class="about-story-grid">
+          
+          <!-- Column 1: Mission & Dedication -->
+          <div class="about-story-card">
+            <h3 class="story-card-title"><i class="fa-solid fa-bullseye"></i> Our Purpose & Commitment</h3>
+            <p class="story-card-text">
+              At the heart of our success is our <strong>dedicated team of professionals</strong> — skilled, passionate, and committed to making a tangible difference in healthcare delivery.
+            </p>
+            <p class="story-card-text">
+              Together, we work hand-in-hand with hospital leaders and healthcare providers to improve patient outcomes, accelerate clinical workflows, and build a healthier future for the communities we serve.
+            </p>
+            <div class="about-badges-row">
+              <span class="badge-item"><i class="fa-solid fa-check-circle"></i> AKD Certified</span>
+              <span class="badge-item"><i class="fa-solid fa-check-circle"></i> 24/7 Technical Support</span>
+              <span class="badge-item"><i class="fa-solid fa-check-circle"></i> On-Site Clinical Training</span>
+            </div>
+          </div>
+
+          <!-- Column 2: 9 Specialized Divisions Explorer -->
+          <div class="about-story-card">
+            <h3 class="story-card-title"><i class="fa-solid fa-layer-group"></i> 9 Specialized Product Divisions</h3>
+            <p class="story-card-text">
+              Explore our comprehensive portfolio across 9 specialized clinical divisions:
+            </p>
+            <div class="about-units-pills">
+              <button class="unit-pill-btn" onclick="filterCatalog('Radiation Oncology')"><i class="fa-solid fa-radiation"></i> Radiation Oncology</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Ortho & Neuro')"><i class="fa-solid fa-bone"></i> Ortho & Neuro</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Med Supplies')"><i class="fa-solid fa-syringe"></i> Med Supplies</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Medical Imaging')"><i class="fa-solid fa-x-ray"></i> Medical Imaging</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Endosurgery')"><i class="fa-solid fa-stethoscope"></i> Endosurgery</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Pain & Rehab')"><i class="fa-solid fa-person-walking"></i> Pain & Rehab</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Critical Care')"><i class="fa-solid fa-heart-pulse"></i> Critical Care</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Ultrasound')"><i class="fa-solid fa-wave-square"></i> Ultrasound</button>
+              <button class="unit-pill-btn" onclick="filterCatalog('Enviro')"><i class="fa-solid fa-shield-virus"></i> Enviro</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. PRODUCT CATALOG VIEW                    -->
+    <!-- ========================================== -->
+    <section id="page-product" class="page-view">
+      <div class="section-container product-catalog-section">
+        
+        <div class="catalog-header">
+          <h2 class="section-title">SynergyMed Product Catalog</h2>
+          <p class="section-subtitle">Browse through our certified medical technologies across 9 specialized divisions. Click any category tab to filter.</p>
+        </div>
+
+        <!-- Filter Pills (9 Units) & Search Controls -->
+        <div class="catalog-controls">
+          <div class="filter-pills">
+            <button class="filter-btn active" onclick="filterCatalog('all', this)">All Products</button>
+            <button class="filter-btn" onclick="filterCatalog('Radiation Oncology', this)">Radiation Oncology</button>
+            <button class="filter-btn" onclick="filterCatalog('Ortho & Neuro', this)">Ortho & Neuro</button>
+            <button class="filter-btn" onclick="filterCatalog('Med Supplies', this)">Med Supplies</button>
+            <button class="filter-btn" onclick="filterCatalog('Medical Imaging', this)">Medical Imaging</button>
+            <button class="filter-btn" onclick="filterCatalog('Endosurgery', this)">Endosurgery</button>
+            <button class="filter-btn" onclick="filterCatalog('Pain & Rehab', this)">Pain & Rehab</button>
+            <button class="filter-btn" onclick="filterCatalog('Critical Care', this)">Critical Care</button>
+            <button class="filter-btn" onclick="filterCatalog('Ultrasound', this)">Ultrasound</button>
+            <button class="filter-btn" onclick="filterCatalog('Enviro', this)">Enviro</button>
+          </div>
+
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="catalog-search" placeholder="Search product model or spec..." onkeyup="searchCatalog()">
+          </div>
+        </div>
+
+
+
+        <!-- Product Grid Output -->
+        <div class="product-grid" id="product-grid-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. NEWS & EVENT VIEW                       -->
+    <!-- ========================================== -->
+    <section id="page-news" class="page-view">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">News & Upcoming Events</h2>
+          <p class="section-subtitle">Stay updated with SynergyMed exhibitions, medical conferences, and corporate announcements.</p>
+        </div>
+
+        <div class="news-grid">
+          <div class="news-card">
+            <div class="news-card-body">
+              <div class="news-date">OCTOBER 15 - 18, 2026</div>
+              <h3 class="news-title">SynergyMed at Hospital Expo Indonesia 2026 (JCC Senayan)</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Visit our interactive booth at Hall B to experience our latest 9 business unit innovations including Radiation Oncology LINAC and 4K Laparoscopy.</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-card-body">
+              <div class="news-date">SEPTEMBER 02, 2026</div>
+              <h3 class="news-title">New Strategic Partnership with 5 Global Medical Pioneers</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Expanding our portfolio to bring ultra-high precision Radiotherapy and Rehabilitation technologies to Indonesia.</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-card-body">
+              <div class="news-date">AUGUST 20, 2026</div>
+              <h3 class="news-title">National Workshop on Electromedical Service Excellence</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">SynergyMed engineering team conducts certified calibration and preventive maintenance training for hospital technicians nationwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. E-BROCHURE VIEW                         -->
+    <!-- ========================================== -->
+    <section id="page-ebrochure" class="page-view">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">E-Brochure Center</h2>
+          <p class="section-subtitle">Download technical specification sheets and product brochures for medical procurement.</p>
+        </div>
+
+        <div class="brochure-grid">
+          <div class="brochure-card">
+            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Company Profile 2026</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Comprehensive overview of PT Sinergi Medika Utama & 9 Business Divisions.</p>
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="downloadBrochure('SynergyMed_Company_Profile_2026.pdf')">
+              <i class="fa-solid fa-download"></i> Download PDF (3.2 MB)
+            </button>
+          </div>
+
+          <div class="brochure-card">
+            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Radiation Oncology & Imaging</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">LINAC, Radiosurgery, MRI, CT Scan, X-Ray.</p>
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="downloadBrochure('SynergyMed_Oncology_Imaging.pdf')">
+              <i class="fa-solid fa-download"></i> Download PDF (5.8 MB)
+            </button>
+          </div>
+
+          <div class="brochure-card">
+            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Critical Care, USG & Rehab</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">ICU Ventilators, Patient Monitors, Doppler USG, Pain & Rehab.</p>
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="downloadBrochure('SynergyMed_CriticalCare_Rehab.pdf')">
+              <i class="fa-solid fa-download"></i> Download PDF (4.1 MB)
+            </button>
+          </div>
+
+          <div class="brochure-card">
+            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Ortho, Endo, Supplies & Enviro</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Surgical Power Tools, 4K Laparoscopy, Consumables, & CSSD Autoclaves.</p>
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="downloadBrochure('SynergyMed_Ortho_Endo_Enviro.pdf')">
+              <i class="fa-solid fa-download"></i> Download PDF (4.9 MB)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. CONTACT US VIEW                         -->
+    <!-- ========================================== -->
+    <section id="page-contact" class="page-view">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Contact SynergyMed</h2>
+          <p class="section-subtitle">Get in touch with our Jakarta headquarters for product inquiries, quotations, or technical service requests.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 25px;">PT Sinergi Medika Utama</h3>
+            
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Headquarters Address</strong>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Grand Slipi Tower Lt. 24, Jl. S. Parman No. 22-24, Palmerah, Jakarta Barat 11480, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Telephone</strong>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">(021) 5366 1234 / (021) 5366 5678</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <strong>Direct WhatsApp Sales Inquiry</strong>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">+62 812-3456-7890</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email Address</strong>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">info@synergymed.co.id / sales@synergymed.co.id</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with 9 Units Dropdown -->
+          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" placeholder="dr. / Bapak / Ibu Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-institution">Hospital / Clinic / Company *</label>
+              <input type="text" id="contact-institution" placeholder="RSUD / RS Private / Clinic Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" placeholder="example@hospital.co.id" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-unit">Business Unit of Interest</label>
+              <select id="contact-unit">
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Radiation Oncology">Radiation Oncology (LINAC, Radiotherapy)</option>
+                <option value="Ortho & Neuro">Ortho & Neuro (Surgical Power Tools, Implants)</option>
+                <option value="Med Supplies">Med Supplies (Medical Disposables)</option>
+                <option value="Medical Imaging">Medical Imaging (MRI, CT, X-Ray, C-Arm)</option>
+                <option value="Endosurgery">Endosurgery (Laparoscopy 4K, ESU)</option>
+                <option value="Pain & Rehab">Pain & Rehab (Physical Therapy, ESWT)</option>
+                <option value="Critical Care">Critical Care (ICU Ventilator, Monitor)</option>
+                <option value="Ultrasound">Ultrasound (USG 4D & Handheld)</option>
+                <option value="Enviro">Enviro (Sterilization Autoclaves, Waste Treatment)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-msg">Message / Inquiry Details *</label>
+              <textarea id="contact-msg" rows="4" placeholder="Mention product requirements, specs, or quotation requests..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="justify-content: center;">
+              <i class="fa-solid fa-paper-plane"></i> Send Inquiry Message
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-copy">
+        Design ©2025 By PT Sinergi Medika Utama
+      </div>
+      <div style="font-size: 0.8rem; color: #94a3b8;">
+        SynergyMed™ - World-Class Healthcare Equipment Indonesia
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions (Bottom Right) -->
+  <div class="floating-widgets">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed,%20saya%20ingin%20bertanya%20mengenai%20produk%20alat%20kesehatan" target="_blank" class="btn-float-wa" title="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <!-- Scroll to Top Button -->
+    <button class="btn-float-top" onclick="scrollToTop()" title="Scroll to Top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    
+    <!-- Let's Chat! Button -->
+    <button class="btn-float-chat" onclick="openChatModal()">
+      <i class="fa-solid fa-comment-dots"></i> Let's Chat!
+    </button>
+  </div>
+
+  <!-- Interactive Modal Dialog -->
+  <div class="modal-overlay" id="generic-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-content-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

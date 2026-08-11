@@ -35,33 +35,37 @@ const server = http.createServer((req, res) => {
 
   // Prevent directory traversal attacks
   const safePath = path.normalize(pathname).replace(/^(\.\.[\/\\])+/, '');
-  const filePath = path.join(PUBLIC_DIR, safePath);
+  
+  // Resolve file path across possible root locations
+  const potentialPaths = [
+    path.join(__dirname, safePath),
+    path.join(process.cwd(), safePath)
+  ];
 
-  // Check if file exists
-  fs.stat(filePath, (err, stats) => {
-    if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-      res.end(`
-        <div style="font-family: sans-serif; text-align: center; padding: 50px;">
-          <h2>404 - File Not Found</h2>
-          <p>The requested file <code>${pathname}</code> was not found.</p>
-          <a href="/" style="color: #1e56a0; font-weight: bold;">Return to Home</a>
-        </div>
-      `);
-      return;
-    }
+  let filePath = potentialPaths.find(p => fs.existsSync(p) && fs.statSync(p).isFile());
 
-    const ext = path.extname(filePath).toLowerCase();
-    const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+  if (!filePath) {
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(`
+      <div style="font-family: sans-serif; text-align: center; padding: 50px;">
+        <h2>404 - File Not Found</h2>
+        <p>The requested file <code>${pathname}</code> was not found.</p>
+        <a href="/" style="color: #1e56a0; font-weight: bold;">Return to Home</a>
+      </div>
+    `);
+    return;
+  }
 
-    res.writeHead(200, {
-      'Content-Type': contentType,
-      'Access-Control-Allow-Origin': '*'
-    });
+  const ext = path.extname(filePath).toLowerCase();
+  const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-    const stream = fs.createReadStream(filePath);
-    stream.pipe(res);
+  res.writeHead(200, {
+    'Content-Type': contentType,
+    'Access-Control-Allow-Origin': '*'
   });
+
+  const stream = fs.createReadStream(filePath);
+  stream.pipe(res);
 });
 
 server.listen(PORT, () => {

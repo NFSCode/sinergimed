@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYNERGYMED™ - Advance Solution For Healthcare | PT Sinergi Medika Utama</title>
-  <meta name="description" content="SynergyMed is a leading medical device company based in Jakarta, Indonesia providing advanced healthcare solutions across 9 product business units.">
+  <title>SYNERGYMED™ - Advance Solutions For Healthcare | PT Sinergi Medika Utama</title>
+  <meta name="description" content="SynergyMed is a leading medical device company based in Jakarta, Indonesia providing advanced healthcare solutions across 9 specialized business units.">
   
   <!-- FontAwesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,7 @@
         <ul>
           <li><span class="nav-link active" id="nav-home" onclick="switchPage('home')">Home</span></li>
           <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">About Us</span></li>
-          <li><span class="nav-link" id="nav-product" onclick="switchPage('product')">Products</span></li>
+          <li><span class="nav-link" id="nav-solutions" onclick="switchPage('solutions')">Solutions</span></li>
           <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">News & Event</span></li>
           <li><span class="nav-link" id="nav-ebrochure" onclick="switchPage('ebrochure')">E-Brochure</span></li>
           <li><span class="nav-link nav-cta-btn" id="nav-contact" onclick="switchPage('contact')"><i class="fa-solid fa-headset"></i> Contact Us</span></li>
@@ -51,20 +51,57 @@
         <div class="section-container">
           <div class="hero-grid">
             
-            <!-- Hero Medical Imaging Banner -->
-            <div class="hero-image-wrapper">
-              <img src="assets/synergymed_hero_1785816523979.png" alt="SynergyMed Medical Imaging Workstation & Diagnostics">
+            <!-- Hero Interactive Technology Showcase Slider -->
+            <div class="hero-slider-wrapper" id="hero-slider-wrapper" aria-label="SynergyMed Featured Technologies Showcase">
+              
+              <!-- Top Auto-Slide Progress Bar -->
+              <div class="slider-progress-bar">
+                <div class="slider-progress-fill" id="hero-slider-progress"></div>
+              </div>
+
+              <!-- Slider Slides Track -->
+              <div class="hero-slider-track" id="hero-slider-track">
+                
+                <!-- Slide 1: MagniVue 1.5T MRI -->
+                <div class="hero-slide active" data-index="0">
+                  <div class="slide-image-box">
+                    <img src="assets/hero_slider_mri.png" alt="MagniVue 1.5T Helium Free Superconductive MRI - Synergy Imaging">
+                  </div>
+                </div>
+
+                <!-- Slide 2: Robotic Surgery System -->
+                <div class="hero-slide" data-index="1">
+                  <div class="slide-image-box">
+                    <img src="assets/hero_slider_robotic.png" alt="Robotic Surgery System - Sagebot Kangduo">
+                  </div>
+                </div>
+
+                <!-- Slide 3: Operating Theater Suite -->
+                <div class="hero-slide" data-index="2">
+                  <div class="slide-image-box">
+                    <img src="assets/hero_slider_surgery.png" alt="PrecisionMed Integrated Operating Theater & Medical Pendant">
+                  </div>
+                </div>
+
+                <!-- Slide 4: AR Surgical Navigation -->
+                <div class="hero-slide" data-index="3">
+                  <div class="slide-image-box">
+                    <img src="assets/hero_slider_visar.png" alt="VisAR Augmented Reality Surgical Navigation System by Novarad">
+                  </div>
+                </div>
+
+              </div>
             </div>
 
             <!-- Hero Text Content -->
             <div class="hero-text-content">
-              <h1 class="hero-title">Advance Solution<br>For Healthcare</h1>
+              <h1 class="hero-title">Advance Solutions<br>For Healthcare</h1>
               <p class="hero-description">
                 <strong>SynergyMed</strong> is committed to providing the latest innovation, excellence in service and competitive pricing for medical devices to improve patient care in Indonesia.
               </p>
               <div class="hero-actions">
-                <button class="btn-primary" onclick="switchPage('product')">
-                  <i class="fa-solid fa-boxes-stacked"></i> Explore Product Catalog
+                <button class="btn-primary" onclick="switchPage('solutions')">
+                  <i class="fa-solid fa-boxes-stacked"></i> Explore Solutions Catalog
                 </button>
                 <button class="btn-secondary" onclick="switchPage('contact')">
                   <i class="fa-solid fa-headset"></i> Contact Sales
@@ -209,7 +246,7 @@
         <!-- Header Overview -->
         <div class="about-header">
           <span class="about-tag"><i class="fa-solid fa-hospital"></i> About PT Sinergi Medika Utama</span>
-          <h2 class="about-main-title">Advance Solution For Healthcare</h2>
+          <h2 class="about-main-title">Advance Solutions For Healthcare</h2>
           <p class="about-main-subtitle">SynergyMed is a premier medical device company based in Jakarta, committed to providing advanced medical technologies, excellence in service, and competitive solutions across Indonesia.</p>
         </div>
 
@@ -269,7 +306,7 @@
 
           <!-- Column 2: 9 Specialized Divisions Explorer -->
           <div class="about-story-card">
-            <h3 class="story-card-title"><i class="fa-solid fa-layer-group"></i> 9 Specialized Product Divisions</h3>
+            <h3 class="story-card-title"><i class="fa-solid fa-layer-group"></i> 9 Specialized Solutions Divisions</h3>
             <p class="story-card-text">
               Explore our comprehensive portfolio across 9 specialized clinical divisions:
             </p>
@@ -292,20 +329,20 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 3. PRODUCT CATALOG VIEW                    -->
+    <!-- 3. SOLUTIONS CATALOG VIEW                  -->
     <!-- ========================================== -->
-    <section id="page-product" class="page-view">
+    <section id="page-solutions" class="page-view">
       <div class="section-container product-catalog-section">
         
         <div class="catalog-header">
-          <h2 class="section-title">SynergyMed Product Catalog</h2>
+          <h2 class="section-title">SynergyMed Solutions Catalog</h2>
           <p class="section-subtitle">Browse through our certified medical technologies across 9 specialized divisions. Click any category tab to filter.</p>
         </div>
 
         <!-- Filter Pills (9 Units) & Search Controls -->
         <div class="catalog-controls">
           <div class="filter-pills">
-            <button class="filter-btn active" onclick="filterCatalog('all', this)">All Products</button>
+            <button class="filter-btn active" onclick="filterCatalog('all', this)">All Solutions</button>
             <button class="filter-btn" onclick="filterCatalog('Radiation Oncology', this)">Radiation Oncology</button>
             <button class="filter-btn" onclick="filterCatalog('Ortho & Neuro', this)">Ortho & Neuro</button>
             <button class="filter-btn" onclick="filterCatalog('Med Supplies', this)">Med Supplies</button>
@@ -319,7 +356,7 @@
 
           <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="catalog-search" placeholder="Search product model or spec..." onkeyup="searchCatalog()">
+            <input type="text" id="catalog-search" placeholder="Search solution model or spec..." onkeyup="searchCatalog()">
           </div>
         </div>
 
@@ -378,7 +415,7 @@
       <div class="section-container">
         <div class="section-header">
           <h2 class="section-title">E-Brochure Center</h2>
-          <p class="section-subtitle">Download technical specification sheets and product brochures for medical procurement.</p>
+          <p class="section-subtitle">Download technical specification sheets and solution brochures for medical procurement.</p>
         </div>
 
         <div class="brochure-grid">
@@ -428,7 +465,7 @@
       <div class="section-container">
         <div class="section-header">
           <h2 class="section-title">Contact SynergyMed</h2>
-          <p class="section-subtitle">Get in touch with our Jakarta headquarters for product inquiries, quotations, or technical service requests.</p>
+          <p class="section-subtitle">Get in touch with our Jakarta headquarters for solution inquiries, quotations, or technical service requests.</p>
         </div>
 
         <div class="contact-grid">
@@ -505,7 +542,7 @@
 
             <div class="form-group">
               <label for="contact-msg">Message / Inquiry Details *</label>
-              <textarea id="contact-msg" rows="4" placeholder="Mention product requirements, specs, or quotation requests..." required></textarea>
+              <textarea id="contact-msg" rows="4" placeholder="Mention solution requirements, specs, or quotation requests..." required></textarea>
             </div>
 
             <button type="submit" class="btn-primary" style="justify-content: center;">
@@ -534,7 +571,7 @@
   <!-- Floating Actions (Bottom Right) -->
   <div class="floating-widgets">
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed,%20saya%20ingin%20bertanya%20mengenai%20produk%20alat%20kesehatan" target="_blank" class="btn-float-wa" title="WhatsApp Chat">
+    <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed,%20saya%20ingin%20bertanya%20mengenai%20solusi%20alat%20kesehatan" target="_blank" class="btn-float-wa" title="WhatsApp Chat">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
     

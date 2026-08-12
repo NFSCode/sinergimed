@@ -1,8 +1,8 @@
 /* ==========================================================================
-   SYNERGYMED™ - Scalable Product Catalog & Interactive App Engine
+   SYNERGYMED™ - Scalable Solutions Catalog & Interactive App Engine
    ========================================================================== */
 
-// 1. EXTENSIBLE PRODUCT CATALOG DATA ACROSS 9 BUSINESS UNITS ("nanti banyak")
+// 1. EXTENSIBLE SOLUTIONS CATALOG DATA ACROSS 9 BUSINESS UNITS ("nanti banyak")
 const productsData = [
   // --- 1. RADIATION ONCOLOGY ---
   {
@@ -282,10 +282,14 @@ let searchQuery = '';
 // Initialize page on load
 document.addEventListener('DOMContentLoaded', () => {
   renderProductGrid();
+  initHeroSlider();
 });
 
 // 2. PAGE NAVIGATION SYSTEM
 function switchPage(pageId) {
+  // Alias 'product' to 'solutions' for backwards compatibility
+  if (pageId === 'product') pageId = 'solutions';
+
   // Hide all page views
   const pages = document.querySelectorAll('.page-view');
   pages.forEach(p => p.classList.remove('active'));
@@ -314,12 +318,12 @@ function switchPage(pageId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// 3. PRODUCT CATALOG FILTER & SEARCH ENGINE
+// 3. SOLUTIONS CATALOG FILTER & SEARCH ENGINE
 function filterCatalog(category, buttonEl = null) {
   activeCategory = category;
 
-  // Switch to product tab if triggered from home page
-  switchPage('product');
+  // Switch to solutions tab if triggered from home page
+  switchPage('solutions');
 
   // Update button active state
   if (buttonEl) {
@@ -369,7 +373,7 @@ function renderProductGrid() {
     container.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; background: #ffffff; border-radius: 12px; border: 1px dashed #cbd5e1;">
         <i class="fa-solid fa-box-open" style="font-size: 3rem; color: #94a3b8; margin-bottom: 15px;"></i>
-        <h3 style="font-family: var(--font-heading); color: var(--primary-dark);">No Products Found</h3>
+        <h3 style="font-family: var(--font-heading); color: var(--primary-dark);">No Solutions Found</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem;">Try adjusting your search criteria or category filter.</p>
         <button class="btn-secondary" style="margin-top: 15px;" onclick="filterCatalog('all')">Reset All Filters</button>
       </div>
@@ -405,7 +409,7 @@ function renderProductGrid() {
 
 // 4. WHATSAPP & MODAL INQUIRIES
 function inquireProduct(productName) {
-  const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk produk: ${productName}. Terima kasih.`);
+  const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
   window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
 }
 
@@ -446,12 +450,12 @@ function openProductDetailModal(productId) {
 function openAddProductModal() {
   const content = `
     <div style="text-align: left;">
-      <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Quick Add Product (Demo Extensibility)</h3>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px;">Tambahkan produk baru secara instan ke dalam memori aplikasi ini untuk menguji penambahan massal ("nanti banyak").</p>
+      <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Quick Add Solution (Demo Extensibility)</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px;">Tambahkan solusi baru secara instan ke dalam memori aplikasi ini untuk menguji penambahan massal ("nanti banyak").</p>
       
       <div style="display: flex; flex-direction: column; gap: 12px;">
         <div>
-          <label style="font-size: 0.8rem; font-weight: 700;">Product Title</label>
+          <label style="font-size: 0.8rem; font-weight: 700;">Solution Title</label>
           <input type="text" id="new-prod-title" placeholder="e.g. SynergyRad LINAC Accelerator" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px;">
         </div>
         <div>
@@ -479,7 +483,7 @@ function openAddProductModal() {
       </div>
 
       <button class="btn-primary" style="width: 100%; margin-top: 20px; justify-content: center;" onclick="saveNewDemoProduct()">
-        + Save Product To Catalog
+        + Save Solution To Catalog
       </button>
     </div>
   `;
@@ -490,7 +494,7 @@ function openAddProductModal() {
 function saveNewDemoProduct() {
   const title = document.getElementById('new-prod-title')?.value || 'Demo Medical System';
   const category = document.getElementById('new-prod-cat')?.value || 'Radiation Oncology';
-  const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solution';
+  const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solutions';
   const spec = document.getElementById('new-prod-spec')?.value || 'AKD Kemenkes RI Certified';
 
   productsData.unshift({
@@ -517,7 +521,7 @@ function openChatModal() {
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">SynergyMed Live Specialist</h3>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px;">Hubungi tim konsultan elektromedis dan spesialis alat kesehatan PT Sinergi Medika Utama secara langsung via WhatsApp.</p>
       
-      <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20produk%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
+      <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20solusi%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Start WhatsApp Live Chat
       </a>
     </div>
@@ -578,3 +582,151 @@ function toggleMobileNav() {
     nav.classList.toggle('mobile-open');
   }
 }
+
+// ==========================================================================
+// 8. HERO TECHNOLOGY SHOWCASE SLIDER ENGINE
+// ==========================================================================
+let currentHeroSlide = 0;
+const totalHeroSlides = 4;
+let heroSliderInterval = null;
+let heroSliderProgressInterval = null;
+const SLIDE_DURATION = 4800; // 4.8 seconds per slide
+let progressStartTime = 0;
+let isHeroSliderPaused = false;
+
+function initHeroSlider() {
+  const container = document.getElementById('hero-slider-wrapper');
+  if (!container) return;
+
+  // Touch Swipe Gesture Handling (Mobile/Tablet)
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  container.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    pauseHeroSlider();
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeThreshold = 45;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextHeroSlide();
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+      prevHeroSlide();
+    }
+    resumeHeroSlider();
+  }, { passive: true });
+
+  // Hover to pause auto-slide
+  container.addEventListener('mouseenter', () => {
+    pauseHeroSlider();
+  });
+
+  container.addEventListener('mouseleave', () => {
+    resumeHeroSlider();
+  });
+
+  // Keyboard navigation when page is visible
+  document.addEventListener('keydown', (e) => {
+    const homePage = document.getElementById('page-home');
+    if (homePage && homePage.classList.contains('active')) {
+      if (e.key === 'ArrowLeft') {
+        prevHeroSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextHeroSlide();
+      }
+    }
+  });
+
+  // Start initial auto-play and progress bar
+  startHeroSliderTimer();
+}
+
+function updateHeroSlideUI() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  const counterNum = document.getElementById('slider-curr-num');
+
+  slides.forEach((slide, idx) => {
+    if (idx === currentHeroSlide) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+
+  dots.forEach((dot, idx) => {
+    if (idx === currentHeroSlide) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+
+  if (counterNum) {
+    counterNum.textContent = String(currentHeroSlide + 1).padStart(2, '0');
+  }
+
+  resetProgressBar();
+}
+
+function goToHeroSlide(index) {
+  currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+  updateHeroSlideUI();
+  if (!isHeroSliderPaused) {
+    restartHeroSliderTimer();
+  }
+}
+
+function nextHeroSlide() {
+  goToHeroSlide(currentHeroSlide + 1);
+}
+
+function prevHeroSlide() {
+  goToHeroSlide(currentHeroSlide - 1);
+}
+
+function startHeroSliderTimer() {
+  progressStartTime = Date.now();
+  
+  if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
+  heroSliderProgressInterval = setInterval(() => {
+    if (isHeroSliderPaused) return;
+    const elapsed = Date.now() - progressStartTime;
+    const progressPercent = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
+    const progressFill = document.getElementById('hero-slider-progress');
+    if (progressFill) {
+      progressFill.style.width = `${progressPercent}%`;
+    }
+  }, 40);
+
+  if (heroSliderInterval) clearInterval(heroSliderInterval);
+  heroSliderInterval = setInterval(() => {
+    if (!isHeroSliderPaused) {
+      nextHeroSlide();
+    }
+  }, SLIDE_DURATION);
+}
+
+function restartHeroSliderTimer() {
+  startHeroSliderTimer();
+}
+
+function resetProgressBar() {
+  progressStartTime = Date.now();
+  const progressFill = document.getElementById('hero-slider-progress');
+  if (progressFill) {
+    progressFill.style.width = '0%';
+  }
+}
+
+function pauseHeroSlider() {
+  isHeroSliderPaused = true;
+}
+
+function resumeHeroSlider() {
+  isHeroSliderPaused = false;
+  progressStartTime = Date.now();
+}
+

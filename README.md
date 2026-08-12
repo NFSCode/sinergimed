@@ -1,6 +1,6 @@
-# SYNERGYMED™ - Advance Solution For Healthcare
+# SYNERGYMED™ - Advance Solutions For Healthcare
 
-Official web platform & product catalog for **PT Sinergi Medika Utama (SynergyMed)**, a leading healthcare technology & medical device provider headquartered in Jakarta, Indonesia.
+Official web platform & solutions catalog for **PT Sinergi Medika Utama (SynergyMed)**, a leading healthcare technology & medical device provider headquartered in Jakarta, Indonesia.
 
 ---
 

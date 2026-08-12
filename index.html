@@ -31,6 +31,7 @@
           <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">About Us</span></li>
           <li><span class="nav-link" id="nav-solutions" onclick="switchPage('solutions')">Solutions</span></li>
           <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">News & Event</span></li>
+          <li><span class="nav-link" id="nav-careers" onclick="switchPage('careers')">Careers</span></li>
           <li><span class="nav-link nav-cta-btn" id="nav-contact" onclick="switchPage('contact')"><i
                 class="fa-solid fa-headset"></i> Contact Us</span></li>
         </ul>
@@ -133,7 +134,6 @@
           <div class="unit-cards-grid">
             <!-- 1. Radiation Oncology -->
             <div class="unit-card" onclick="filterCatalog('Radiation Oncology')">
-              <div class="unit-card-icon"><i class="fa-solid fa-radiation"></i></div>
               <h3 class="unit-card-title">Radiation Oncology</h3>
               <p class="unit-card-desc">Advanced Linear Accelerators (LINAC), stereotactic radiosurgery, brachytherapy
                 systems, and oncology treatment planning.</p>
@@ -141,7 +141,6 @@
 
             <!-- 2. Ortho & Neuro -->
             <div class="unit-card" onclick="filterCatalog('Ortho & Neuro')">
-              <div class="unit-card-icon"><i class="fa-solid fa-bone"></i></div>
               <h3 class="unit-card-title">Ortho & Neuro</h3>
               <p class="unit-card-desc">Surgical bone power tools, spinal implants, neurosurgical navigation, joint
                 replacements, and trauma care.</p>
@@ -149,7 +148,6 @@
 
             <!-- 3. Med Supplies -->
             <div class="unit-card" onclick="filterCatalog('Med Supplies')">
-              <div class="unit-card-icon"><i class="fa-solid fa-boxes-packing"></i></div>
               <h3 class="unit-card-title">Med Supplies</h3>
               <p class="unit-card-desc">High-grade sterile medical disposables, surgical drapes, catheters, IV cannulas,
                 and hospital consumables.</p>
@@ -157,7 +155,6 @@
 
             <!-- 4. Medical Imaging -->
             <div class="unit-card" onclick="filterCatalog('Medical Imaging')">
-              <div class="unit-card-icon"><i class="fa-solid fa-x-ray"></i></div>
               <h3 class="unit-card-title">Medical Imaging</h3>
               <p class="unit-card-desc">Advanced MRI 1.5T/3.0T, 128-Slice CT Scanners, Digital Radiography (X-Ray), and
                 Surgical C-Arm systems.</p>
@@ -165,7 +162,6 @@
 
             <!-- 5. Endosurgery -->
             <div class="unit-card" onclick="filterCatalog('Endosurgery')">
-              <div class="unit-card-icon"><i class="fa-solid fa-video"></i></div>
               <h3 class="unit-card-title">Endosurgery</h3>
               <p class="unit-card-desc">4K UHD Laparoscopic towers, flexible endoscopes, CO2 insufflators, and
                 electrosurgical generators.</p>
@@ -173,7 +169,6 @@
 
             <!-- 6. Pain & Rehab -->
             <div class="unit-card" onclick="filterCatalog('Pain & Rehab')">
-              <div class="unit-card-icon"><i class="fa-solid fa-child-reaching"></i></div>
               <h3 class="unit-card-title">Pain & Rehab</h3>
               <p class="unit-card-desc">Physical therapy equipment, extracorporeal shockwave therapy (ESWT),
                 neuro-rehabilitation, and pain relief devices.</p>
@@ -181,7 +176,6 @@
 
             <!-- 7. Critical Care -->
             <div class="unit-card" onclick="filterCatalog('Critical Care')">
-              <div class="unit-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
               <h3 class="unit-card-title">Critical Care</h3>
               <p class="unit-card-desc">ICU Ventilators, Multi-parameter Patient Monitors, Anesthesia Workstations, and
                 Defibrillators.</p>
@@ -189,7 +183,6 @@
 
             <!-- 8. Ultrasound -->
             <div class="unit-card" onclick="filterCatalog('Ultrasound')">
-              <div class="unit-card-icon"><i class="fa-solid fa-wave-square"></i></div>
               <h3 class="unit-card-title">Ultrasound</h3>
               <p class="unit-card-desc">High-definition 3D/4D Color Doppler USG consoles and ultra-portable
                 point-of-care ultrasound devices.</p>
@@ -197,7 +190,6 @@
 
             <!-- 9. Enviro -->
             <div class="unit-card" onclick="filterCatalog('Enviro')">
-              <div class="unit-card-icon"><i class="fa-solid fa-leaf"></i></div>
               <h3 class="unit-card-title">Enviro</h3>
               <p class="unit-card-desc">Autoclave sterilization units, hospital medical waste treatment, cleanroom air
                 purifiers, and environmental controls.</p>
@@ -417,6 +409,224 @@
     </section>
 
     <!-- ========================================== -->
+    <!-- 7. CAREERS VIEW                            -->
+    <!-- ========================================== -->
+    <section id="page-careers" class="page-view">
+      <div class="section-container">
+
+        <!-- Hero Banner -->
+        <div class="careers-hero">
+          <div class="careers-hero-text">
+            <h2 class="careers-hero-title">Build the Future of Healthcare with Us</h2>
+            <p class="careers-hero-sub">PT Sinergi Medika Utama is growing. We are looking for passionate, driven individuals who want to make a real impact in Indonesia's medical technology sector.</p>
+          </div>
+        </div>
+
+        <!-- Filter & Count -->
+        <div class="careers-controls">
+          <div class="careers-filter-pills">
+            <button class="career-filter-btn active" onclick="filterJobs('all', this)">All Openings <span class="job-count-badge">5</span></button>
+            <button class="career-filter-btn" onclick="filterJobs('Sales', this)">Sales</button>
+            <button class="career-filter-btn" onclick="filterJobs('Marketing', this)">Marketing</button>
+            <button class="career-filter-btn" onclick="filterJobs('Regulatory', this)">Regulatory</button>
+          </div>
+          <p class="careers-open-label"><span id="job-visible-count">5</span> open positions</p>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="jobs-grid" id="jobs-grid">
+
+          <!-- 1. Sales Orthopedic -->
+          <div class="job-card" data-dept="Sales">
+            <h3 class="job-title">Sales Orthopedic</h3>
+            <p class="job-location"><i class="fa-solid fa-location-dot"></i> Jakarta Barat, Indonesia</p>
+            
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Responsibilities:</h4>
+              <ul class="job-points">
+                <li>Promote and sell orthopedic products to hospitals, and healthcare professionals.</li>
+                <li>Identify and develop new business opportunities and maintain strong customer networks.</li>
+                <li>Prepare and deliver product presentations, proposals, and quotations.</li>
+                <li>Conduct user training sessions for surgeons, nurses, and hospital staff.</li>
+              </ul>
+            </div>
+
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Requirements:</h4>
+              <ul class="job-points">
+                <li>Bachelor’s degree in Nursing (S1 Keperawatan).</li>
+                <li>Experience as OT nurse and surgeon assistant.</li>
+                <li>Strong communication, negotiation, and presentation skills.</li>
+                <li>Technical aptitude to understand and demonstrate orthopedic devices.</li>
+                <li>Willingness to travel frequently for hospital visits and product support.</li>
+              </ul>
+            </div>
+
+            <div class="job-card-footer">
+              <button type="button" class="btn-apply" onclick="openJobApplicationModal('Sales Orthopedic')">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- 2. Regulatory Affairs -->
+          <div class="job-card" data-dept="Regulatory">
+            <h3 class="job-title">Regulatory Affairs</h3>
+            <p class="job-location"><i class="fa-solid fa-location-dot"></i> Jakarta Barat, Indonesia</p>
+            
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Responsibilities:</h4>
+              <ul class="job-points">
+                <li>Handle licensing and regulatory processes with relevant authorities, including Ministry of Health (Kemenkes) and/or BAPETEN.</li>
+                <li>Prepare, compile, and submit regulatory documents and applications.</li>
+                <li>Monitor licensing status and ensure compliance with applicable regulations.</li>
+                <li>Coordinate with third parties (consultants, vendors, notaries, principals, or distributors) related to regulatory matters.</li>
+                <li>Liaise with internal departments to collect required data and documents.</li>
+                <li>Maintain proper documentation and regulatory records.</li>
+                <li>Stay updated on regulatory changes related to healthcare, medical devices, or related industries.</li>
+              </ul>
+            </div>
+
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Requirements:</h4>
+              <ul class="job-points">
+                <li>Min. 3 years experience in Regulatory Affairs.</li>
+                <li>Open to graduates from any major (Background in Law, Public Health, Pharmacy, Life Sciences, or related fields will be a strong advantage).</li>
+                <li>Eager to learn, proactive, and detail-oriented.</li>
+                <li>Good communication skills, both written and verbal.</li>
+                <li>Good command of English is a plus.</li>
+              </ul>
+            </div>
+
+            <div class="job-card-footer">
+              <button type="button" class="btn-apply" onclick="openJobApplicationModal('Regulatory Affairs')">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- 3. Graphic Design -->
+          <div class="job-card" data-dept="Marketing">
+            <h3 class="job-title">Graphic Design</h3>
+            <p class="job-location"><i class="fa-solid fa-location-dot"></i> Jakarta Barat, Indonesia</p>
+            
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Responsibilities:</h4>
+              <ul class="job-points">
+                <li>Create booth, packaging, and product mockups.</li>
+                <li>Design and edit product photography.</li>
+                <li>Create brochures, flyers, catalogs, and promotional materials.</li>
+                <li>Create and edit product videos for marketing and social media purposes.</li>
+                <li>Collaborate with the E-Catalog Admin Team to prepare product visuals and materials for e-catalog uploads.</li>
+                <li>Ensure designs are aligned with the company’s branding and visual identity.</li>
+                <li>Handle design revisions and other visual content requirements as needed.</li>
+              </ul>
+            </div>
+
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Requirements:</h4>
+              <ul class="job-points">
+                <li>Minimum Diploma (D3) in Graphic Design, Visual Communication Design (DKV), or a related field.</li>
+                <li>Strong creativity and good graphic design skills.</li>
+                <li>Proficient in Adobe Photoshop, Adobe Illustrator, CorelDRAW, or other design software.</li>
+                <li>Able to create booth, packaging, and product mockups.</li>
+                <li>Skilled in photo editing and product retouching.</li>
+                <li>Good understanding of layout, typography, composition, and visual design.</li>
+                <li>Experience with Adobe Premiere Pro, After Effects, CapCut, or similar software is an advantage.</li>
+                <li>Detail-oriented, responsive, and able to work with deadlines.</li>
+                <li>Portfolio is required.</li>
+              </ul>
+            </div>
+
+            <div class="job-card-footer">
+              <button type="button" class="btn-apply" onclick="openJobApplicationModal('Graphic Design')">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- 4. Sales Rehab -->
+          <div class="job-card" data-dept="Sales">
+            <h3 class="job-title">Sales Rehab</h3>
+            <p class="job-location"><i class="fa-solid fa-location-dot"></i> Jakarta Barat, Indonesia</p>
+            
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Responsibilities:</h4>
+              <ul class="job-points">
+                <li>Drive sales of rehabilitation &amp; physiotherapy medical devices.</li>
+                <li>Develop and maintain relationships with hospitals, clinics &amp; healthcare professionals.</li>
+                <li>Identify new business opportunities and expand customer networks.</li>
+                <li>Conduct product presentations and customer visits.</li>
+                <li>Achieve sales targets and follow up leads.</li>
+                <li>Prepare sales activity reports and coordinate with internal teams.</li>
+              </ul>
+            </div>
+
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Requirements:</h4>
+              <ul class="job-points">
+                <li>Min. D3/S1, any major.</li>
+                <li>Experience in Sales/Marketing; medical device experience is a plus.</li>
+                <li>Strong communication, negotiation &amp; presentation skills.</li>
+                <li>Target-oriented with excellent interpersonal skills.</li>
+                <li>Able to work independently and as part of a team.</li>
+                <li>Willing to travel for customer visits.</li>
+                <li>Possess a valid driving license and personal vehicle is a plus.</li>
+                <li>Fresh graduates are welcome to apply.</li>
+              </ul>
+            </div>
+
+            <div class="job-card-footer">
+              <button type="button" class="btn-apply" onclick="openJobApplicationModal('Sales Rehab')">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- 5. Sales Endosurgery -->
+          <div class="job-card" data-dept="Sales">
+            <h3 class="job-title">Sales Endosurgery</h3>
+            <p class="job-location"><i class="fa-solid fa-location-dot"></i> Jakarta Barat, Indonesia</p>
+            
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Responsibilities:</h4>
+              <ul class="job-points">
+                <li>Promote, introduce, and sell Endosurgery products to hospitals, clinics, and healthcare facilities.</li>
+                <li>Build and maintain strong relationships with doctors and healthcare professionals.</li>
+                <li>Develop new business opportunities and expand the customer network.</li>
+                <li>Conduct product presentations, customer visits, and regular follow-ups.</li>
+                <li>Achieve monthly sales targets while providing excellent service to customers.</li>
+              </ul>
+            </div>
+
+            <div class="job-details-block">
+              <h4 class="job-section-heading">Requirements:</h4>
+              <ul class="job-points">
+                <li>Bachelor’s degree (S1) in any field.</li>
+                <li>Target-oriented with a strong drive to achieve sales goals.</li>
+                <li>Excellent communication and persuasive skills.</li>
+                <li>Able to build and maintain strong relationships with doctors and healthcare professionals.</li>
+                <li>Persistent, proactive, and willing to learn new things.</li>
+                <li>Experience in the medical device industry, especially Endosurgery, is highly preferred.</li>
+                <li>Willing to conduct customer visits to hospitals, clinics, and healthcare facilities.</li>
+              </ul>
+            </div>
+
+            <div class="job-card-footer">
+              <button type="button" class="btn-apply" onclick="openJobApplicationModal('Sales Endosurgery')">Apply Now</button>
+            </div>
+          </div>
+
+        </div><!-- /.jobs-grid -->
+
+        <!-- No results state -->
+        <div class="jobs-empty" id="jobs-empty" style="display:none;">
+          <i class="fa-solid fa-briefcase"></i>
+          <p>No open positions in this category right now.</p>
+        </div>
+
+        <!-- CTA Footer -->
+        <div class="careers-cta-banner">
+          <p class="careers-cta-text">Don't see a role that fits? Send us your CV and we'll keep you in mind for future openings.</p>
+          <button type="button" class="btn-apply btn-apply-outline" onclick="openJobApplicationModal('General Application')">Send Your CV</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
     <!-- 6. CONTACT US VIEW                         -->
     <!-- ========================================== -->
     <section id="page-contact" class="page-view">
@@ -550,6 +760,8 @@
                 Solutions Catalog</a></li>
             <li><a href="javascript:void(0)" onclick="switchPage('news')"><i class="fa-solid fa-chevron-right"></i> News
                 & Event</a></li>
+            <li><a href="javascript:void(0)" onclick="switchPage('careers')"><i class="fa-solid fa-chevron-right"></i>
+                Careers</a></li>
             <li><a href="javascript:void(0)" onclick="switchPage('contact')"><i class="fa-solid fa-chevron-right"></i>
                 Contact Us</a></li>
           </ul>

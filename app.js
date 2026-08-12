@@ -785,4 +785,449 @@ function resumeHeroSlider() {
   isHeroSliderPaused = false;
   progressStartTime = Date.now();
 }
+// ==========================================================================
+// 9. CAREERS FILTER ENGINE
+// ==========================================================================
+function filterJobs(dept, btnElement) {
+  const buttons = document.querySelectorAll('.career-filter-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  if (btnElement) {
+    btnElement.classList.add('active');
+  }
+
+  const jobCards = document.querySelectorAll('.job-card');
+  let visibleCount = 0;
+
+  jobCards.forEach(card => {
+    const cardDept = card.getAttribute('data-dept');
+    if (dept === 'all' || cardDept === dept) {
+      card.style.display = 'flex';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const countDisplay = document.getElementById('job-visible-count');
+  if (countDisplay) {
+    countDisplay.textContent = visibleCount;
+  }
+
+  const emptyState = document.getElementById('jobs-empty');
+  if (emptyState) {
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+}
+
+// ==========================================================================
+// 10. JOB APPLICATION MODAL & DATABASE SUBMISSION FLOW
+// ==========================================================================
+let uploadedCVName = "";
+let uploadedCVBase64 = "";
+let isSubmittingApplication = false;
+
+function handleJobCVFileChange(input) {
+  const label = document.getElementById('app-cv-filename');
+  const errorBox = document.getElementById('app-form-error');
+  if (errorBox) errorBox.style.display = 'none';
+
+  if (input.files && input.files[0]) {
+    const file = input.files[0];
+    
+    // Validate file size (< 15MB)
+    if (file.size > 15 * 1024 * 1024) {
+      if (errorBox) {
+        errorBox.textContent = 'Ukuran file CV terlalu besar. Maksimal 15 MB.';
+        errorBox.style.display = 'block';
+      }
+      input.value = '';
+      uploadedCVName = '';
+      uploadedCVBase64 = '';
+      if (label) label.textContent = 'Klik untuk memilih file CV dari perangkat';
+      return;
+    }
+
+    uploadedCVName = file.name;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      uploadedCVBase64 = e.target.result;
+    };
+    reader.readAsDataURL(file);
+
+    if (label) {
+      label.innerHTML = `<i class="fa-solid fa-file-pdf" style="color: #ef4444;"></i> <strong>${uploadedCVName}</strong> (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+    }
+  }
+}
+
+function openJobApplicationModal(positionName) {
+  uploadedCVName = "";
+  uploadedCVBase64 = "";
+  isSubmittingApplication = false;
+
+  const content = `
+    <div style="text-align: left;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+        <div style="width: 38px; height: 38px; background: #e0f2fe; color: var(--primary-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0;">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.2rem; margin: 0;">Formulir Lamaran Kerja</h3>
+          <p style="margin: 0; font-size: 0.88rem; font-weight: 700; color: var(--primary-blue);">${positionName}</p>
+        </div>
+      </div>
+      <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">
+        Lengkapi data diri dan upload CV Anda. Data lamaran akan diproses dan disimpan secara aman ke database rekrutmen PT Sinergi Medika Utama.
+      </p>
+
+      <div id="app-form-error" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 14px;"></div>
+
+      <form id="career-apply-form" onsubmit="submitJobApplication(event, '${positionName}')" style="display: flex; flex-direction: column; gap: 12px;">
+        
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+            Nama Lengkap <span style="color: #ef4444;">*</span>
+          </label>
+          <input type="text" id="app-name" required placeholder="Nama lengkap sesuai KTP" 
+            style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+              Nomor WhatsApp <span style="color: #ef4444;">*</span>
+            </label>
+            <input type="tel" id="app-phone" required placeholder="08xxxxxxxxxx" 
+              style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+              Email Aktif <span style="color: #ef4444;">*</span>
+            </label>
+            <input type="email" id="app-email" required placeholder="nama@email.com" 
+              style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
+          </div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+            Pendidikan Terakhir & Jurusan <span style="color: #ef4444;">*</span>
+          </label>
+          <input type="text" id="app-education" required placeholder="Contoh: S1 Keperawatan / D3 DKV / S1 Farmasi" 
+            style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+            Pengalaman Kerja Singkat <span style="color: #ef4444;">*</span>
+          </label>
+          <input type="text" id="app-experience" required placeholder="Contoh: 2 Tahun Sales Alkes / Fresh Graduate" 
+            style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+            Upload File CV / Resume (PDF/DOCX) <span style="color: #ef4444;">*</span>
+          </label>
+          <div style="border: 2px dashed #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; background: #f8fafc; cursor: pointer;" onclick="document.getElementById('app-cv-file').click()">
+            <input type="file" id="app-cv-file" accept=".pdf,.doc,.docx" required style="display: none;" onchange="handleJobCVFileChange(this)">
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 4px; display: block;"></i>
+            <span id="app-cv-filename" style="font-size: 0.82rem; color: #475569; font-weight: 600; display: block;">Klik untuk memilih file CV dari perangkat</span>
+          </div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
+            Pesan / Catatan Tambahan (Opsional)
+          </label>
+          <textarea id="app-note" rows="2" placeholder="Tuliskan motivasi singkat atau ketersediaan bergabung..." 
+            style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" id="app-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%); color: #ffffff; border: none; box-shadow: 0 4px 14px rgba(11, 59, 96, 0.25); margin-top: 4px;">
+          <i class="fa-solid fa-paper-plane" style="font-size: 1rem;"></i> Submit Application
+        </button>
+
+      </form>
+    </div>
+  `;
+  showModal(content);
+}
+
+async function submitJobApplication(event, positionName) {
+  event.preventDefault();
+  
+  if (isSubmittingApplication) return;
+
+  const errorBox = document.getElementById('app-form-error');
+  const submitBtn = document.getElementById('app-submit-btn');
+
+  if (errorBox) errorBox.style.display = 'none';
+
+  const name = document.getElementById('app-name')?.value.trim();
+  const phone = document.getElementById('app-phone')?.value.trim();
+  const email = document.getElementById('app-email')?.value.trim();
+  const education = document.getElementById('app-education')?.value.trim();
+  const experience = document.getElementById('app-experience')?.value.trim();
+  const note = document.getElementById('app-note')?.value.trim();
+  const fileInput = document.getElementById('app-cv-file');
+
+  // Client-Side Validation
+  if (!name || !phone || !email || !education || !experience) {
+    if (errorBox) {
+      errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
+      errorBox.style.display = 'block';
+    }
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    if (errorBox) {
+      errorBox.textContent = 'Format email tidak valid. Mohon masukkan email aktif Anda.';
+      errorBox.style.display = 'block';
+    }
+    return;
+  }
+
+  if (!fileInput || !fileInput.files || !fileInput.files[0]) {
+    if (errorBox) {
+      errorBox.textContent = 'Mohon unggah dokumen file CV / Resume Anda.';
+      errorBox.style.display = 'block';
+    }
+    return;
+  }
+
+  const file = fileInput.files[0];
+
+  // If base64 is not yet generated, generate now
+  if (!uploadedCVBase64) {
+    try {
+      uploadedCVBase64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = e => resolve(e.target.result);
+        reader.onerror = err => reject(err);
+        reader.readAsDataURL(file);
+      });
+    } catch (err) {
+      if (errorBox) {
+        errorBox.textContent = 'Gagal membaca file CV. Silakan pilih kembali file Anda.';
+        errorBox.style.display = 'block';
+      }
+      return;
+    }
+  }
+
+  // Prevent duplicate submission & show loading UI
+  isSubmittingApplication = true;
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyimpan Data Lamaran...`;
+    submitBtn.style.opacity = '0.75';
+    submitBtn.style.cursor = 'not-allowed';
+  }
+
+  const payload = {
+    name: name,
+    phone: phone,
+    email: email,
+    education: education,
+    experience: experience,
+    position: positionName,
+    note: note || '',
+    cvFile: {
+      name: file.name,
+      type: file.type || 'application/pdf',
+      size: file.size,
+      dataBase64: uploadedCVBase64
+    }
+  };
+
+  try {
+    const response = await fetch('/api/careers/apply', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Gagal mengirimkan lamaran kerja.');
+    }
+
+    // SUBMISSION SUCCESS: Launch email client pop-up & Render Success View
+    launchCandidateEmailClient(result, payload);
+    renderApplicationSuccessView(result, payload);
+
+  } catch (err) {
+    console.error('Submission error:', err);
+    isSubmittingApplication = false;
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Application`;
+      submitBtn.style.opacity = '1';
+      submitBtn.style.cursor = 'pointer';
+    }
+    if (errorBox) {
+      errorBox.textContent = err.message || 'Terjadi gangguan jaringan saat mengirimkan data lamaran. Silakan coba kembali.';
+      errorBox.style.display = 'block';
+    }
+  }
+}
+
+function generateCandidateEmailDetails(result, payload) {
+  const recipient = "marketing@synergymed.id";
+  const subject = `Lamaran Pekerjaan: ${result.candidate.position} - ${result.candidate.name} (${result.applicationId})`;
+  
+  const body = 
+`Yth. Tim HR & Rekrutmen PT Sinergi Medika Utama,
+
+Saya yang bertanda tangan di bawah ini mengajukan lamaran pekerjaan untuk posisi ${result.candidate.position}. Berikut adalah rincian data diri dan kualifikasi saya:
+
+• Application ID   : ${result.applicationId}
+• Posisi Dilamar   : ${result.candidate.position}
+• Nama Lengkap     : ${result.candidate.name}
+• Nomor WhatsApp   : ${result.candidate.phone}
+• Email            : ${result.candidate.email}
+• Pendidikan       : ${payload.education}
+• Pengalaman Kerja : ${payload.experience}
+• Dokumen CV       : ${result.candidate.cvFileName}
+• Catatan Tambahan : ${payload.note || '-'}
+
+Bersama email ini saya melampirkan berkas CV (${result.candidate.cvFileName}) saya untuk bahan pertimbangan lebih lanjut.
+
+Besar harapan saya untuk dapat mengikuti proses seleksi berikutnya. Terima kasih.
+
+Hormat saya,
+${result.candidate.name}
+${result.candidate.phone}`;
+
+  const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  return { recipient, subject, body, mailtoUrl, gmailUrl };
+}
+
+function launchCandidateEmailClient(result, payload) {
+  try {
+    const { mailtoUrl } = generateCandidateEmailDetails(result, payload);
+    // Trigger default mail client
+    window.location.href = mailtoUrl;
+  } catch (e) {
+    console.log('Auto mailto triggered:', e);
+  }
+}
+
+function renderApplicationSuccessView(result, payload) {
+  const { mailtoUrl, gmailUrl, recipient } = generateCandidateEmailDetails(result, payload);
+
+  const submissionDateFormatted = new Date(result.submittedAt).toLocaleString('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  const successHtml = `
+    <div style="text-align: center; padding: 10px 4px;">
+      <!-- Success Icon Badge -->
+      <div style="width: 64px; height: 64px; background: #ecfdf5; color: #059669; border: 2px solid #a7f3d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px auto; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.15);">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <!-- Main Headline -->
+      <h2 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.4rem; font-weight: 800; margin: 0 0 8px 0;">
+        Application Submitted Successfully
+      </h2>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.55; max-width: 490px; margin-left: auto; margin-right: auto;">
+        Data Anda telah tersimpan di database. Aplikasi email Anda telah otomatis dibuka dengan draf lamaran lengkap.
+      </p>
+
+      <!-- Application Details Card -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; text-align: left; margin-bottom: 18px;">
+        
+        <!-- Header: Application ID & Status -->
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <span style="font-size: 0.72rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; display: block;">Application ID</span>
+            <strong style="font-size: 1.05rem; color: var(--primary-blue); font-family: monospace; letter-spacing: 0.5px;">${result.applicationId}</strong>
+          </div>
+          <span style="font-size: 0.76rem; font-weight: 700; background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fa-solid fa-circle-dot" style="font-size: 0.55rem;"></i> Status: ${result.status}
+          </span>
+        </div>
+
+        <!-- Candidate Details Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.84rem; margin-bottom: 10px;">
+          <div>
+            <span style="color: #64748b; display: block; font-size: 0.76rem;">Posisi:</span>
+            <strong style="color: #0f172a;">${result.candidate.position}</strong>
+          </div>
+          <div>
+            <span style="color: #64748b; display: block; font-size: 0.76rem;">Nama:</span>
+            <strong style="color: #0f172a;">${result.candidate.name}</strong>
+          </div>
+          <div>
+            <span style="color: #64748b; display: block; font-size: 0.76rem;">WhatsApp / Telp:</span>
+            <span style="color: #0f172a; font-weight: 600;">${result.candidate.phone}</span>
+          </div>
+          <div>
+            <span style="color: #64748b; display: block; font-size: 0.76rem;">Email:</span>
+            <span style="color: #0f172a; font-weight: 600;">${result.candidate.email}</span>
+          </div>
+        </div>
+
+        <!-- File Storage Info -->
+        <div style="font-size: 0.82rem; color: #475569; border-top: 1px dashed #cbd5e1; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+          <div>
+            <i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-right: 4px;"></i> 
+            Dokumen: <strong>${result.candidate.cvFileName}</strong>
+          </div>
+          <span style="font-size: 0.74rem; color: #059669; font-weight: 700; background: #ecfdf5; padding: 2px 7px; border-radius: 5px;">
+            <i class="fa-solid fa-database"></i> Database &amp; Storage Saved
+          </span>
+        </div>
+      </div>
+
+      <!-- Email Sending Action Banner -->
+      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; text-align: left; margin-bottom: 18px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+          <i class="fa-solid fa-envelope-open-text" style="color: var(--primary-blue); font-size: 1.2rem; margin-top: 2px;"></i>
+          <div>
+            <div style="font-size: 0.88rem; font-weight: 700; color: #1e3a8a; margin-bottom: 2px;">
+              Kirim Email dari Akun Anda ke: ${recipient}
+            </div>
+            <div style="font-size: 0.82rem; color: #3b82f6; line-height: 1.45;">
+              Draf pesan lamaran sudah siap. Klik tombol di bawah jika aplikasi email Anda belum terbuka otomatis:
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+          <a href="${mailtoUrl}" class="btn-primary" style="padding: 8px 16px; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: var(--primary-blue);">
+            <i class="fa-solid fa-paper-plane"></i> Buka Default Email App
+          </a>
+          <a href="${gmailUrl}" target="_blank" class="btn-secondary" style="padding: 8px 16px; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-color: #ea4335; color: #ea4335;">
+            <i class="fa-brands fa-google"></i> Buka via Gmail Web
+          </a>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-primary" onclick="closeModal()" style="padding: 9px 26px; font-size: 0.88rem; justify-content: center; background: #64748b;">
+          Tutup Jendela
+        </button>
+      </div>
+    </div>
+  `;
+
+  showModal(successHtml);
+}
+
+
 

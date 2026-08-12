@@ -1,0 +1,116 @@
+[
+  {
+    "id": "SYN-APP-20260812-D96C",
+    "status": "Applied",
+    "position": "Graphic Design",
+    "candidate": {
+      "name": "Siti Rahmawati",
+      "phone": "081399887766",
+      "email": "siti.rahma@desain.com",
+      "education": "D3 Desain Komunikasi Visual",
+      "experience": "2 Tahun Graphic Designer",
+      "notes": ""
+    },
+    "documents": {
+      "cv": {
+        "originalName": "Vendor SynergyMed - Sheet1.pdf",
+        "storedFileName": "SYN-APP-20260812-D96C_Vendor_SynergyMed_-_Sheet1.pdf",
+        "storedPath": "storage/applications/SYN-APP-20260812-D96C_Vendor_SynergyMed_-_Sheet1.pdf",
+        "sizeBytes": 44876,
+        "mimeType": "application/pdf",
+        "uploadedAt": "2026-08-12T12:28:42.530Z"
+      }
+    },
+    "notifications": {
+      "hr": {
+        "recipient": "hr@synergymed.id",
+        "whatsappChannel": "087738220545",
+        "subject": "[New Candidate Application] Graphic Design - Siti Rahmawati (SYN-APP-20260812-D96C)",
+        "sentAt": "2026-08-12T12:28:42.530Z",
+        "status": "Delivered",
+        "payload": {
+          "candidateName": "Siti Rahmawati",
+          "position": "Graphic Design",
+          "submissionDate": "12/8/2026, 19.28.42",
+          "applicationId": "SYN-APP-20260812-D96C",
+          "contactInfo": {
+            "phone": "081399887766",
+            "email": "siti.rahma@desain.com"
+          },
+          "education": "D3 Desain Komunikasi Visual",
+          "experience": "2 Tahun Graphic Designer",
+          "cvFileName": "Vendor SynergyMed - Sheet1.pdf",
+          "cvDownloadUrl": "http://localhost:8080/storage/applications/SYN-APP-20260812-D96C_Vendor_SynergyMed_-_Sheet1.pdf",
+          "reviewLink": "http://localhost:8080/api/applications/SYN-APP-20260812-D96C"
+        }
+      },
+      "candidate": {
+        "recipient": "siti.rahma@desain.com",
+        "whatsappRecipient": "081399887766",
+        "subject": "Konfirmasi Penerimaan Lamaran Kerja: Graphic Design - PT Sinergi Medika Utama",
+        "sentAt": "2026-08-12T12:28:42.530Z",
+        "status": "Delivered",
+        "message": "Terima kasih atas minat Anda bergabung dengan PT Sinergi Medika Utama. Lamaran Anda untuk posisi Graphic Design dengan Application ID SYN-APP-20260812-D96C telah berhasil kami terima dan masuk ke dalam sistem recruitment database kami."
+      }
+    },
+    "submittedAt": "2026-08-12T12:28:42.530Z",
+    "ip": "::1"
+  },
+  {
+    "id": "SYN-APP-20260812-2C4F",
+    "status": "Applied",
+    "position": "Sales Orthopedic",
+    "candidate": {
+      "name": "dr. Andika Pratama",
+      "phone": "081289897766",
+      "email": "andika.pratama@medika.id",
+      "education": "S1 Keperawatan & Profesi Ners",
+      "experience": "3 Tahun OT Nurse di RS Jantung Jakarta",
+      "notes": "Saya siap bergabung dan mengikuti seluruh proses seleksi.C:\\cv.pdf"
+    },
+    "documents": {
+      "cv": {
+        "originalName": "Vendor SynergyMed - Sheet1.pdf",
+        "storedFileName": "SYN-APP-20260812-2C4F_Vendor_SynergyMed_-_Sheet1.pdf",
+        "storedPath": "storage/applications/SYN-APP-20260812-2C4F_Vendor_SynergyMed_-_Sheet1.pdf",
+        "sizeBytes": 44876,
+        "mimeType": "application/pdf",
+        "uploadedAt": "2026-08-12T12:12:18.402Z"
+      }
+    },
+    "notifications": {
+      "hr": {
+        "recipient": "hr@synergymed.id",
+        "whatsappChannel": "087738220545",
+        "subject": "[New Candidate Application] Sales Orthopedic - dr. Andika Pratama (SYN-APP-20260812-2C4F)",
+        "sentAt": "2026-08-12T12:12:18.402Z",
+        "status": "Delivered",
+        "payload": {
+          "candidateName": "dr. Andika Pratama",
+          "position": "Sales Orthopedic",
+          "submissionDate": "12/8/2026, 19.12.18",
+          "applicationId": "SYN-APP-20260812-2C4F",
+          "contactInfo": {
+            "phone": "081289897766",
+            "email": "andika.pratama@medika.id"
+          },
+          "education": "S1 Keperawatan & Profesi Ners",
+          "experience": "3 Tahun OT Nurse di RS Jantung Jakarta",
+          "cvFileName": "Vendor SynergyMed - Sheet1.pdf",
+          "cvDownloadUrl": "http://localhost:8080/storage/applications/SYN-APP-20260812-2C4F_Vendor_SynergyMed_-_Sheet1.pdf",
+          "reviewLink": "http://localhost:8080/api/applications/SYN-APP-20260812-2C4F"
+        }
+      },
+      "candidate": {
+        "recipient": "andika.pratama@medika.id",
+        "whatsappRecipient": "081289897766",
+        "subject": "Konfirmasi Penerimaan Lamaran Kerja: Sales Orthopedic - PT Sinergi Medika Utama",
+        "sentAt": "2026-08-12T12:12:18.402Z",
+        "status": "Delivered",
+        "message": "Terima kasih atas minat Anda bergabung dengan PT Sinergi Medika Utama. Lamaran Anda untuk posisi Sales Orthopedic dengan Application ID SYN-APP-20260812-2C4F telah berhasil kami terima dan masuk ke dalam sistem recruitment database kami."
+      }
+    },
+    "submittedAt": "2026-08-12T12:12:18.402Z",
+    "ip": "::1"
+  }
+]

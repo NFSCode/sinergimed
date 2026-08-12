@@ -10,7 +10,7 @@ const productsData = [
     id: "rs-01",
     title: "Zap-X",
     subtitle: "Gyroscopic Stereotactic Radiosurgery System",
-    category: "Radiotherapy & Surgery",
+    category: "Radiation Oncology",
     image: "https://zapsurgical.com/wp-content/uploads/zap-x-centre-de-cancerologie-de-la-porte-de-saint-cloud-ccpsc.jpg",
     specs: [
       "Self-shielded dual-gantry gyroscopic design — no bunker required",

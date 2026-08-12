@@ -2,280 +2,336 @@
    SYNERGYMED™ - Scalable Solutions Catalog & Interactive App Engine
    ========================================================================== */
 
-// 1. EXTENSIBLE SOLUTIONS CATALOG DATA ACROSS 9 BUSINESS UNITS ("nanti banyak")
+// 1. SOLUTIONS CATALOG DATA
 const productsData = [
-  // --- 1. RADIATION ONCOLOGY ---
+
+  // --- RADIOTHERAPY & SURGERY ---
   {
-    id: "rad-01",
-    title: "SynergyRad Precision LINAC Accelerator",
-    subtitle: "High-Energy Linear Accelerator & Radiotherapy System",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    id: "rs-01",
+    title: "Zap-X",
+    subtitle: "Gyroscopic Stereotactic Radiosurgery System",
+    category: "Radiotherapy & Surgery",
+    image: "https://zapsurgical.com/wp-content/uploads/zap-x-centre-de-cancerologie-de-la-porte-de-saint-cloud-ccpsc.jpg",
     specs: [
-      "Sub-millimeter IMRT & VMAT Beam Delivery",
-      "Real-time 4D Cone-Beam CT (CBCT) Image Guidance",
-      "Integrated High-Definition Multileaf Collimator (HD-MLC)",
-      "Automated Patient Positioning 6D Robotic Couch"
-    ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
-  },
-  {
-    id: "rad-02",
-    title: "SynroBrachy High Dose Rate (HDR) System",
-    subtitle: "Remote Afterloading Brachytherapy Suite",
-    category: "Radiation Oncology",
-    image: "assets/media__1785815004846.png",
-    specs: [
-      "30-Channel Iridium-192 (Ir-192) Remote Afterloader",
-      "Real-time Ultrasound & CT Guided Applicator Planning",
-      "Automatic Safety Retraction System",
-      "DICOM-RT Integration with Treatment Planning Station"
+      "Self-shielded dual-gantry gyroscopic design — no bunker required",
+      "Frameless stereotactic radiosurgery for intracranial & cervical spine",
+      "Built-in kV imaging for real-time patient guidance",
+      "6 MV compact LINAC — no radioactive isotopes",
+      "Hundreds of non-coplanar beam angles for precise targeting"
     ],
     brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
 
-  // --- 2. ORTHO & NEURO ---
+  // --- MEDICAL IMAGING: C-ARM ---
   {
-    id: "ortho-01",
-    title: "OrthoPower Surgical Battery Drill System",
-    subtitle: "Heavy-Duty Modular Bone Power Tool",
-    category: "Ortho & Neuro",
-    image: "assets/synergymed_surgery_1785816546977.png",
-    specs: [
-      "Autoclavable Modular Handpiece (Drill, Reamer, Oscillating Saw)",
-      "Li-ion Rapid Charge Battery Pack",
-      "Variable speed control up to 1200 RPM",
-      "Ergonomic Titanium Lightweight Body"
-    ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
-  },
-  {
-    id: "ortho-02",
-    title: "SynroFix Titanium Trauma & Spine Locking Plate System",
-    subtitle: "Anatomical Bone Fixation Implants & Spine Implants",
-    category: "Ortho & Neuro",
-    image: "assets/media__1785815004846.png",
-    specs: [
-      "Biocompatible Pure Titanium Grade 4",
-      "Anatomically pre-shaped low-profile plates",
-      "Combi-holes for locking and compression screws",
-      "Neurosurgical Cranioplasty & Spinal Fixation Hardware"
-    ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
-  },
-
-  // --- 3. MED SUPPLIES ---
-  {
-    id: "supp-01",
-    title: "SynergyFlex IV Catheter & Safety Cannula",
-    subtitle: "Sterile Disposable Vascular Access Supplies",
-    category: "Med Supplies",
-    image: "assets/media__1785814971701.png",
-    specs: [
-      "Passive Needle Safety Shield Mechanism",
-      "FEP/PUR Radiopaque Catheter Material",
-      "Size range: 14G to 24G",
-      "CE & AKD Kemenkes Certified"
-    ],
-    brochure: "SynergyMed_Company_Profile_2026.pdf"
-  },
-  {
-    id: "supp-02",
-    title: "SynroDrape Surgical Pack & Sterile Gowns",
-    subtitle: "Reinforced Infection Barrier Hospital Consumables",
-    category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "AAMI Level 4 Liquid & Viral Penetration Barrier",
-      "Breathable non-woven SMS material",
-      "Customized OR Surgical Pack Sets",
-      "EO Gas Sterilized & Single-Use Sealed"
-    ],
-    brochure: "SynergyMed_Company_Profile_2026.pdf"
-  },
-
-  // --- 4. MEDICAL IMAGING ---
-  {
-    id: "img-01",
-    title: "SynergyScan 1.5T Superconducting MRI",
-    subtitle: "High-Field Magnetic Resonance Imaging System",
+    id: "img-carm-01",
+    title: "Synergy XCA",
+    subtitle: "Mobile C-Arm Analog Fluoroscopy System (5 kW)",
     category: "Medical Imaging",
-    image: "assets/synergymed_mri_1785816534955.png",
+    image: "https://www.perlove.net/wp-content/uploads/perlove-mobile-c-arm-machinr.png",
     specs: [
-      "1.5T Zero-Boil-Off Superconducting Magnet",
-      "Real-time 4D Neuro & Cardiac Imaging Software",
-      "70 cm Wide Bore for Patient Comfort",
-      "Ultra-quiet Silent Scan acoustic reduction"
+      "Analog image intensifier fluoroscopic C-arm",
+      "5 kW high-frequency X-ray generator",
+      "Fully mobile with motorized C-arm movements",
+      "Real-time fluoroscopic imaging for surgical guidance",
+      "AKL registered — Ministry of Health Indonesia"
     ],
     brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "img-02",
-    title: "SynroVision 128-Slice CT Scanner",
-    subtitle: "Ultra-Low Dose Multi-Detector Computed Tomography",
+    id: "img-carm-02",
+    title: "Synergy XCD",
+    subtitle: "Mobile C-Arm Digital Fluoroscopy System",
     category: "Medical Imaging",
-    image: "assets/media__1785815004846.png",
+    image: "https://www.perlove.net/wp-content/uploads/perlove-mobile-c-arm-machinr.png",
     specs: [
-      "128 Slice per rotation with 0.33s gantry speed",
-      "AI-Powered Cardiac Motion Artifact Reduction",
-      "up to 75% Dose Reduction with ASiR-V technology",
-      "High Heat Capacity X-Ray Tube (8.0 MHU)"
+      "Digital flat panel detector fluoroscopic C-arm",
+      "High-resolution digital image acquisition",
+      "Motorized multi-axis C-arm positioning",
+      "Ideal for orthopedic, vascular & trauma procedures",
+      "AKL registered — Ministry of Health Indonesia"
     ],
     brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
 
-  // --- 5. ENDOSURGERY ---
+  // --- MEDICAL IMAGING: CT SCAN ---
   {
-    id: "endo-01",
-    title: "EndoSight 4K UHD Laparoscopic Tower",
-    subtitle: "Complete Minimally Invasive Surgical Suite",
-    category: "Endosurgery",
-    image: "assets/synergymed_surgery_1785816546977.png",
+    id: "img-ct-01",
+    title: "Synergy CR32S",
+    subtitle: "32-Slice CT Scanner — Standard Edition",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
     specs: [
-      "4K Ultra HD 3-CMOS Camera Control Unit",
-      "350W LED Cold Light Source (50,000 hrs lifespan)",
-      "High-Flow 45L/min CO2 Insufflator with Heating",
-      "Medical Grade 32-inch 4K Monitor"
+      "32-slice helical CT scanning",
+      "0.5s gantry rotation speed",
+      "Dose modulation for low-radiation imaging",
+      "Wide bore gantry for patient comfort",
+      "DICOM 3.0 compliant workstation"
     ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "endo-02",
-    title: "SynroCut Electrosurgical Unit (ESU 400W)",
-    subtitle: "Advanced High-Frequency Diathermy Generator",
-    category: "Endosurgery",
-    image: "assets/synergymed_hero_1785816523979.png",
+    id: "img-ct-02",
+    title: "Synergy CT32",
+    subtitle: "32-Slice CT Scanner — Advanced Edition",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
     specs: [
-      "Monopolar Cut/Coag & Bipolar Vessel Sealing",
-      "Tissue impedance auto-feedback system",
-      "EndoCut mode for precise endoscopic polypectomy",
-      "Dual Footswitch & Safety Return Electrode Monitor"
+      "32-slice CT with advanced reconstruction algorithms",
+      "AI-assisted noise reduction",
+      "Cardiac & neuro imaging protocols included",
+      "Auto exposure control for optimal image quality",
+      "High-capacity X-ray tube"
     ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
-  },
-
-  // --- 6. PAIN & REHAB ---
-  {
-    id: "rehab-01",
-    title: "SynroShock Radial & Focused ESWT System",
-    subtitle: "Extracorporeal Shockwave Therapy for Pain & Physio",
-    category: "Pain & Rehab",
-    image: "assets/media__1785814971701.png",
-    specs: [
-      "Pneumatic Shockwave & High-Energy Electromagnetic Focus",
-      "Frequency 1 - 22 Hz & Pressure up to 5.0 Bar",
-      "Preset Clinical Protocols for Musculoskeletal Pain",
-      "Ergonomic Dual Handpieces"
-    ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "rehab-02",
-    title: "SynergyMotion Robotic Gait Rehab Trainer",
-    subtitle: "Lower Limb Neuro-Rehabilitation System",
-    category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    id: "img-ct-03",
+    title: "Synergy CT64",
+    subtitle: "64-Slice Multi-Detector CT Scanner",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
     specs: [
-      "Active-Passive Weight Bearing Treadmill Exoskeleton",
-      "Real-time Biofeedback & Virtual Reality Interactive Games",
-      "Spinal Cord Injury & Stroke Rehabilitation Protocols",
-      "Automated Safety Harness & Emergency Stop"
+      "64-slice per rotation imaging",
+      "0.4s gantry rotation for cardiac CT",
+      "Spectral imaging capability",
+      "Sub-millimeter isotropic resolution",
+      "ASIR dose reduction technology"
     ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
-  },
-
-  // --- 7. CRITICAL CARE ---
-  {
-    id: "cc-01",
-    title: "SynroVent ICU Ventilator V900",
-    subtitle: "Advanced Respiratory Support for Neonatal to Adult",
-    category: "Critical Care",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Invasive & Non-Invasive Ventilation Modes (PRVC, APRV, High Flow O2)",
-      "Integrated 15-inch Touchscreen Interface",
-      "Built-in Turbine Drive (No central gas pipeline required)",
-      "High Frequency Oscillation option for Neonates"
-    ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "cc-02",
-    title: "SynroMonitor M15 Patient Monitor",
-    subtitle: "Modular Vital Signs Monitor for ICU / OR",
-    category: "Critical Care",
-    image: "assets/media__1785814971701.png",
+    id: "img-ct-04",
+    title: "Synergy CT128",
+    subtitle: "128-Slice Ultra-High Definition CT Scanner",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
     specs: [
-      "15-inch HD Anti-Glare Touchscreen",
-      "Multi-lead ECG, SpO2, NIBP, 4-Channel IBP, EtCO2",
-      "Arrhythmia & ST Segment Analysis",
-      "Central Monitoring Station connectivity up to 64 beds"
+      "128-slice ultra-fast helical CT",
+      "0.33s rotation — ideal for cardiac & trauma",
+      "Dual-energy spectral CT capability",
+      "AI-powered motion artifact reduction",
+      "8.0 MHU high heat capacity X-ray tube"
     ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
 
-  // --- 8. ULTRASOUND ---
+  // --- MEDICAL IMAGING: DIGITAL STATIONARY X-RAY ---
   {
-    id: "usg-01",
-    title: "UltraVision Premium 4D USG Console",
-    subtitle: "Diagnostic Ultrasound with AI Assist",
-    category: "Ultrasound",
-    image: "assets/media__1785814971701.png",
+    id: "img-xray-s01",
+    title: "Synergy Imaging XSD-70C",
+    subtitle: "Digital Stationary X-Ray System — 70 kW",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
     specs: [
-      "21.5-inch HD LED Display + 13.3-inch Touch Console",
-      "Real-time HD Live 4D OB/GYN Imaging",
-      "Shear Wave Elastography & Cardiac Strain Package",
-      "Pure Wave Single Crystal Transducers"
+      "70 kW high-frequency X-ray generator",
+      "Flat panel detector with auto-positioning ceiling suspension",
+      "High-resolution digital radiography",
+      "Auto-exposure control (AEC)",
+      "DICOM 3.0 PACS integration ready"
     ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "usg-02",
-    title: "SynroPocket Wireless USG Scanner",
-    subtitle: "Handheld Point-of-Care Ultrasound Probe",
-    category: "Ultrasound",
-    image: "assets/synergymed_mri_1785816534955.png",
+    id: "img-xray-s02",
+    title: "Synergy Imaging XSD-50F",
+    subtitle: "Digital Stationary X-Ray System — 50 kW Floor-mounted",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
     specs: [
-      "Dual Head Probe (Convex + Linear)",
-      "Connects wirelessly to iOS / Android / Windows Tablets",
-      "Ideal for Emergency, ICU, & Vascular Access",
-      "3-hour Continuous Battery Scan Time"
+      "50 kW high-frequency generator, floor-mounted",
+      "Digital flat panel detector",
+      "Multi-angle table and wall bucky positioning",
+      "Remote exposure control",
+      "Low-dose intelligent imaging mode"
     ],
-    brochure: "SynergyMed_CriticalCare_Rehab.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
 
-  // --- 9. ENVIRO ---
+  // --- MEDICAL IMAGING: DIGITAL MOBILE X-RAY ---
   {
-    id: "env-01",
-    title: "SafeShield Heavy-Duty Autoclave Sterilizer 500L",
-    subtitle: "Hospital Central Sterile Supply (CSSD) System",
-    category: "Enviro",
-    image: "assets/media__1785815004846.png",
+    id: "img-xray-m01",
+    title: "Synergy XMD5",
+    subtitle: "Digital Mobile X-Ray Unit — 5 kW",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
     specs: [
-      "500 Liter Double-Door Pass-Through Chamber",
-      "Microprocessor Touchscreen PLC Control with Printer",
-      "Vacuum Drying Cycle & Biological Indicator Monitoring",
-      "ASME / PED Pressure Vessel Certified"
+      "5 kW mobile digital X-ray unit",
+      "Integrated flat panel detector",
+      "Battery-operated for ward & ICU use",
+      "Lightweight compact design for maneuverability",
+      "Instant image review on built-in display"
     ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   },
   {
-    id: "env-02",
-    title: "SynroClean Hospital Air Purification & Sterilization Unit",
-    subtitle: "Cleanroom HEPA & UV-C Airborne Decontamination System",
-    category: "Enviro",
-    image: "assets/synergymed_surgery_1785816546977.png",
+    id: "img-xray-m02",
+    title: "Synergy XMD50",
+    subtitle: "Digital Mobile X-Ray Unit — High Capacity",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
     specs: [
-      "H14 Medical Grade HEPA Filter (99.995% efficiency)",
-      "High-Intensity UV-C Germicidal Disinfection (254nm)",
-      "Negative Pressure Isolation Room Convertible",
-      "Quiet 42 dB Operation for ICU & Operating Rooms"
+      "High-capacity mobile digital X-ray system",
+      "Wireless flat panel detector",
+      "Extended battery life for long ward rounds",
+      "AI-powered image enhancement",
+      "DICOM wireless transfer to PACS"
     ],
-    brochure: "SynergyMed_Ortho_Endo_Enviro.pdf"
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: DIGITAL PORTABLE X-RAY ---
+  {
+    id: "img-xray-p01",
+    title: "Synergy XPD-5",
+    subtitle: "Digital Portable X-Ray System",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
+    specs: [
+      "Ultra-portable, handheld-ready X-ray unit",
+      "Wireless flat panel detector included",
+      "Suitable for bedside, OR & field imaging",
+      "Rechargeable battery with rapid charge",
+      "Lightweight under 10 kg for maximum portability"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: FLAT PANEL DETECTOR ---
+  {
+    id: "img-fpd-01",
+    title: "Synergy RX-1",
+    subtitle: "Wireless Digital Flat Panel Detector",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    specs: [
+      "High-resolution amorphous silicon flat panel",
+      "Wireless & wired connectivity",
+      "Compatible with analog X-ray systems for digital upgrade",
+      "Large active area for full-field chest imaging",
+      "Drop-resistant, splash-proof casing"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: INJECTOR ---
+  {
+    id: "img-inj-01",
+    title: "ASA-200E",
+    subtitle: "CT Contrast Media Injector — Dual Head",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    specs: [
+      "Dual-head injector for CT contrast media delivery",
+      "Programmable injection protocols",
+      "Pressure monitoring & safety alarms",
+      "Large touch-screen interface",
+      "Compatible with all major CT platforms"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+  {
+    id: "img-inj-02",
+    title: "ASA-300P",
+    subtitle: "MRI Contrast Media Injector — Power Injector",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "MRI-compatible power injector system",
+      "Single & dual syringe configurations",
+      "Non-magnetic components — MRI safe",
+      "Automatic saline flush post-injection",
+      "Programmable flow rate and volume"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: MAMMOGRAPHY ---
+  {
+    id: "img-mam-01",
+    title: "MammoVue",
+    subtitle: "Full-Field Digital Mammography System",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Mammography_machine.jpg",
+    specs: [
+      "Full-field digital mammography (FFDM)",
+      "High-resolution flat panel detector optimized for breast tissue",
+      "Tomosynthesis (3D mammography) option",
+      "Low-dose exposure with superior image quality",
+      "AI-assisted lesion detection software"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: MRI ---
+  {
+    id: "img-mri-01",
+    title: "Esaote MRI",
+    subtitle: "Open & Compact MRI Systems by Esaote",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "Open-design MRI for claustrophobic and large patients",
+      "Dedicated musculoskeletal & orthopedic imaging",
+      "Low-field to 1.0T permanent magnet options",
+      "Compact footprint — suitable for any facility",
+      "Excellent soft tissue differentiation"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+  {
+    id: "img-mri-02",
+    title: "Synergy Imaging MRI",
+    subtitle: "1.5T High-Field MRI System",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "1.5T superconducting magnet",
+      "Wide 70 cm bore for patient comfort",
+      "Advanced neuro, cardiac, and body imaging",
+      "Silent scan acoustic noise reduction",
+      "AI-powered workflow and image reconstruction"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: PACS ---
+  {
+    id: "img-pacs-01",
+    title: "NovaPACS",
+    subtitle: "Picture Archiving & Communication System",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    specs: [
+      "Scalable cloud & on-premise PACS solution",
+      "DICOM 3.0 compliant — integrates with all modalities",
+      "Multi-site, multi-user simultaneous access",
+      "AI-ready image processing and reporting tools",
+      "HL7 & HIS/RIS integration"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // --- MEDICAL IMAGING: VisAr ---
+  {
+    id: "img-visar-01",
+    title: "Visual AR",
+    subtitle: "Augmented Reality Surgical Visualization System",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    specs: [
+      "Augmented reality overlay for surgical navigation",
+      "Real-time 3D anatomical visualization",
+      "Integrates with CT/MRI DICOM datasets",
+      "Marker-free optical tracking system",
+      "Compatible with standard OR lighting and equipment"
+    ],
+    brochure: "SynergyMed_Oncology_Imaging.pdf"
   }
 ];
 
 // Current Filter & Search State
+
 let activeCategory = 'all';
 let searchQuery = '';
 

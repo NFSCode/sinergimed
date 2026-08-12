@@ -31,7 +31,6 @@
           <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">About Us</span></li>
           <li><span class="nav-link" id="nav-solutions" onclick="switchPage('solutions')">Solutions</span></li>
           <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">News & Event</span></li>
-          <li><span class="nav-link" id="nav-ebrochure" onclick="switchPage('ebrochure')">E-Brochure</span></li>
           <li><span class="nav-link nav-cta-btn" id="nav-contact" onclick="switchPage('contact')"><i
                 class="fa-solid fa-headset"></i> Contact Us</span></li>
         </ul>
@@ -352,16 +351,10 @@
         <!-- Filter Pills (9 Units) & Search Controls -->
         <div class="catalog-controls">
           <div class="filter-pills">
-            <button class="filter-btn active" onclick="filterCatalog('all', this)">All Solutions</button>
-            <button class="filter-btn" onclick="filterCatalog('Radiation Oncology', this)">Radiation Oncology</button>
-            <button class="filter-btn" onclick="filterCatalog('Ortho & Neuro', this)">Ortho & Neuro</button>
-            <button class="filter-btn" onclick="filterCatalog('Med Supplies', this)">Med Supplies</button>
+            <button class="filter-btn active" onclick="filterCatalog('all', this)">All Products</button>
+            <button class="filter-btn" onclick="filterCatalog('Radiotherapy &amp; Surgery', this)">Radiotherapy &amp;
+              Surgery</button>
             <button class="filter-btn" onclick="filterCatalog('Medical Imaging', this)">Medical Imaging</button>
-            <button class="filter-btn" onclick="filterCatalog('Endosurgery', this)">Endosurgery</button>
-            <button class="filter-btn" onclick="filterCatalog('Pain & Rehab', this)">Pain & Rehab</button>
-            <button class="filter-btn" onclick="filterCatalog('Critical Care', this)">Critical Care</button>
-            <button class="filter-btn" onclick="filterCatalog('Ultrasound', this)">Ultrasound</button>
-            <button class="filter-btn" onclick="filterCatalog('Enviro', this)">Enviro</button>
           </div>
 
           <div class="search-box">
@@ -425,69 +418,6 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 5. E-BROCHURE VIEW                         -->
-    <!-- ========================================== -->
-    <section id="page-ebrochure" class="page-view">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">E-Brochure Center</h2>
-          <p class="section-subtitle">Download technical specification sheets and solution brochures for medical
-            procurement.</p>
-        </div>
-
-        <div class="brochure-grid">
-          <div class="brochure-card">
-            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Company Profile 2026
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Comprehensive overview of PT
-              Sinergi Medika Utama & 9 Business Divisions.</p>
-            <button class="btn-primary" style="width: 100%; justify-content: center;"
-              onclick="downloadBrochure('SynergyMed_Company_Profile_2026.pdf')">
-              <i class="fa-solid fa-download"></i> Download PDF (3.2 MB)
-            </button>
-          </div>
-
-          <div class="brochure-card">
-            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Radiation Oncology &
-              Imaging</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">LINAC, Radiosurgery, MRI, CT
-              Scan, X-Ray.</p>
-            <button class="btn-primary" style="width: 100%; justify-content: center;"
-              onclick="downloadBrochure('SynergyMed_Oncology_Imaging.pdf')">
-              <i class="fa-solid fa-download"></i> Download PDF (5.8 MB)
-            </button>
-          </div>
-
-          <div class="brochure-card">
-            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Critical Care, USG &
-              Rehab</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">ICU Ventilators, Patient
-              Monitors, Doppler USG, Pain & Rehab.</p>
-            <button class="btn-primary" style="width: 100%; justify-content: center;"
-              onclick="downloadBrochure('SynergyMed_CriticalCare_Rehab.pdf')">
-              <i class="fa-solid fa-download"></i> Download PDF (4.1 MB)
-            </button>
-          </div>
-
-          <div class="brochure-card">
-            <div class="brochure-icon"><i class="fa-solid fa-file-pdf"></i></div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Ortho, Endo, Supplies &
-              Enviro</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Surgical Power Tools, 4K
-              Laparoscopy, Consumables, & CSSD Autoclaves.</p>
-            <button class="btn-primary" style="width: 100%; justify-content: center;"
-              onclick="downloadBrochure('SynergyMed_Ortho_Endo_Enviro.pdf')">
-              <i class="fa-solid fa-download"></i> Download PDF (4.9 MB)
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
     <!-- 6. CONTACT US VIEW                         -->
     <!-- ========================================== -->
     <section id="page-contact" class="page-view">
@@ -510,8 +440,8 @@
               <i class="fa-solid fa-location-dot"></i>
               <div>
                 <strong>Headquarters Address</strong>
-                <p style="font-size: 0.9rem; color: var(--text-muted);">Grand Slipi Tower Lt. 24, Jl. S. Parman No.
-                  22-24, Palmerah, Jakarta Barat 11480, Indonesia</p>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Jl. Gajah Mada No.112, RT.1/RW.1, Krukut, Kec.
+                  Taman Sari, Kota Jakarta Barat, DKI Jakarta 11140</p>
               </div>
             </div>
 
@@ -599,7 +529,8 @@
         <div class="footer-col footer-col-brand">
           <div class="footer-brand-name">PT Sinergi Medika Utama</div>
           <p class="footer-brand-desc">
-            A premier medical device company based in Jakarta, providing advanced healthcare solutions, technical excellence, and trusted partnerships across Indonesia.
+            A premier medical device company based in Jakarta, providing advanced healthcare solutions, technical
+            excellence, and trusted partnerships across Indonesia.
           </p>
           <address class="footer-brand-address">
             Jl. Gajah Mada No.112, RT.1/RW.1, Krukut,<br>
@@ -620,8 +551,6 @@
                 Solutions Catalog</a></li>
             <li><a href="javascript:void(0)" onclick="switchPage('news')"><i class="fa-solid fa-chevron-right"></i> News
                 & Event</a></li>
-            <li><a href="javascript:void(0)" onclick="switchPage('ebrochure')"><i class="fa-solid fa-chevron-right"></i>
-                E-Brochure</a></li>
             <li><a href="javascript:void(0)" onclick="switchPage('contact')"><i class="fa-solid fa-chevron-right"></i>
                 Contact Us</a></li>
           </ul>

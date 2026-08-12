@@ -1846,8 +1846,10 @@ img {
   }
 
   .hero-slider-wrapper {
-    max-width: 360px;
-    border-radius: 14px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    order: -1;
   }
 
   .hero-text-content {
@@ -2169,19 +2171,93 @@ img {
 
 /* Extra Small Phones (<= 480px) */
 @media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header-container {
+    padding: 8px 12px;
+  }
+
   .hero-title {
     font-size: 1.7rem;
   }
 
+  .hero-description {
+    font-size: 0.88rem;
+  }
+
   .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-container {
+    padding: 10px 12px 24px 12px;
+  }
+
+  /* About */
+  .about-main-title {
     font-size: 1.45rem;
   }
 
-  .gallery-carousel-strip {
-    grid-template-columns: 1fr 1fr;
+  .vm-card {
+    padding: 18px 16px;
   }
 
-  .gallery-item:nth-child(5) {
-    grid-column: span 2;
+  .values-title {
+    font-size: 1.45rem;
+  }
+
+  .value-item-row {
+    padding: 10px 14px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 35px 0 16px 0;
+  }
+
+  .footer-grid {
+    gap: 24px;
+  }
+
+  .footer-col-title {
+    font-size: 0.95rem;
+  }
+
+  .footer-channel-card {
+    padding: 10px 12px;
+  }
+
+  .channel-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  /* Floating widgets */
+  .floating-widgets {
+    bottom: 10px;
+    right: 10px;
+    gap: 5px;
+  }
+
+  .btn-float-chat {
+    display: none;
+  }
+
+  /* Contact */
+  .contact-form-card, .contact-info-card {
+    padding: 18px 14px;
+  }
+
+  /* Product cards */
+  .product-card-img {
+    height: 180px;
+  }
+
+  /* News */
+  .news-card-body {
+    padding: 14px;
   }
 }

@@ -895,14 +895,6 @@ function openJobApplicationModal(positionName) {
             style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
         </div>
 
-        <div>
-          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
-            Pesan / Motivasi Singkat (Opsional)
-          </label>
-          <textarea id="app-note" rows="2" placeholder="Tuliskan motivasi singkat, domisili, atau ketersediaan bergabung..." 
-            style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none; resize: vertical;"></textarea>
-        </div>
-
         <button type="submit" id="app-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); color: #ffffff; border: none; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25); margin-top: 4px;">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i> Kirim Lamaran &amp; Buka WhatsApp
         </button>
@@ -928,7 +920,6 @@ async function submitJobApplication(event, positionName) {
   const email = document.getElementById('app-email')?.value.trim();
   const education = document.getElementById('app-education')?.value.trim();
   const experience = document.getElementById('app-experience')?.value.trim();
-  const note = document.getElementById('app-note')?.value.trim();
 
   // Client-Side Validation
   if (!name || !phone || !email || !education || !experience) {
@@ -963,14 +954,12 @@ async function submitJobApplication(event, positionName) {
     email: email,
     education: education,
     experience: experience,
-    position: positionName,
-    note: note || ''
+    position: positionName
   };
 
   // Optional background sync to local server database if API endpoint is active
   let result = {
     success: true,
-    applicationId: 'SYN-APP-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
     submittedAt: new Date().toISOString(),
     status: 'Applied (WA CV Pending)',
     candidate: {
@@ -991,7 +980,7 @@ async function submitJobApplication(event, positionName) {
     });
     if (response.ok) {
       const jsonRes = await response.json();
-      if (jsonRes && jsonRes.applicationId) {
+      if (jsonRes) {
         result = jsonRes;
       }
     }
@@ -1000,7 +989,7 @@ async function submitJobApplication(event, positionName) {
   }
 
   // Generate WhatsApp Message
-  const waUrl = generateCareerWhatsAppUrl(result, payload);
+  const waUrl = generateCareerWhatsAppUrl(payload);
 
   // Trigger WhatsApp in new tab
   try {
@@ -1010,25 +999,23 @@ async function submitJobApplication(event, positionName) {
   }
 
   // Render modal success & candidate instruction view
-  renderApplicationSuccessView(result, payload, waUrl);
+  renderApplicationSuccessView(payload, waUrl);
 }
 
-function generateCareerWhatsAppUrl(result, payload) {
+function generateCareerWhatsAppUrl(payload) {
   const waNumber = "628131306711";
   
   const lines = [
     `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
     ``,
-    `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi *${payload.position}*.`,
+    `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi ${payload.position}.`,
     ``,
     `Berikut adalah ringkasan data diri saya:`,
-    `• *Nama Lengkap:* ${payload.name}`,
-    `• *Nomor WhatsApp / Telp:* ${payload.phone}`,
-    `• *Email Aktif:* ${payload.email}`,
-    `• *Pendidikan Terakhir:* ${payload.education}`,
-    `• *Pengalaman Kerja:* ${payload.experience}`,
-    `• *Catatan / Motivasi:* ${payload.note || '-'}`,
-    `• *Kode Referensi Lamaran:* ${result.applicationId}`,
+    `• Nama Lengkap: ${payload.name}`,
+    `• Nomor WhatsApp / Telp: ${payload.phone}`,
+    `• Email Aktif: ${payload.email}`,
+    `• Pendidikan Terakhir: ${payload.education}`,
+    `• Pengalaman Kerja: ${payload.experience}`,
     ``,
     `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
     ``,
@@ -1039,7 +1026,7 @@ function generateCareerWhatsAppUrl(result, payload) {
   return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
 }
 
-function renderApplicationSuccessView(result, payload, waUrl) {
+function renderApplicationSuccessView(payload, waUrl) {
   const successHtml = `
     <div style="text-align: center; padding: 6px 4px;">
       <!-- Success Icon Badge -->
@@ -1070,12 +1057,9 @@ function renderApplicationSuccessView(result, payload, waUrl) {
       <!-- Application Details Card -->
       <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; text-align: left; margin-bottom: 16px;">
         
-        <!-- Header: Application ID & Status -->
+        <!-- Header Status -->
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 10px; flex-wrap: wrap; gap: 6px;">
-          <div>
-            <span style="font-size: 0.7rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; display: block;">Kode Lamaran</span>
-            <strong style="font-size: 0.98rem; color: var(--primary-blue); font-family: monospace;">${result.applicationId}</strong>
-          </div>
+          <span style="font-size: 0.82rem; font-weight: 700; color: #334155;">Ringkasan Data Lamaran</span>
           <span style="font-size: 0.74rem; font-weight: 700; background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px;">
             <i class="fa-brands fa-whatsapp" style="font-size: 0.8rem;"></i> WhatsApp Ready
           </span>
@@ -1098,6 +1082,14 @@ function renderApplicationSuccessView(result, payload, waUrl) {
           <div>
             <span style="color: #64748b; display: block; font-size: 0.74rem;">Email:</span>
             <span style="color: #0f172a; font-weight: 600;">${payload.email}</span>
+          </div>
+          <div style="grid-column: 1 / -1; border-top: 1px dashed #e2e8f0; padding-top: 6px; margin-top: 2px;">
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">Pendidikan Terakhir:</span>
+            <span style="color: #0f172a; font-weight: 600;">${payload.education}</span>
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">Pengalaman Kerja:</span>
+            <span style="color: #0f172a; font-weight: 600;">${payload.experience}</span>
           </div>
         </div>
       </div>

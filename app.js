@@ -466,7 +466,7 @@ function renderProductGrid() {
 // 4. WHATSAPP & MODAL INQUIRIES
 function inquireProduct(productName) {
   const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
-  window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+  window.open(`https://wa.me/628131306711?text=${text}`, '_blank');
 }
 
 function openProductDetailModal(productId) {
@@ -577,7 +577,7 @@ function openChatModal() {
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">SynergyMed Live Specialist</h3>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px;">Hubungi tim konsultan elektromedis dan spesialis alat kesehatan PT Sinergi Medika Utama secara langsung via WhatsApp.</p>
       
-      <a href="https://wa.me/6281234567890?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20solusi%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
+      <a href="https://wa.me/628131306711?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20solusi%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Start WhatsApp Live Chat
       </a>
     </div>
@@ -820,65 +820,35 @@ function filterJobs(dept, btnElement) {
 }
 
 // ==========================================================================
-// 10. JOB APPLICATION MODAL & DATABASE SUBMISSION FLOW
+// 10. JOB APPLICATION MODAL & WHATSAPP REDIRECTION FLOW
 // ==========================================================================
-let uploadedCVName = "";
-let uploadedCVBase64 = "";
 let isSubmittingApplication = false;
 
-function handleJobCVFileChange(input) {
-  const label = document.getElementById('app-cv-filename');
-  const errorBox = document.getElementById('app-form-error');
-  if (errorBox) errorBox.style.display = 'none';
-
-  if (input.files && input.files[0]) {
-    const file = input.files[0];
-    
-    // Validate file size (< 15MB)
-    if (file.size > 15 * 1024 * 1024) {
-      if (errorBox) {
-        errorBox.textContent = 'Ukuran file CV terlalu besar. Maksimal 15 MB.';
-        errorBox.style.display = 'block';
-      }
-      input.value = '';
-      uploadedCVName = '';
-      uploadedCVBase64 = '';
-      if (label) label.textContent = 'Klik untuk memilih file CV dari perangkat';
-      return;
-    }
-
-    uploadedCVName = file.name;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      uploadedCVBase64 = e.target.result;
-    };
-    reader.readAsDataURL(file);
-
-    if (label) {
-      label.innerHTML = `<i class="fa-solid fa-file-pdf" style="color: #ef4444;"></i> <strong>${uploadedCVName}</strong> (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
-    }
-  }
-}
-
 function openJobApplicationModal(positionName) {
-  uploadedCVName = "";
-  uploadedCVBase64 = "";
   isSubmittingApplication = false;
 
   const content = `
     <div style="text-align: left;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-        <div style="width: 38px; height: 38px; background: #e0f2fe; color: var(--primary-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0;">
+        <div style="width: 40px; height: 40px; background: #e0f2fe; color: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
           <i class="fa-solid fa-file-signature"></i>
         </div>
         <div>
-          <h3 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.2rem; margin: 0;">Formulir Lamaran Kerja</h3>
+          <h3 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.22rem; margin: 0; font-weight: 800;">Formulir Lamaran Kerja</h3>
           <p style="margin: 0; font-size: 0.88rem; font-weight: 700; color: var(--primary-blue);">${positionName}</p>
         </div>
       </div>
-      <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">
-        Lengkapi data diri dan upload CV Anda. Data lamaran akan diproses dan disimpan secara aman ke database rekrutmen PT Sinergi Medika Utama.
+      <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5;">
+        Lengkapi formulir data diri Anda di bawah ini. Setelah menekan tombol kirim, Anda akan diarahkan ke WhatsApp resmi Rekrutmen PT Sinergi Medika Utama dengan draf pesan otomatis untuk melampirkan berkas CV Anda.
       </p>
+
+      <!-- WhatsApp CV Notice -->
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 12px; font-size: 0.82rem; color: #166534; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.45;">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem; color: #16a34a; margin-top: 1px; flex-shrink: 0;"></i>
+        <div>
+          <strong>Pengiriman Berkas CV:</strong> Tidak perlu unggah file di website. Cukup isi data diri, lalu lampirkan file CV / resume Anda di chat WhatsApp yang akan otomatis terbuka.
+        </div>
+      </div>
 
       <div id="app-form-error" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 14px;"></div>
 
@@ -897,7 +867,7 @@ function openJobApplicationModal(positionName) {
             <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
               Nomor WhatsApp <span style="color: #ef4444;">*</span>
             </label>
-            <input type="tel" id="app-phone" required placeholder="08xxxxxxxxxx" 
+            <input type="tel" id="app-phone" required placeholder="Contoh: 081234567890" 
               style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
           </div>
           <div>
@@ -913,7 +883,7 @@ function openJobApplicationModal(positionName) {
           <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
             Pendidikan Terakhir & Jurusan <span style="color: #ef4444;">*</span>
           </label>
-          <input type="text" id="app-education" required placeholder="Contoh: S1 Keperawatan / D3 DKV / S1 Farmasi" 
+          <input type="text" id="app-education" required placeholder="Contoh: S1 Keperawatan / D3 Desain Grafis / S1 Farmasi" 
             style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
         </div>
 
@@ -927,25 +897,14 @@ function openJobApplicationModal(positionName) {
 
         <div>
           <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
-            Upload File CV / Resume (PDF/DOCX) <span style="color: #ef4444;">*</span>
+            Pesan / Motivasi Singkat (Opsional)
           </label>
-          <div style="border: 2px dashed #cbd5e1; border-radius: 8px; padding: 12px; text-align: center; background: #f8fafc; cursor: pointer;" onclick="document.getElementById('app-cv-file').click()">
-            <input type="file" id="app-cv-file" accept=".pdf,.doc,.docx" required style="display: none;" onchange="handleJobCVFileChange(this)">
-            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 4px; display: block;"></i>
-            <span id="app-cv-filename" style="font-size: 0.82rem; color: #475569; font-weight: 600; display: block;">Klik untuk memilih file CV dari perangkat</span>
-          </div>
-        </div>
-
-        <div>
-          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
-            Pesan / Catatan Tambahan (Opsional)
-          </label>
-          <textarea id="app-note" rows="2" placeholder="Tuliskan motivasi singkat atau ketersediaan bergabung..." 
+          <textarea id="app-note" rows="2" placeholder="Tuliskan motivasi singkat, domisili, atau ketersediaan bergabung..." 
             style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none; resize: vertical;"></textarea>
         </div>
 
-        <button type="submit" id="app-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%); color: #ffffff; border: none; box-shadow: 0 4px 14px rgba(11, 59, 96, 0.25); margin-top: 4px;">
-          <i class="fa-solid fa-paper-plane" style="font-size: 1rem;"></i> Submit Application
+        <button type="submit" id="app-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); color: #ffffff; border: none; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25); margin-top: 4px;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i> Kirim Lamaran &amp; Buka WhatsApp
         </button>
 
       </form>
@@ -970,7 +929,6 @@ async function submitJobApplication(event, positionName) {
   const education = document.getElementById('app-education')?.value.trim();
   const experience = document.getElementById('app-experience')?.value.trim();
   const note = document.getElementById('app-note')?.value.trim();
-  const fileInput = document.getElementById('app-cv-file');
 
   // Client-Side Validation
   if (!name || !phone || !email || !education || !experience) {
@@ -990,40 +948,12 @@ async function submitJobApplication(event, positionName) {
     return;
   }
 
-  if (!fileInput || !fileInput.files || !fileInput.files[0]) {
-    if (errorBox) {
-      errorBox.textContent = 'Mohon unggah dokumen file CV / Resume Anda.';
-      errorBox.style.display = 'block';
-    }
-    return;
-  }
-
-  const file = fileInput.files[0];
-
-  // If base64 is not yet generated, generate now
-  if (!uploadedCVBase64) {
-    try {
-      uploadedCVBase64 = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = e => resolve(e.target.result);
-        reader.onerror = err => reject(err);
-        reader.readAsDataURL(file);
-      });
-    } catch (err) {
-      if (errorBox) {
-        errorBox.textContent = 'Gagal membaca file CV. Silakan pilih kembali file Anda.';
-        errorBox.style.display = 'block';
-      }
-      return;
-    }
-  }
-
   // Prevent duplicate submission & show loading UI
   isSubmittingApplication = true;
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyimpan Data Lamaran...`;
-    submitBtn.style.opacity = '0.75';
+    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyiapkan WhatsApp...`;
+    submitBtn.style.opacity = '0.8';
     submitBtn.style.cursor = 'not-allowed';
   }
 
@@ -1034,12 +964,20 @@ async function submitJobApplication(event, positionName) {
     education: education,
     experience: experience,
     position: positionName,
-    note: note || '',
-    cvFile: {
-      name: file.name,
-      type: file.type || 'application/pdf',
-      size: file.size,
-      dataBase64: uploadedCVBase64
+    note: note || ''
+  };
+
+  // Optional background sync to local server database if API endpoint is active
+  let result = {
+    success: true,
+    applicationId: 'SYN-APP-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
+    submittedAt: new Date().toISOString(),
+    status: 'Applied (WA CV Pending)',
+    candidate: {
+      name,
+      phone,
+      email,
+      position: positionName
     }
   };
 
@@ -1051,175 +989,125 @@ async function submitJobApplication(event, positionName) {
       },
       body: JSON.stringify(payload)
     });
-
-    const result = await response.json();
-
-    if (!response.ok || !result.success) {
-      throw new Error(result.message || 'Gagal mengirimkan lamaran kerja.');
+    if (response.ok) {
+      const jsonRes = await response.json();
+      if (jsonRes && jsonRes.applicationId) {
+        result = jsonRes;
+      }
     }
-
-    // SUBMISSION SUCCESS: Launch email client pop-up & Render Success View
-    launchCandidateEmailClient(result, payload);
-    renderApplicationSuccessView(result, payload);
-
   } catch (err) {
-    console.error('Submission error:', err);
-    isSubmittingApplication = false;
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit Application`;
-      submitBtn.style.opacity = '1';
-      submitBtn.style.cursor = 'pointer';
-    }
-    if (errorBox) {
-      errorBox.textContent = err.message || 'Terjadi gangguan jaringan saat mengirimkan data lamaran. Silakan coba kembali.';
-      errorBox.style.display = 'block';
-    }
+    console.log('Background API sync skipped, proceeding directly to WhatsApp:', err);
   }
-}
 
-function generateCandidateEmailDetails(result, payload) {
-  const recipient = "marketing@synergymed.id";
-  const subject = `Lamaran Pekerjaan: ${result.candidate.position} - ${result.candidate.name} (${result.applicationId})`;
-  
-  const body = 
-`Yth. Tim HR & Rekrutmen PT Sinergi Medika Utama,
+  // Generate WhatsApp Message
+  const waUrl = generateCareerWhatsAppUrl(result, payload);
 
-Saya yang bertanda tangan di bawah ini mengajukan lamaran pekerjaan untuk posisi ${result.candidate.position}. Berikut adalah rincian data diri dan kualifikasi saya:
-
-• Application ID   : ${result.applicationId}
-• Posisi Dilamar   : ${result.candidate.position}
-• Nama Lengkap     : ${result.candidate.name}
-• Nomor WhatsApp   : ${result.candidate.phone}
-• Email            : ${result.candidate.email}
-• Pendidikan       : ${payload.education}
-• Pengalaman Kerja : ${payload.experience}
-• Dokumen CV       : ${result.candidate.cvFileName}
-• Catatan Tambahan : ${payload.note || '-'}
-
-Bersama email ini saya melampirkan berkas CV (${result.candidate.cvFileName}) saya untuk bahan pertimbangan lebih lanjut.
-
-Besar harapan saya untuk dapat mengikuti proses seleksi berikutnya. Terima kasih.
-
-Hormat saya,
-${result.candidate.name}
-${result.candidate.phone}`;
-
-  const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  return { recipient, subject, body, mailtoUrl, gmailUrl };
-}
-
-function launchCandidateEmailClient(result, payload) {
+  // Trigger WhatsApp in new tab
   try {
-    const { mailtoUrl } = generateCandidateEmailDetails(result, payload);
-    // Trigger default mail client
-    window.location.href = mailtoUrl;
+    window.open(waUrl, '_blank');
   } catch (e) {
-    console.log('Auto mailto triggered:', e);
+    console.log('Pop-up open triggered:', e);
   }
+
+  // Render modal success & candidate instruction view
+  renderApplicationSuccessView(result, payload, waUrl);
 }
 
-function renderApplicationSuccessView(result, payload) {
-  const { mailtoUrl, gmailUrl, recipient } = generateCandidateEmailDetails(result, payload);
+function generateCareerWhatsAppUrl(result, payload) {
+  const waNumber = "628131306711";
+  
+  const lines = [
+    `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
+    ``,
+    `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi *${payload.position}*.`,
+    ``,
+    `Berikut adalah ringkasan data diri saya:`,
+    `• *Nama Lengkap:* ${payload.name}`,
+    `• *Nomor WhatsApp / Telp:* ${payload.phone}`,
+    `• *Email Aktif:* ${payload.email}`,
+    `• *Pendidikan Terakhir:* ${payload.education}`,
+    `• *Pengalaman Kerja:* ${payload.experience}`,
+    `• *Catatan / Motivasi:* ${payload.note || '-'}`,
+    `• *Kode Referensi Lamaran:* ${result.applicationId}`,
+    ``,
+    `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
+    ``,
+    `Besar harapan saya untuk berkesempatan mengikuti proses rekrutmen di PT Sinergi Medika Utama. Terima kasih.`
+  ];
 
-  const submissionDateFormatted = new Date(result.submittedAt).toLocaleString('id-ID', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
-  });
+  const fullText = lines.join('\n');
+  return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
+}
 
+function renderApplicationSuccessView(result, payload, waUrl) {
   const successHtml = `
-    <div style="text-align: center; padding: 10px 4px;">
+    <div style="text-align: center; padding: 6px 4px;">
       <!-- Success Icon Badge -->
-      <div style="width: 64px; height: 64px; background: #ecfdf5; color: #059669; border: 2px solid #a7f3d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px auto; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.15);">
-        <i class="fa-solid fa-circle-check"></i>
+      <div style="width: 62px; height: 62px; background: #ecfdf5; color: #16a34a; border: 2px solid #bbf7d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 14px auto; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.15);">
+        <i class="fa-brands fa-whatsapp"></i>
       </div>
 
       <!-- Main Headline -->
-      <h2 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.4rem; font-weight: 800; margin: 0 0 8px 0;">
-        Application Submitted Successfully
+      <h2 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0;">
+        Data Diri Siap Dikirim ke WhatsApp!
       </h2>
-      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.55; max-width: 490px; margin-left: auto; margin-right: auto;">
-        Data Anda telah tersimpan di database. Aplikasi email Anda telah otomatis dibuka dengan draf lamaran lengkap.
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5; max-width: 480px; margin-left: auto; margin-right: auto;">
+        Jendela WhatsApp telah dibuka dengan draf data diri Anda. Silakan ikuti langkah di bawah ini:
       </p>
 
+      <!-- Step Instruction Card -->
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 14px 16px; text-align: left; margin-bottom: 16px;">
+        <div style="font-size: 0.88rem; font-weight: 700; color: #166534; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+          <i class="fa-solid fa-circle-info"></i> Petunjuk Pengiriman CV:
+        </div>
+        <ol style="margin: 0; padding-left: 20px; font-size: 0.84rem; color: #14532d; line-height: 1.6;">
+          <li>Periksa draf pesan WhatsApp yang telah otomatis terisi data diri Anda.</li>
+          <li><strong>Lampirkan (Attach) file dokumen CV / Resume Anda (PDF/DOCX)</strong> ke dalam chat WhatsApp tersebut.</li>
+          <li>Kirim pesan dan dokumen CV Anda ke kontak HR Rekrutmen.</li>
+        </ol>
+      </div>
+
       <!-- Application Details Card -->
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; text-align: left; margin-bottom: 18px;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; text-align: left; margin-bottom: 16px;">
         
         <!-- Header: Application ID & Status -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 10px; flex-wrap: wrap; gap: 6px;">
           <div>
-            <span style="font-size: 0.72rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; display: block;">Application ID</span>
-            <strong style="font-size: 1.05rem; color: var(--primary-blue); font-family: monospace; letter-spacing: 0.5px;">${result.applicationId}</strong>
+            <span style="font-size: 0.7rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; display: block;">Kode Lamaran</span>
+            <strong style="font-size: 0.98rem; color: var(--primary-blue); font-family: monospace;">${result.applicationId}</strong>
           </div>
-          <span style="font-size: 0.76rem; font-weight: 700; background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px;">
-            <i class="fa-solid fa-circle-dot" style="font-size: 0.55rem;"></i> Status: ${result.status}
+          <span style="font-size: 0.74rem; font-weight: 700; background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fa-brands fa-whatsapp" style="font-size: 0.8rem;"></i> WhatsApp Ready
           </span>
         </div>
 
         <!-- Candidate Details Grid -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.84rem; margin-bottom: 10px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.82rem;">
           <div>
-            <span style="color: #64748b; display: block; font-size: 0.76rem;">Posisi:</span>
-            <strong style="color: #0f172a;">${result.candidate.position}</strong>
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">Posisi:</span>
+            <strong style="color: #0f172a;">${payload.position}</strong>
           </div>
           <div>
-            <span style="color: #64748b; display: block; font-size: 0.76rem;">Nama:</span>
-            <strong style="color: #0f172a;">${result.candidate.name}</strong>
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">Nama:</span>
+            <strong style="color: #0f172a;">${payload.name}</strong>
           </div>
           <div>
-            <span style="color: #64748b; display: block; font-size: 0.76rem;">WhatsApp / Telp:</span>
-            <span style="color: #0f172a; font-weight: 600;">${result.candidate.phone}</span>
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">WhatsApp / Telp:</span>
+            <span style="color: #0f172a; font-weight: 600;">${payload.phone}</span>
           </div>
           <div>
-            <span style="color: #64748b; display: block; font-size: 0.76rem;">Email:</span>
-            <span style="color: #0f172a; font-weight: 600;">${result.candidate.email}</span>
+            <span style="color: #64748b; display: block; font-size: 0.74rem;">Email:</span>
+            <span style="color: #0f172a; font-weight: 600;">${payload.email}</span>
           </div>
-        </div>
-
-        <!-- File Storage Info -->
-        <div style="font-size: 0.82rem; color: #475569; border-top: 1px dashed #cbd5e1; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
-          <div>
-            <i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-right: 4px;"></i> 
-            Dokumen: <strong>${result.candidate.cvFileName}</strong>
-          </div>
-          <span style="font-size: 0.74rem; color: #059669; font-weight: 700; background: #ecfdf5; padding: 2px 7px; border-radius: 5px;">
-            <i class="fa-solid fa-database"></i> Database &amp; Storage Saved
-          </span>
         </div>
       </div>
 
-      <!-- Email Sending Action Banner -->
-      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; text-align: left; margin-bottom: 18px;">
-        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
-          <i class="fa-solid fa-envelope-open-text" style="color: var(--primary-blue); font-size: 1.2rem; margin-top: 2px;"></i>
-          <div>
-            <div style="font-size: 0.88rem; font-weight: 700; color: #1e3a8a; margin-bottom: 2px;">
-              Kirim Email dari Akun Anda ke: ${recipient}
-            </div>
-            <div style="font-size: 0.82rem; color: #3b82f6; line-height: 1.45;">
-              Draf pesan lamaran sudah siap. Klik tombol di bawah jika aplikasi email Anda belum terbuka otomatis:
-            </div>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
-          <a href="${mailtoUrl}" class="btn-primary" style="padding: 8px 16px; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: var(--primary-blue);">
-            <i class="fa-solid fa-paper-plane"></i> Buka Default Email App
-          </a>
-          <a href="${gmailUrl}" target="_blank" class="btn-secondary" style="padding: 8px 16px; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-color: #ea4335; color: #ea4335;">
-            <i class="fa-brands fa-google"></i> Buka via Gmail Web
-          </a>
-        </div>
-      </div>
-
-      <!-- Actions -->
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="closeModal()" style="padding: 9px 26px; font-size: 0.88rem; justify-content: center; background: #64748b;">
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="${waUrl}" target="_blank" class="btn-primary" style="padding: 10px 22px; font-size: 0.9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); border: none; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> Buka Ulang Chat WhatsApp
+        </a>
+        <button class="btn-secondary" onclick="closeModal()" style="padding: 10px 20px; font-size: 0.9rem;">
           Tutup Jendela
         </button>
       </div>

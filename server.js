@@ -164,9 +164,6 @@ const server = http.createServer(async (req, res) => {
       if (!position || typeof position !== 'string') {
         errors.push('Posisi yang dilamar wajib dipilih.');
       }
-      if (!cvFile || !cvFile.dataBase64 || !cvFile.name) {
-        errors.push('File CV / Resume wajib diunggah.');
-      }
 
       if (errors.length > 0) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
@@ -209,26 +206,35 @@ const server = http.createServer(async (req, res) => {
       const applicationId = generateApplicationId();
       const submissionTimestamp = new Date().toISOString();
 
-      // 4. SAVE CV TO FILE STORAGE
-      const originalFileName = cvFile.name;
-      const sanitizedOriginal = sanitizeFileName(originalFileName);
-      const storedFileName = `${applicationId}_${sanitizedOriginal}`;
-      const storedFilePath = path.join(STORAGE_DIR, storedFileName);
+      // 4. SAVE CV TO FILE STORAGE (IF ATTACHED DIRECTLY)
+      let originalFileName = "Direct via WhatsApp Attachment";
+      let storedFileName = null;
+      let storedPath = null;
+      let fileSizeBytes = 0;
+      let mimeType = 'application/octet-stream';
 
-      // Strip base64 data header if present
-      const base64Data = cvFile.dataBase64.replace(/^data:[^;]+;base64,/, '');
-      const fileBuffer = Buffer.from(base64Data, 'base64');
-      fs.writeFileSync(storedFilePath, fileBuffer);
+      if (cvFile && cvFile.dataBase64 && cvFile.name) {
+        originalFileName = cvFile.name;
+        const sanitizedOriginal = sanitizeFileName(originalFileName);
+        storedFileName = `${applicationId}_${sanitizedOriginal}`;
+        const storedFilePath = path.join(STORAGE_DIR, storedFileName);
 
-      const fileExt = path.extname(originalFileName).toLowerCase();
-      const mimeType = MIME_TYPES[fileExt] || 'application/octet-stream';
-      const fileSizeBytes = fileBuffer.length;
+        // Strip base64 data header if present
+        const base64Data = cvFile.dataBase64.replace(/^data:[^;]+;base64,/, '');
+        const fileBuffer = Buffer.from(base64Data, 'base64');
+        fs.writeFileSync(storedFilePath, fileBuffer);
+
+        const fileExt = path.extname(originalFileName).toLowerCase();
+        mimeType = MIME_TYPES[fileExt] || 'application/octet-stream';
+        fileSizeBytes = fileBuffer.length;
+        storedPath = `storage/applications/${storedFileName}`;
+      }
 
       // 5. PREPARE NOTIFICATIONS
       const hrReviewUrl = `http://localhost:${PORT}/api/applications/${applicationId}`;
       const hrNotification = {
         recipient: 'hr@synergymed.id',
-        whatsappChannel: '087738220545',
+        whatsappChannel: '08131306711',
         subject: `[New Candidate Application] ${cleanPosition} - ${cleanName} (${applicationId})`,
         sentAt: submissionTimestamp,
         status: 'Delivered',
@@ -244,7 +250,7 @@ const server = http.createServer(async (req, res) => {
           education: cleanEducation,
           experience: cleanExperience,
           cvFileName: originalFileName,
-          cvDownloadUrl: `http://localhost:${PORT}/storage/applications/${storedFileName}`,
+          cvDownloadUrl: storedFileName ? `http://localhost:${PORT}/storage/applications/${storedFileName}` : 'Attached via WhatsApp Chat',
           reviewLink: hrReviewUrl
         }
       };
@@ -261,7 +267,7 @@ const server = http.createServer(async (req, res) => {
       // 6. SAVE TO DATABASE (Source of Truth)
       const applicationRecord = {
         id: applicationId,
-        status: 'Applied',
+        status: 'Applied (WA CV Pending)',
         position: cleanPosition,
         candidate: {
           name: cleanName,
@@ -275,7 +281,7 @@ const server = http.createServer(async (req, res) => {
           cv: {
             originalName: originalFileName,
             storedFileName: storedFileName,
-            storedPath: `storage/applications/${storedFileName}`,
+            storedPath: storedPath,
             sizeBytes: fileSizeBytes,
             mimeType: mimeType,
             uploadedAt: submissionTimestamp
@@ -300,9 +306,9 @@ const server = http.createServer(async (req, res) => {
       console.log(`   ID: ${applicationId}`);
       console.log(`   Position: ${cleanPosition}`);
       console.log(`   Candidate: ${cleanName} (${cleanEmail} / ${cleanPhone})`);
-      console.log(`   CV Saved: ${storedFileName} (${(fileSizeBytes / 1024).toFixed(1)} KB)`);
+      console.log(`   CV Method: ${storedFileName ? storedFileName : 'Sent via WhatsApp Chat'}`);
       console.log(`   Status: Applied`);
-      console.log(`   HR Notification: Dispatched to hr@synergymed.id & WA 0877-3822-0545\n`);
+      console.log(`   HR Notification: Dispatched to hr@synergymed.id & WA 0813-1306-711\n`);
 
       // 7. RESPOND TO CLIENT
       res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -419,8 +425,14 @@ const server = http.createServer(async (req, res) => {
 
           <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
             <h4 style="margin: 0 0 10px 0;">Dokumen CV Pelamar:</h4>
-            <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">${app.documents.cv.originalName} (${(app.documents.cv.sizeBytes / 1024).toFixed(1)} KB)</p>
-            <a href="/storage/applications/${app.documents.cv.storedFileName}" class="btn-download" target="_blank">📥 Unduh Dokumen CV</a>
+            ${app.documents && app.documents.cv && app.documents.cv.storedFileName ? `
+              <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #64748b;">${app.documents.cv.originalName} (${(app.documents.cv.sizeBytes / 1024).toFixed(1)} KB)</p>
+              <a href="/storage/applications/${app.documents.cv.storedFileName}" class="btn-download" target="_blank">📥 Unduh Dokumen CV</a>
+            ` : `
+              <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; color: #166534; font-size: 0.88rem;">
+                💬 Dokumen CV dilampirkan langsung oleh pelamar melalui ruang chat WhatsApp.
+              </div>
+            `}
           </div>
 
           <a href="/" class="back-link">← Kembali ke Website PT Sinergi Medika Utama</a>

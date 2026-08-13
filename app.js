@@ -327,6 +327,642 @@ const productsData = [
       "Compatible with standard OR lighting and equipment"
     ],
     brochure: "SynergyMed_Oncology_Imaging.pdf"
+  },
+
+  // =====================================================================
+  // --- CRITICAL CARE ---
+  // =====================================================================
+
+  // --- CRITICAL CARE: ANESTHESIA MACHINE ---
+  {
+    id: "cc-anes-01",
+    title: "AccuBreathe AN20",
+    subtitle: "Anesthesia Machine — Entry Level",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    specs: [
+      "Compact anesthesia workstation for general anesthesia",
+      "Electronic gas mixer with flow control",
+      "Integrated vaporizer mount for volatile agents",
+      "7-inch color display with real-time waveforms",
+      "Built-in ventilator with volume & pressure modes"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-anes-02",
+    title: "AccuBreathe AN30",
+    subtitle: "Anesthesia Machine — Mid-Range",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    specs: [
+      "Advanced anesthesia delivery system with dual vaporizers",
+      "10.4-inch touchscreen with intuitive UI",
+      "Electronic PEEP & fresh gas flow compensation",
+      "Low-flow anesthesia capability for agent conservation",
+      "Integrated patient monitoring module (SpO2, ECG, EtCO2)"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-anes-03",
+    title: "AccuBreathe AN50",
+    subtitle: "Anesthesia Machine — Premium Workstation",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    specs: [
+      "High-end anesthesia workstation with full electronic gas management",
+      "15-inch HD touchscreen with multi-waveform display",
+      "Triple vaporizer configuration support",
+      "Advanced ventilation modes: VCV, PCV, PSV, SIMV",
+      "Comprehensive monitoring: hemodynamics, gas analysis, spirometry"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: CENTRAL MONITOR ---
+  {
+    id: "cc-cmon-01",
+    title: "AccuSign CMS 10",
+    subtitle: "Central Monitoring Station — 32 Beds",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "Centralized patient surveillance for up to 32 beds",
+      "32-inch HD display with multi-patient grid view",
+      "Real-time waveform & numeric data streaming",
+      "Full disclosure recording with trend analysis",
+      "Network integration with AccuSign bedside monitors"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-cmon-02",
+    title: "AccuSign CMS 30 & 40",
+    subtitle: "Central Monitoring Station — 64 Beds",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "Enterprise-grade central monitoring for up to 64 beds",
+      "Dual 32-inch display configuration",
+      "Alarm management with priority escalation",
+      "HL7/DICOM integration for HIS/EMR connectivity",
+      "Long-term data storage with full event review"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: CARDIOTOCOGRAPHY (CTG) ---
+  {
+    id: "cc-ctg-01",
+    title: "AccuTop 10",
+    subtitle: "Fetal Monitor — Single Fetal Heart Rate",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Cardiotocography_in_Pijnacker%2C_2019.jpg",
+    specs: [
+      "Continuous fetal heart rate (FHR) monitoring",
+      "Ultrasound Doppler transducer — 1 MHz",
+      "TOCO transducer for uterine contraction tracking",
+      "7-inch LCD display with real-time CTG trace",
+      "Thermal printer for paper CTG recording"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-ctg-02",
+    title: "AccuTop 20",
+    subtitle: "Fetal Monitor — Twins Monitoring",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Cardiotocography_in_Pijnacker%2C_2019.jpg",
+    specs: [
+      "Dual-channel FHR monitoring for twin pregnancies",
+      "Dual ultrasound Doppler transducers",
+      "Integrated TOCO & IUP measurement",
+      "10.4-inch color touchscreen display",
+      "Wireless connectivity for central station monitoring"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: DEFIBRILLATOR ---
+  {
+    id: "cc-defib-01",
+    title: "AccuShock 10",
+    subtitle: "Defibrillator — Portable AED",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Defibrillator_Monitor.jpg",
+    specs: [
+      "Automated External Defibrillator (AED) with manual override",
+      "Biphasic waveform for effective defibrillation",
+      "7-inch color display with ECG waveform",
+      "Voice-guided CPR coaching",
+      "Lightweight portable design — under 4 kg"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-defib-02",
+    title: "AccuShock 60",
+    subtitle: "Defibrillator/Monitor — Professional Grade",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Defibrillator_Monitor.jpg",
+    specs: [
+      "Manual defibrillator with AED mode & synchronized cardioversion",
+      "12-lead ECG acquisition & interpretation",
+      "Pacing capability (transcutaneous external pacing)",
+      "10.4-inch high-resolution display with multi-parameter monitoring",
+      "SpO2, NIBP, EtCO2 integrated monitoring modules"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: ELECTROCARDIOGRAPHY (ECG) ---
+  {
+    id: "cc-ecg-01",
+    title: "AccuRead 10",
+    subtitle: "12-Channel ECG — Portable Digital",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    specs: [
+      "12-channel digital ECG with simultaneous acquisition",
+      "4.3-inch touchscreen display",
+      "Internal storage for 1000+ ECG records",
+      "Auto-interpretation with measurement report",
+      "USB & Wi-Fi data transfer"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-ecg-02",
+    title: "AccuRead 15",
+    subtitle: "12-Channel ECG — Enhanced Portable",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    specs: [
+      "12-channel ECG with 7-inch color LCD",
+      "Enhanced noise filtering & baseline correction",
+      "Built-in lithium battery for long field use",
+      "Configurable report formats with patient database",
+      "Bluetooth connectivity to PC workstation"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-ecg-03",
+    title: "AccuRead 20",
+    subtitle: "12-Channel ECG — PC-Based Workstation",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    specs: [
+      "PC-based 12-channel ECG workstation system",
+      "Wireless Bluetooth ECG acquisition module",
+      "Full DICOM & HL7 integration for HIS/EMR",
+      "Advanced interpretation algorithms with Glasgow scoring",
+      "Unlimited record storage with cloud backup option"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-ecg-04",
+    title: "AccuRead 25",
+    subtitle: "12-Channel ECG — Touchscreen Advanced",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    specs: [
+      "12-channel ECG with 10.1-inch touchscreen",
+      "Real-time rhythm analysis & arrhythmia detection",
+      "High-resolution thermal printer integrated",
+      "Stress test (ergometry) compatible",
+      "Barcode scanner for patient ID integration"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-ecg-05",
+    title: "AccuRead 30",
+    subtitle: "12-Channel ECG — Premium Digital",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    specs: [
+      "Premium 12-channel digital ECG system",
+      "12.1-inch HD touchscreen with multi-lead preview",
+      "AI-assisted ECG interpretation engine",
+      "Simultaneous 12-lead display & recording",
+      "Full network connectivity: Wi-Fi, LAN, USB, Bluetooth"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: INCUBATOR ---
+  {
+    id: "cc-incub-01",
+    title: "Hippo I50",
+    subtitle: "Infant Incubator — Neonatal Intensive Care",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    specs: [
+      "Double-wall canopy for optimal thermal insulation",
+      "Servo-controlled skin & air temperature modes",
+      "Integrated humidity & oxygen concentration control",
+      "Tiltable bassinet for Trendelenburg positioning",
+      "Access ports with iris diaphragms for minimal heat loss"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: INFANT WARMER ---
+  {
+    id: "cc-warm-01",
+    title: "Hippo W30",
+    subtitle: "Infant Radiant Warmer — Open Care System",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    specs: [
+      "Overhead radiant heater with servo skin temperature control",
+      "Open-access design for immediate neonatal care",
+      "Integrated APGAR timer & resuscitation timer",
+      "Phototherapy-ready with optional LED blue light unit",
+      "X-ray cassette tray under bassinet for imaging"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: SYRINGE & INFUSION PUMP ---
+  {
+    id: "cc-pump-01",
+    title: "AccuDrip 10",
+    subtitle: "Volumetric Infusion Pump",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    specs: [
+      "Volumetric infusion pump for standard IV sets",
+      "Flow rate: 0.1–1200 mL/h with high accuracy",
+      "Ultrasonic air-in-line bubble detection",
+      "Occlusion pressure monitoring with adjustable alarm levels",
+      "Color LCD display with drug library"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pump-02",
+    title: "AccuDrip 15",
+    subtitle: "Volumetric Infusion Pump — Enhanced",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    specs: [
+      "Enhanced volumetric infusion pump with dose calculation",
+      "Dual CPU safety architecture",
+      "Anti-bolus protection system",
+      "Wi-Fi connectivity for pump fleet management",
+      "Compatible with all major IV set brands"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pump-03",
+    title: "AccuDrip 20",
+    subtitle: "Syringe Pump — Precision Delivery",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    specs: [
+      "Motorized syringe pump for precise micro-infusion",
+      "Flow rate: 0.01–1500 mL/h",
+      "Supports 5 mL to 60 mL syringe sizes",
+      "Dual CPU with automatic/manual bolus function",
+      "Stackable design for multi-channel configuration"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pump-04",
+    title: "AccuDrip 25",
+    subtitle: "Syringe Pump — Advanced",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    specs: [
+      "Advanced syringe pump with TCI (Target Controlled Infusion)",
+      "Integrated drug library with DERS (Dose Error Reduction System)",
+      "Full-color touchscreen interface",
+      "Nurse call & network alarm integration",
+      "Battery backup for uninterrupted delivery"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: OPERATING LAMP ---
+  {
+    id: "cc-lamp-01",
+    title: "Solar 10",
+    subtitle: "LED Surgical Operating Lamp — Single Dome",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    specs: [
+      "Single-dome LED surgical light",
+      "Shadow-free illumination up to 130,000 lux",
+      "Color temperature adjustable: 3500–5000 K",
+      "CRI ≥ 95 for accurate tissue color rendering",
+      "Sterilizable central handle for positioning"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-lamp-02",
+    title: "Solar 20",
+    subtitle: "LED Surgical Operating Lamp — Dual Dome",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    specs: [
+      "Dual-dome LED surgical lamp system",
+      "Main dome: 160,000 lux / satellite dome: 120,000 lux",
+      "Independent dimming & focus for each dome",
+      "Endoscopic mode with reduced light intensity",
+      "HD camera integration option for surgical recording"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-lamp-03",
+    title: "Solar 30",
+    subtitle: "LED Surgical Operating Lamp — Advanced",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    specs: [
+      "Advanced LED operating lamp with ambient lighting system",
+      "180,000 lux center illumination intensity",
+      "Ultra-low heat emission for surgeon comfort",
+      "Multiple light field sizes: 15–30 cm diameter",
+      "Integrated Full HD camera with live video output"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-lamp-04",
+    title: "Solar 40",
+    subtitle: "LED Surgical Operating Lamp — Premium",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    specs: [
+      "Premium dual-dome LED surgical lighting system",
+      "Main: 200,000 lux / Satellite: 160,000 lux",
+      "ShadowControl technology eliminates deep cavity shadows",
+      "Color rendering index Ra ≥ 97 — medical grade",
+      "4K camera integration with OR video management"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: OPERATING TABLE ---
+  {
+    id: "cc-table-01",
+    title: "Staflex 10",
+    subtitle: "Operating Table — Electro-Hydraulic",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "Electro-hydraulic multi-purpose surgical table",
+      "Height, Trendelenburg, lateral tilt, back & leg adjustment",
+      "Radiolucent tabletop for C-arm & X-ray imaging",
+      "Weight capacity: 250 kg",
+      "Stainless steel construction — easy to clean & sterilize"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-table-02",
+    title: "Staflex 10 Premium",
+    subtitle: "Operating Table — Premium Electro-Hydraulic",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "Premium electro-hydraulic surgical table with memory positioning",
+      "Motorized all-section adjustment with programmable presets",
+      "Carbon fiber radiolucent tabletop",
+      "Integrated battery backup for emergency positioning",
+      "Weight capacity: 300 kg — bariatric compatible"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-table-03",
+    title: "Staflex 10 Platinum",
+    subtitle: "Operating Table — Platinum Series",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "Top-tier electro-hydraulic surgical table — Platinum edition",
+      "Fully motorized with joystick & wireless remote control",
+      "Sliding tabletop for cardiac, neuro & orthopedic surgery",
+      "Integrated heating pad & patient transfer system",
+      "Weight capacity: 360 kg — heavy-duty bariatric"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: PATIENT MONITOR ---
+  {
+    id: "cc-pmon-01",
+    title: "AccuSign 5",
+    subtitle: "Patient Monitor — Compact Bedside",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "Compact 7-inch bedside patient monitor",
+      "ECG (3/5-lead), SpO2, NIBP, Pulse Rate",
+      "Real-time waveform display with trend recording",
+      "Audible & visual alarm system with configurable limits",
+      "Lightweight & portable — ideal for transport"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pmon-02",
+    title: "AccuSign 10",
+    subtitle: "Patient Monitor — Standard",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "10.4-inch color patient monitor",
+      "ECG, SpO2, NIBP, Temperature, Respiration",
+      "Optional EtCO2 & IBP modules",
+      "96-hour trend data storage with alarm event log",
+      "Central station networking via LAN/Wi-Fi"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pmon-03",
+    title: "AccuSign 20",
+    subtitle: "Patient Monitor — Multi-Parameter",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "12.1-inch touchscreen multi-parameter monitor",
+      "ECG (12-lead), SpO2, NIBP, IBP, Temp, EtCO2, Resp",
+      "Arrhythmia analysis & ST-segment monitoring",
+      "Built-in recorder for waveform printout",
+      "Drug calculation & hemodynamic computation"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pmon-04",
+    title: "AccuSign 30",
+    subtitle: "Patient Monitor — Advanced ICU",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "15-inch HD touchscreen ICU-grade patient monitor",
+      "Full multi-parameter: ECG, SpO2, NIBP, IBP x2, Temp x2, EtCO2",
+      "Cardiac output & continuous hemodynamic monitoring",
+      "Dual-screen display with configurable layouts",
+      "HL7 integration for EMR/HIS data exchange"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pmon-05",
+    title: "AccuSign 40",
+    subtitle: "Patient Monitor — Premium Modular",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "17-inch HD modular patient monitoring platform",
+      "Expandable module slots for BIS, NMT, Cardiac Output, Gas Analysis",
+      "Up to 8 waveforms simultaneous display",
+      "Enterprise networking with central station integration",
+      "Touchscreen + rotary knob for intuitive operation"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: PENDANT ---
+  {
+    id: "cc-pend-01",
+    title: "Stellar 10",
+    subtitle: "Medical Pendant — Single Arm",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "Single-arm ceiling-mounted medical pendant",
+      "Gas outlets: O2, Air, Vacuum, N2O",
+      "Electrical outlets: 6x power sockets + data ports",
+      "360° horizontal rotation with pneumatic brake",
+      "Load capacity: 150 kg for equipment mounting"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pend-02",
+    title: "Stellar 20",
+    subtitle: "Medical Pendant — Dual Arm",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "Dual-arm ceiling pendant for OR & ICU environments",
+      "Wet arm (gas/electrical) + dry arm (monitor/equipment)",
+      "Motorized height adjustment for ergonomic positioning",
+      "12x power sockets, 8x gas outlets, network connections",
+      "Load capacity: 250 kg total"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-pend-03",
+    title: "Stellar 30",
+    subtitle: "Medical Pendant — Bridge System",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    specs: [
+      "ICU bridge pendant system with sliding shelves",
+      "Configurable wet/dry separation on bridge rail",
+      "Multiple infusion pump docking positions",
+      "Integrated LED ambient lighting",
+      "Modular design for customized ICU bed layout"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: PHOTOTHERAPY ---
+  {
+    id: "cc-photo-01",
+    title: "L30 Infant Phototherapy",
+    subtitle: "LED Phototherapy Unit — Neonatal Jaundice Treatment",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    specs: [
+      "High-intensity blue LED phototherapy (430–490 nm)",
+      "Irradiance ≥ 40 µW/cm²/nm at treatment surface",
+      "Fanless silent operation for NICU environment",
+      "Adjustable stand — fits over incubator or bassinet",
+      "LED lifespan > 50,000 hours — low maintenance"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: PUMP WORK STATION ---
+  {
+    id: "cc-pws-01",
+    title: "AccuWS Pump Work Station",
+    subtitle: "Infusion Pump Docking Station — Multi-Channel",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    specs: [
+      "Multi-channel docking station for AccuDrip pump series",
+      "Supports up to 8 syringe/infusion pumps simultaneously",
+      "Centralized power supply — single mains connection",
+      "Network hub for pump fleet data management",
+      "IV pole mount with adjustable height & tilt"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: VENTILATOR ---
+  {
+    id: "cc-vent-01",
+    title: "AccuBreathe VI30",
+    subtitle: "ICU Ventilator — Standard",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    specs: [
+      "ICU mechanical ventilator for adult & pediatric patients",
+      "Ventilation modes: VCV, PCV, SIMV, PSV, CPAP, BiPAP",
+      "12.1-inch touchscreen with real-time waveform display",
+      "Integrated high-performance turbine — no external air supply needed",
+      "FiO2 range: 21%–100% with precision O2 blender"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+  {
+    id: "cc-vent-02",
+    title: "AccuBreathe VI40",
+    subtitle: "ICU Ventilator — Advanced with NIV",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    specs: [
+      "Advanced ICU ventilator for adult, pediatric & neonatal patients",
+      "Full invasive & non-invasive ventilation (NIV) capability",
+      "15-inch HD touchscreen with pressure-volume loops & trends",
+      "Lung protection tools: auto-PEEP, P0.1, NIF measurement",
+      "Integrated nebulizer & heated humidifier interface"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // --- CRITICAL CARE: VITAL SIGN ---
+  {
+    id: "cc-vital-01",
+    title: "Accu Vital 10",
+    subtitle: "Vital Sign Monitor — Portable Spot Check",
+    category: "Critical Care",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    specs: [
+      "Portable vital sign spot-check monitor",
+      "NIBP, SpO2, Pulse Rate, Temperature measurement",
+      "5-inch color LCD display with intuitive interface",
+      "Rechargeable lithium battery for mobile ward rounds",
+      "Data transfer via Wi-Fi to central EMR system"
+    ],
+    brochure: "SynergyMed_CriticalCare.pdf"
   }
 ];
 

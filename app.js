@@ -19,7 +19,7 @@ const productsData = [
       "6 MV compact LINAC — no radioactive isotopes",
       "Hundreds of non-coplanar beam angles for precise targeting"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1_K5iGL9FJk3EWWZ9SeIqwbxiCLsWyLLL/view?usp=sharing"
   },
 
   // --- MEDICAL IMAGING: C-ARM ---
@@ -1190,7 +1190,7 @@ function renderProductGrid() {
           <button class="btn-card-inquire" onclick="inquireProduct('${item.title}')">
             <i class="fa-brands fa-whatsapp"></i> Inquire Quote
           </button>
-          <button class="btn-card-details" onclick="openProductDetailModal('${item.id}')" title="View Full Specs">
+          <button class="btn-card-details" onclick="window.open('${item.brochure}', '_blank')" title="View Brochure">
             <i class="fa-solid fa-eye"></i>
           </button>
         </div>
@@ -1225,9 +1225,6 @@ function openProductDetailModal(productId) {
       </ul>
 
       <div style="display: flex; gap: 12px;">
-        <button class="btn-primary" style="flex: 1; justify-content: center;" onclick="inquireProduct('${item.title}')">
-          <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Specialist
-        </button>
         <button class="btn-secondary" onclick="downloadBrochure('${item.brochure}')">
           <i class="fa-solid fa-file-pdf"></i> Brochure
         </button>

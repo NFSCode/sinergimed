@@ -36,7 +36,7 @@ const productsData = [
       "Real-time fluoroscopic imaging for surgical guidance",
       "AKL registered — Ministry of Health Indonesia"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1O9Qf0zHiuI0y-yRLbasjNNtOUjGYw7be/view"
   },
   {
     id: "img-carm-02",
@@ -51,7 +51,7 @@ const productsData = [
       "Ideal for orthopedic, vascular & trauma procedures",
       "AKL registered — Ministry of Health Indonesia"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1z0iohlUczBkhPji1G8LJNiF6AljeRXGH/view"
   },
 
   // --- MEDICAL IMAGING: CT SCAN ---
@@ -68,7 +68,7 @@ const productsData = [
       "Wide bore gantry for patient comfort",
       "DICOM 3.0 compliant workstation"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: null
   },
   {
     id: "img-ct-02",
@@ -83,7 +83,7 @@ const productsData = [
       "Auto exposure control for optimal image quality",
       "High-capacity X-ray tube"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1NwSiMwvf5B4eQHOhZDWxtvSwhxvFtU4_/view"
   },
   {
     id: "img-ct-03",
@@ -98,7 +98,7 @@ const productsData = [
       "Sub-millimeter isotropic resolution",
       "ASIR dose reduction technology"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1a4ufz21eo7bHQTwP-ybFKG5F6TpMYDBT/view"
   },
   {
     id: "img-ct-04",
@@ -113,7 +113,7 @@ const productsData = [
       "AI-powered motion artifact reduction",
       "8.0 MHU high heat capacity X-ray tube"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1J9lz5VOR874ug7bJfcrCr7qHgO-2ZofQ/view"
   },
 
   // --- MEDICAL IMAGING: DIGITAL STATIONARY X-RAY ---
@@ -130,7 +130,7 @@ const productsData = [
       "Auto-exposure control (AEC)",
       "DICOM 3.0 PACS integration ready"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1Zu3S82aWT_Ep7mbj-N71nlszAoM7kKiz/view"
   },
   {
     id: "img-xray-s02",
@@ -145,7 +145,7 @@ const productsData = [
       "Remote exposure control",
       "Low-dose intelligent imaging mode"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: null
   },
 
   // --- MEDICAL IMAGING: DIGITAL MOBILE X-RAY ---
@@ -162,7 +162,7 @@ const productsData = [
       "Lightweight compact design for maneuverability",
       "Instant image review on built-in display"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1udUpetK2NMSUvWZ1VOUuBrh0MCLfk9Ib/view"
   },
   {
     id: "img-xray-m02",
@@ -177,7 +177,7 @@ const productsData = [
       "AI-powered image enhancement",
       "DICOM wireless transfer to PACS"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/111BHYCrJw7lzWi-3nfkonsL5fFeo4CTw/view"
   },
 
   // --- MEDICAL IMAGING: DIGITAL PORTABLE X-RAY ---
@@ -194,7 +194,7 @@ const productsData = [
       "Rechargeable battery with rapid charge",
       "Lightweight under 10 kg for maximum portability"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1Vl2WQ8eo6aEk4sQ6urYrMb6oWMMC2JPt/view"
   },
 
   // --- MEDICAL IMAGING: FLAT PANEL DETECTOR ---
@@ -1102,8 +1102,12 @@ function switchPage(pageId) {
 
   // Close mobile nav menu if open
   const mainNav = document.querySelector('.main-nav');
+  const btnIcon = document.querySelector('.mobile-menu-btn i');
   if (mainNav) {
     mainNav.classList.remove('mobile-open');
+  }
+  if (btnIcon) {
+    btnIcon.className = 'fa-solid fa-bars';
   }
 
   // Scroll smooth to top on page switch
@@ -1190,13 +1194,21 @@ function renderProductGrid() {
           <button class="btn-card-inquire" onclick="inquireProduct('${item.title}')">
             <i class="fa-brands fa-whatsapp"></i> Inquire Quote
           </button>
-          <button class="btn-card-details" onclick="window.open('${item.brochure}', '_blank')" title="View Brochure">
-            <i class="fa-solid fa-eye"></i>
+          <button class="btn-card-details" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}')" title="${item.brochure ? 'View Brochure' : 'Hubungi Sales untuk Brosur / Spek'}">
+            <i class="fa-solid ${item.brochure ? 'fa-eye' : 'fa-headset'}"></i>
           </button>
         </div>
       </div>
     </div>
   `).join('');
+}
+
+function openBrochureLink(url, title) {
+  if (url && url !== 'null' && url !== 'undefined') {
+    window.open(url, '_blank');
+  } else {
+    inquireProduct(`${title} (Permintaan Brosur & Spesifikasi Resmi)`);
+  }
 }
 
 // 4. WHATSAPP & MODAL INQUIRIES
@@ -1382,8 +1394,16 @@ function scrollToTop() {
 
 function toggleMobileNav() {
   const nav = document.querySelector('.main-nav');
+  const btnIcon = document.querySelector('.mobile-menu-btn i');
   if (nav) {
     nav.classList.toggle('mobile-open');
+    if (btnIcon) {
+      if (nav.classList.contains('mobile-open')) {
+        btnIcon.className = 'fa-solid fa-xmark';
+      } else {
+        btnIcon.className = 'fa-solid fa-bars';
+      }
+    }
   }
 }
 
@@ -1610,7 +1630,7 @@ function openJobApplicationModal(positionName) {
             style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div class="modal-form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
           <div>
             <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
               Nomor WhatsApp <span style="color: #ef4444;">*</span>

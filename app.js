@@ -11,7 +11,7 @@ const productsData = [
     title: "Zap-X",
     subtitle: "Gyroscopic Stereotactic Radiosurgery System",
     category: "Radiation Oncology",
-    image: "https://zapsurgical.com/wp-content/uploads/zap-x-centre-de-cancerologie-de-la-porte-de-saint-cloud-ccpsc.jpg",
+    image: "assets/zap_x.jpg",
     specs: [
       "Self-shielded dual-gantry gyroscopic design — no bunker required",
       "Frameless stereotactic radiosurgery for intracranial & cervical spine",
@@ -211,7 +211,7 @@ const productsData = [
       "Large active area for full-field chest imaging",
       "Drop-resistant, splash-proof casing"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1MeHZc-lPvxL6tCdEXjl4po0mYwVT153V/view"
   },
 
   // --- MEDICAL IMAGING: INJECTOR ---
@@ -228,7 +228,7 @@ const productsData = [
       "Large touch-screen interface",
       "Compatible with all major CT platforms"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1spxUFZyjodylVZgF6j9Ym5qq-QD8j1d6/view"
   },
   {
     id: "img-inj-02",
@@ -243,7 +243,7 @@ const productsData = [
       "Automatic saline flush post-injection",
       "Programmable flow rate and volume"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1tqHl9P974tk0ivwHhw2BOXoVAHcfzbQ1/view"
   },
 
   // --- MEDICAL IMAGING: MAMMOGRAPHY ---
@@ -260,39 +260,84 @@ const productsData = [
       "Low-dose exposure with superior image quality",
       "AI-assisted lesion detection software"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1p7ka7Ugu6jvbns6XlPQXFgsVFd7MGtZP/view"
   },
 
-  // --- MEDICAL IMAGING: MRI ---
+  // --- MEDICAL IMAGING: MRI (ESAOTE OPEN MRI SERIES) ---
   {
-    id: "img-mri-01",
-    title: "Esaote MRI",
-    subtitle: "Open & Compact MRI Systems by Esaote",
+    id: "img-mri-gscan",
+    title: "G-Scan Open",
+    subtitle: "Weight-Bearing Tilting Open MRI System by Esaote",
     category: "Medical Imaging",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
     specs: [
-      "Open-design MRI for claustrophobic and large patients",
-      "Dedicated musculoskeletal & orthopedic imaging",
-      "Low-field to 1.0T permanent magnet options",
-      "Compact footprint — suitable for any facility",
-      "Excellent soft tissue differentiation"
+      "Innovative tilting design from horizontal to vertical (0° to 90°)",
+      "True weight-bearing spine & joint dynamic musculoskeletal imaging",
+      "Open claustrophobia-free gantry design for high patient comfort",
+      "High-resolution dedicated MSK coils and real-time positioning",
+      "Low power consumption & minimal site preparation requirements"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1mMw4XufnjHY-dtWiLzPLo4AVXvSezucD/view"
+  },
+  {
+    id: "img-mri-oscan",
+    title: "O-Scan Smart",
+    subtitle: "Dedicated Extremity & Joint MRI System by Esaote",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "Specialized MRI for knee, calf, ankle, foot, hand, wrist & forearm",
+      "Ultra-compact footprint — installs in a 9 m² standard room",
+      "Zero claustrophobia — only target limb is positioned in magnet",
+      "e-Spresso user interface with automated scanning sequences",
+      "Eco-friendly low operating costs with standard 220V wall plug"
+    ],
+    brochure: "https://drive.google.com/file/d/1TPM7tF94fBELvdjRcWm91lkz93xgaTbF/view"
+  },
+  {
+    id: "img-mri-sscan",
+    title: "S-Scan Open",
+    subtitle: "Open Musculoskeletal & Spine MRI System by Esaote",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "Complete musculoskeletal & full spine diagnostic coverage",
+      "Wide asymmetric open design for easy patient access",
+      "Real-time scout positioning for fast patient centering",
+      "High diagnostic image quality with permanent magnet technology",
+      "No cryogens or helium refills required — low maintenance"
+    ],
+    brochure: "https://drive.google.com/file/d/1iKXbrVGMStntOaOvIly1eYWPRWcnCRvv/view"
+  },
+  {
+    id: "img-mri-magnifico",
+    title: "Magnifico Open",
+    subtitle: "Total Body Open MRI System by Esaote",
+    category: "Medical Imaging",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    specs: [
+      "State-of-the-art open MRI for whole body & neuro-imaging",
+      "Permanent magnet design with true open gantry architecture",
+      "Speed Up and Evolution AI image reconstruction algorithms",
+      "Ergonomic rotating patient table with laser centering",
+      "Cost-effective installation with compact RF shielding cabin"
+    ],
+    brochure: "https://drive.google.com/file/d/1hH5Qz8WsXeJLMfVwWD2sA6kTLR3oQAto/view"
   },
   {
     id: "img-mri-02",
     title: "Synergy Imaging MRI",
-    subtitle: "1.5T High-Field MRI System",
+    subtitle: "MagniVue 1.5T Superconductive MRI System",
     category: "Medical Imaging",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
     specs: [
-      "1.5T superconducting magnet",
-      "Wide 70 cm bore for patient comfort",
-      "Advanced neuro, cardiac, and body imaging",
-      "Silent scan acoustic noise reduction",
-      "AI-powered workflow and image reconstruction"
+      "1.5T high-field superconducting magnet with helium-free technology",
+      "Wide 70 cm bore for premium patient comfort",
+      "Advanced neuro, cardiac, orthopedic & whole-body imaging",
+      "Silent scan acoustic noise reduction system",
+      "AI-powered clinical workflow and high-speed image reconstruction"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: null
   },
 
   // --- MEDICAL IMAGING: PACS ---
@@ -309,7 +354,7 @@ const productsData = [
       "AI-ready image processing and reporting tools",
       "HL7 & HIS/RIS integration"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1XG8xXy_zNsQceblNp3rDd2nqunrMns7Y/view"
   },
 
   // --- MEDICAL IMAGING: VisAr ---
@@ -326,7 +371,7 @@ const productsData = [
       "Marker-free optical tracking system",
       "Compatible with standard OR lighting and equipment"
     ],
-    brochure: "SynergyMed_Oncology_Imaging.pdf"
+    brochure: "https://drive.google.com/file/d/1cIADhnT2n4PHvkODZXv-IzhqyWf2Inaq/view"
   },
 
   // =====================================================================

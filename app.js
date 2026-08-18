@@ -963,6 +963,106 @@ const productsData = [
       "Data transfer via Wi-Fi to central EMR system"
     ],
     brochure: "SynergyMed_CriticalCare.pdf"
+  },
+
+  // =====================================================================
+  // --- ULTRASOUND ---
+  // =====================================================================
+
+  // --- ULTRASOUND: PORTABLE ---
+  {
+    id: "usg-port-01",
+    title: "Hres 10",
+    subtitle: "Portable Diagnostic Ultrasound System",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Pocus_%28ultrasound%29_semi-portable.jpg",
+    specs: [
+      "High-resolution B/W & Color Doppler portable ultrasound unit",
+      "Compact laptop-style design with 12.1-inch high-contrast LCD display",
+      "Advanced H-res™ image enhancement & speckle noise reduction",
+      "Multi-frequency convex, linear, and micro-convex transducer support",
+      "Built-in rechargeable battery & dual probe ports for point-of-care mobility"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+  {
+    id: "usg-port-02",
+    title: "Hres 15",
+    subtitle: "Enhanced Portable Color Doppler Ultrasound",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/USMC-100608-M-0493G-043.jpg",
+    specs: [
+      "All-digital beamformer with enhanced Color & Power Doppler sensitivity",
+      "15-inch anti-glare tiltable high-definition medical display",
+      "Tissue Harmonic Imaging (THI) & Spatial Compound Imaging (SCI)",
+      "Fast boot-up time with direct DICOM 3.0 network PACS transfer",
+      "Dedicated clinical presets for Abdominal, OB/GYN, MSK, and Small Parts"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+  {
+    id: "usg-port-03",
+    title: "Hres 20",
+    subtitle: "Premium Portable Digital Ultrasound System",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Portable_Ultrasound_Team%2C_Belize.jpg",
+    specs: [
+      "Flagship portable ultrasound platform with AI-assisted auto-measurements",
+      "Multi-beam parallel processing for ultra-high frame rate imaging",
+      "Continuous Wave (CW) Doppler & Tissue Doppler Imaging (TDI) integrated",
+      "Customizable intuitive touch workflow & multiple transducer connectivity",
+      "Ruggedized lightweight chassis designed for emergency and bedside ultrasound"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+
+  // --- ULTRASOUND: CONSOLE ---
+  {
+    id: "usg-cons-01",
+    title: "Hres 18",
+    subtitle: "Cart-Based Console Color Doppler Ultrasound Workstation",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Sonoscape_Ultrasound_Machine.jpg",
+    specs: [
+      "Ergonomic cart-based console with articulated multi-axis monitor arm",
+      "21.5-inch Full HD medical display with 10.4-inch command touchscreen",
+      "4 active transducer ports with rapid electronic probe switching",
+      "Broadband multi-frequency probes for deep abdominal & vascular diagnostics",
+      "Full DICOM structured reporting & seamless HIS/PACS workflow integration"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+  {
+    id: "usg-cons-02",
+    title: "Hres 20 Console",
+    subtitle: "Premium Multi-Disciplinary Console Ultrasound System",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/A_modern_medical_ultrasound_scanner.jpg",
+    specs: [
+      "Top-tier cart-based ultrasound workstation with advanced 3D/4D volumetric imaging",
+      "23.8-inch high-resolution IPS display with floating motorized control panel",
+      "Real-time shear wave elastography and contrast-enhanced ultrasound (CEUS)",
+      "AI-powered anatomical boundary recognition and cardiac auto-EF quantification",
+      "Comprehensive cardiology, radiology, OB/GYN, and shared-service clinical packages"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+
+  // --- ULTRASOUND: HANDHELD ---
+  {
+    id: "usg-hand-01",
+    title: "Kosmos by EchoNous",
+    subtitle: "AI-Powered Handheld Point-of-Care Ultrasound (POCUS)",
+    category: "Ultrasound",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Pocus_%28ultrasound%29_semi-portable.jpg",
+    specs: [
+      "Ultra-portable AI-guided handheld ultrasound with cart-grade diagnostic image quality",
+      "Triple-probe technology (Phased, Curved, Linear) supporting CW, PW, TDI & Color Doppler",
+      "Deep learning AI for real-time cardiac guidance, auto-EF, stroke volume & anatomical labeling",
+      "IP67 waterproof & ruggedized drop-tested probe for bedside, ICU, and emergency triage",
+      "Seamless iOS, Android & Kosmos Bridge tablet compatibility with cloud PACS synchronization"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
   }
 ];
 
@@ -1052,8 +1152,8 @@ function renderProductGrid() {
   // Filter products
   const filtered = productsData.filter(item => {
     const matchesCategory = (activeCategory === 'all') || (item.category.toLowerCase() === activeCategory.toLowerCase());
-    const matchesSearch = !searchQuery || 
-      item.title.toLowerCase().includes(searchQuery) || 
+    const matchesSearch = !searchQuery ||
+      item.title.toLowerCase().includes(searchQuery) ||
       item.subtitle.toLowerCase().includes(searchQuery) ||
       item.category.toLowerCase().includes(searchQuery) ||
       item.specs.some(s => s.toLowerCase().includes(searchQuery));
@@ -1264,6 +1364,21 @@ function closeModal() {
   }
 }
 
+// Close modal when clicking backdrop
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('generic-modal');
+  if (modal && modal.classList.contains('active') && e.target === modal) {
+    closeModal();
+  }
+
+  // Close mobile nav when clicking outside header
+  const mainNav = document.querySelector('.main-nav');
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  if (mainNav && mainNav.classList.contains('mobile-open') && !mainNav.contains(e.target) && menuBtn && !menuBtn.contains(e.target)) {
+    mainNav.classList.remove('mobile-open');
+  }
+});
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -1381,7 +1496,7 @@ function prevHeroSlide() {
 
 function startHeroSliderTimer() {
   progressStartTime = Date.now();
-  
+
   if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
   heroSliderProgressInterval = setInterval(() => {
     if (isHeroSliderPaused) return;
@@ -1543,7 +1658,7 @@ function openJobApplicationModal(positionName) {
 
 async function submitJobApplication(event, positionName) {
   event.preventDefault();
-  
+
   if (isSubmittingApplication) return;
 
   const errorBox = document.getElementById('app-form-error');
@@ -1640,7 +1755,7 @@ async function submitJobApplication(event, positionName) {
 
 function generateCareerWhatsAppUrl(payload) {
   const waNumber = "628131306711";
-  
+
   const lines = [
     `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
     ``,

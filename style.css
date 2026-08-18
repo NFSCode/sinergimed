@@ -1949,51 +1949,133 @@ img {
    RESPONSIVE BREAKPOINTS (Mobile & Tablet Optimization)
    ========================================================================== */
 
-/* Tablet (Landscape & Portrait <= 992px) */
-@media (max-width: 992px) {
-  .hero-grid {
-    flex-direction: column;
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Mobile, Tablet & Desktop Optimization)
+   ========================================================================== */
+
+/* Laptop & Small Desktop (993px to 1200px) */
+@media (max-width: 1200px) {
+  .section-container {
+    padding: 16px 20px 30px 20px;
+  }
+
+  .hero-slider-wrapper {
+    max-width: 420px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr;
     gap: 28px;
   }
+
+  .footer-bottom-tagline {
+    padding-right: 140px;
+  }
+}
+
+/* Tablet Devices (769px to 992px) */
+@media (max-width: 992px) {
+  .section-container {
+    padding: 14px 18px 28px 18px;
+  }
+
+  /* Hero Tablet */
+  .hero-grid {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
   .hero-slider-wrapper {
     max-width: 440px;
     margin: 0 auto;
   }
+
   .hero-text-content {
     max-width: 100%;
+    text-align: center;
   }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* 9 Business Units Tablet */
   .unit-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  /* About Page Tablet */
   .gallery-carousel-strip {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
+
   .about-vm-cards-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
+
   .values-banner-card {
     padding: 30px 24px;
   }
+
+  .about-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
   .about-story-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+
+  /* Solutions / Product Catalog Tablet */
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
   }
+
+  /* News & Events Tablet */
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  /* Careers Tablet */
+  .jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Contact Tablet */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Footer Tablet */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+  }
+
+  .footer-bottom-tagline {
+    padding-right: 0;
   }
 }
 
@@ -2003,13 +2085,38 @@ img {
     font-size: 15px;
   }
 
+  /* Header & Navigation Mobile */
+  .site-header {
+    padding: 4px 0;
+  }
+
   .header-container {
+    padding: 6px 16px;
     flex-wrap: wrap;
-    padding: 8px 16px;
+    position: relative;
   }
 
   .site-logo-img {
+    height: 40px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
     height: 42px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: var(--primary-dark);
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn:active {
+    background: #e2e8f0;
+    transform: scale(0.96);
   }
 
   .main-nav {
@@ -2019,8 +2126,8 @@ img {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
-    padding: 8px;
-    box-shadow: 0 10px 25px rgba(11, 59, 96, 0.12);
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(11, 59, 96, 0.12);
   }
 
   .main-nav.mobile-open {
@@ -2036,10 +2143,11 @@ img {
 
   .nav-link {
     width: 100%;
-    padding: 11px 14px;
+    padding: 12px 14px;
     font-size: 0.92rem;
     border-radius: 8px;
     justify-content: flex-start;
+    min-height: 44px;
   }
 
   .nav-link.active::after {
@@ -2059,31 +2167,27 @@ img {
     padding: 12px;
     font-size: 0.95rem;
     border-radius: 10px;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    min-height: 46px;
   }
 
   .section-container {
-    padding: 12px 16px 30px 16px;
+    padding: 12px 16px 28px 16px;
   }
 
   /* Hero Mobile */
   .hero-section {
-    padding: 5px 0 25px 0;
+    padding: 10px 0 25px 0;
+  }
+
+  .hero-grid {
+    flex-direction: column;
+    gap: 22px;
   }
 
   .hero-slider-wrapper {
     width: 100%;
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: 14px;
     order: -1;
   }
 
@@ -2095,11 +2199,11 @@ img {
   .hero-title {
     font-size: 1.95rem;
     line-height: 1.2;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   .hero-description {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.6;
     margin-bottom: 20px;
   }
@@ -2113,11 +2217,12 @@ img {
   .btn-primary, .btn-secondary {
     width: 100%;
     justify-content: center;
-    padding: 12px 20px;
+    padding: 13px 20px;
     font-size: 0.92rem;
+    min-height: 46px;
   }
 
-  /* 9 Units Mobile */
+  /* 9 Business Units Mobile */
   .units-overview-section {
     padding: 35px 0;
   }
@@ -2133,12 +2238,12 @@ img {
 
   .section-subtitle {
     font-size: 0.88rem;
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
   .unit-cards-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
   }
 
   .unit-card {
@@ -2188,6 +2293,7 @@ img {
 
   .vm-card {
     padding: 20px 18px;
+    border-radius: 14px;
   }
 
   .vm-heading {
@@ -2196,6 +2302,7 @@ img {
 
   .values-banner-card {
     padding: 24px 16px;
+    border-radius: 14px;
   }
 
   .values-title {
@@ -2221,21 +2328,6 @@ img {
     padding: 18px 16px;
   }
 
-  .highlight-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-  }
-
-  .highlight-info h4 {
-    font-size: 1rem;
-  }
-
-  .highlight-info p {
-    font-size: 0.82rem;
-  }
-
   .about-story-card {
     padding: 22px 18px;
   }
@@ -2253,7 +2345,7 @@ img {
     padding: 6px 12px;
   }
 
-  /* Product Catalog Mobile */
+  /* Solutions / Product Catalog Mobile */
   .product-catalog-section {
     padding: 15px 0 40px 0;
   }
@@ -2263,18 +2355,20 @@ img {
   }
 
   .catalog-controls {
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 14px;
+    margin-bottom: 24px;
   }
 
   .filter-pills {
     gap: 6px;
     justify-content: center;
+    width: 100%;
   }
 
   .filter-btn {
     font-size: 0.78rem;
-    padding: 6px 13px;
+    padding: 7px 14px;
+    border-radius: 20px;
   }
 
   .search-box {
@@ -2288,11 +2382,15 @@ img {
 
   .product-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .product-card {
+    border-radius: 12px;
   }
 
   .product-card-img {
-    height: 200px;
+    height: 195px;
   }
 
   .product-card-body {
@@ -2300,17 +2398,27 @@ img {
   }
 
   .product-title {
-    font-size: 1.1rem;
+    font-size: 1.12rem;
   }
 
   .product-card-footer {
     flex-direction: row;
+    gap: 8px;
+  }
+
+  .btn-card-inquire {
+    padding: 11px 12px;
+    font-size: 0.84rem;
+  }
+
+  .btn-card-details {
+    padding: 11px 14px;
   }
 
   /* News & Events Mobile */
   .news-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .news-card-body {
@@ -2331,32 +2439,45 @@ img {
     padding: 22px 18px;
   }
 
-  .brochure-icon {
-    font-size: 2.4rem;
-  }
-
   /* Careers Mobile */
   .careers-hero {
-    padding: 28px 20px;
+    padding: 26px 18px;
     border-radius: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   .careers-hero-title {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
   }
 
   .careers-hero-sub {
     font-size: 0.88rem;
   }
 
+  .careers-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .careers-filter-pills {
+    width: 100%;
+  }
+
+  .career-filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
   .jobs-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .job-card {
     padding: 20px 16px;
+    border-radius: 14px;
   }
 
   .job-title {
@@ -2383,6 +2504,7 @@ img {
 
   .contact-form-card, .contact-info-card {
     padding: 22px 18px;
+    border-radius: 14px;
   }
 
   .form-group input,
@@ -2400,8 +2522,8 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 28px;
+    margin-bottom: 28px;
   }
 
   .footer-bottom-bar {
@@ -2410,45 +2532,58 @@ img {
     gap: 8px;
   }
 
+  .footer-bottom-tagline {
+    padding-right: 0;
+    font-size: 0.78rem;
+  }
+
   .floating-widgets {
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     right: 12px;
     gap: 6px;
   }
 
   .btn-float-wa, .btn-float-top {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.15rem;
   }
 
   .btn-float-chat {
-    height: 38px;
+    height: 40px;
     padding: 0 12px;
     font-size: 0.8rem;
     gap: 5px;
   }
 
+  /* Modals Mobile */
+  .modal-overlay {
+    padding: 12px;
+  }
+
   .modal-card {
-    max-width: 95vw;
-    padding: 24px 18px;
+    max-width: 96vw;
+    width: 100%;
+    padding: 22px 16px;
     max-height: 88vh;
+    border-radius: 14px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-/* Extra Small Phones (<= 480px) */
+/* Extra Small Phones & Foldables (<= 480px) */
 @media (max-width: 480px) {
   html {
     font-size: 14px;
   }
 
   .header-container {
-    padding: 8px 12px;
+    padding: 6px 12px;
   }
 
   .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.68rem;
   }
 
   .hero-description {
@@ -2460,24 +2595,34 @@ img {
   }
 
   .section-container {
-    padding: 10px 12px 24px 12px;
+    padding: 8px 12px 22px 12px;
   }
 
   /* About */
   .about-main-title {
-    font-size: 1.45rem;
+    font-size: 1.42rem;
   }
 
   .vm-card {
-    padding: 18px 16px;
+    padding: 16px 14px;
   }
 
   .values-title {
-    font-size: 1.45rem;
+    font-size: 1.42rem;
   }
 
   .value-item-row {
-    padding: 10px 14px;
+    padding: 10px 12px;
+  }
+
+  /* Catalog */
+  .product-card-img {
+    height: 180px;
+  }
+
+  .filter-btn {
+    font-size: 0.74rem;
+    padding: 6px 11px;
   }
 
   /* Footer */
@@ -2486,7 +2631,7 @@ img {
   }
 
   .footer-grid {
-    gap: 24px;
+    gap: 22px;
   }
 
   .footer-col-title {
@@ -2494,7 +2639,7 @@ img {
   }
 
   .footer-channel-card {
-    padding: 10px 12px;
+    padding: 9px 11px;
   }
 
   .channel-icon {
@@ -2505,7 +2650,7 @@ img {
 
   /* Floating widgets */
   .floating-widgets {
-    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     right: 10px;
     gap: 5px;
   }
@@ -2519,13 +2664,14 @@ img {
     padding: 18px 14px;
   }
 
-  /* Product cards */
-  .product-card-img {
-    height: 180px;
-  }
-
   /* News */
   .news-card-body {
     padding: 14px;
   }
+
+  /* Form modal rows (2-column grids inside modal) */
+  form div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
 }
+

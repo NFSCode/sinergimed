@@ -28,7 +28,7 @@ const productsData = [
     title: "Synergy XCA",
     subtitle: "Mobile C-Arm Analog Fluoroscopy System (5 kW)",
     category: "Medical Imaging",
-    image: "https://www.perlove.net/wp-content/uploads/perlove-mobile-c-arm-machinr.png",
+    image: "assets/synergymed_carm_analog.png",
     specs: [
       "Analog image intensifier fluoroscopic C-arm",
       "5 kW high-frequency X-ray generator",
@@ -43,7 +43,7 @@ const productsData = [
     title: "Synergy XCD",
     subtitle: "Mobile C-Arm Digital Fluoroscopy System",
     category: "Medical Imaging",
-    image: "https://www.perlove.net/wp-content/uploads/perlove-mobile-c-arm-machinr.png",
+    image: "assets/synergymed_carm_digital.png",
     specs: [
       "Digital flat panel detector fluoroscopic C-arm",
       "High-resolution digital image acquisition",
@@ -60,7 +60,7 @@ const productsData = [
     title: "Synergy CR32S",
     subtitle: "32-Slice CT Scanner — Standard Edition",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_ct32.png",
     specs: [
       "32-slice helical CT scanning",
       "0.5s gantry rotation speed",
@@ -75,7 +75,7 @@ const productsData = [
     title: "Synergy CT32",
     subtitle: "32-Slice CT Scanner — Advanced Edition",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_ct32.png",
     specs: [
       "32-slice CT with advanced reconstruction algorithms",
       "AI-assisted noise reduction",
@@ -90,7 +90,7 @@ const productsData = [
     title: "Synergy CT64",
     subtitle: "64-Slice Multi-Detector CT Scanner",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_ct128.png",
     specs: [
       "64-slice per rotation imaging",
       "0.4s gantry rotation for cardiac CT",
@@ -105,7 +105,7 @@ const productsData = [
     title: "Synergy CT128",
     subtitle: "128-Slice Ultra-High Definition CT Scanner",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_ct128.png",
     specs: [
       "128-slice ultra-fast helical CT",
       "0.33s rotation — ideal for cardiac & trauma",
@@ -154,7 +154,7 @@ const productsData = [
     title: "Synergy XMD5",
     subtitle: "Digital Mobile X-Ray Unit — 5 kW",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
+    image: "assets/synergymed_mobile_xray.png",
     specs: [
       "5 kW mobile digital X-ray unit",
       "Integrated flat panel detector",
@@ -169,7 +169,7 @@ const productsData = [
     title: "Synergy XMD50",
     subtitle: "Digital Mobile X-Ray Unit — High Capacity",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
+    image: "assets/synergymed_mobile_xray.png",
     specs: [
       "High-capacity mobile digital X-ray system",
       "Wireless flat panel detector",
@@ -186,7 +186,7 @@ const productsData = [
     title: "Synergy XPD-5",
     subtitle: "Digital Portable X-Ray System",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mobile_X-Ray_Unit_Sirius_Star_Mobile.jpg",
+    image: "assets/synergymed_mobile_xray.png",
     specs: [
       "Ultra-portable, handheld-ready X-ray unit",
       "Wireless flat panel detector included",

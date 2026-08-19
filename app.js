@@ -122,7 +122,7 @@ const productsData = [
     title: "Synergy Imaging XSD-70C",
     subtitle: "Digital Stationary X-Ray System — 70 kW",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    image: "assets/synergymed_xsd70c.png",
     specs: [
       "70 kW high-frequency X-ray generator",
       "Flat panel detector with auto-positioning ceiling suspension",
@@ -137,7 +137,7 @@ const productsData = [
     title: "Synergy Imaging XSD-50F",
     subtitle: "Digital Stationary X-Ray System — 50 kW Floor-mounted",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    image: "assets/synergymed_xsd50f.png",
     specs: [
       "50 kW high-frequency generator, floor-mounted",
       "Digital flat panel detector",
@@ -220,7 +220,7 @@ const productsData = [
     title: "ASA-200E",
     subtitle: "CT Contrast Media Injector — Dual Head",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_injector.jpg",
     specs: [
       "Dual-head injector for CT contrast media delivery",
       "Programmable injection protocols",
@@ -235,7 +235,7 @@ const productsData = [
     title: "ASA-300P",
     subtitle: "MRI Contrast Media Injector — Power Injector",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    image: "assets/synergymed_injector.jpg",
     specs: [
       "MRI-compatible power injector system",
       "Single & dual syringe configurations",
@@ -252,7 +252,7 @@ const productsData = [
     title: "MammoVue",
     subtitle: "Full-Field Digital Mammography System",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Mammography_machine.jpg",
+    image: "assets/synergymed_mammovue.png",
     specs: [
       "Full-field digital mammography (FFDM)",
       "High-resolution flat panel detector optimized for breast tissue",
@@ -346,7 +346,7 @@ const productsData = [
     title: "NovaPACS",
     subtitle: "Picture Archiving & Communication System",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/UPMCEast_CTscan.jpg",
+    image: "assets/synergymed_novapacs.png",
     specs: [
       "Scalable cloud & on-premise PACS solution",
       "DICOM 3.0 compliant — integrates with all modalities",
@@ -363,7 +363,7 @@ const productsData = [
     title: "Visual AR",
     subtitle: "Augmented Reality Surgical Visualization System",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    image: "assets/synergymed_visar.png",
     specs: [
       "Augmented reality overlay for surgical navigation",
       "Real-time 3D anatomical visualization",

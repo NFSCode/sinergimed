@@ -1020,7 +1020,7 @@ const productsData = [
     title: "Hres 10",
     subtitle: "Portable Diagnostic Ultrasound System",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Pocus_%28ultrasound%29_semi-portable.jpg",
+    image: "assets/synergymed_usg_hres10.png",
     specs: [
       "High-resolution B/W & Color Doppler portable ultrasound unit",
       "Compact laptop-style design with 12.1-inch high-contrast LCD display",
@@ -1035,7 +1035,7 @@ const productsData = [
     title: "Hres 15",
     subtitle: "Enhanced Portable Color Doppler Ultrasound",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/USMC-100608-M-0493G-043.jpg",
+    image: "assets/synergymed_usg_hres15.jpg",
     specs: [
       "All-digital beamformer with enhanced Color & Power Doppler sensitivity",
       "15-inch anti-glare tiltable high-definition medical display",
@@ -1050,13 +1050,28 @@ const productsData = [
     title: "Hres 20",
     subtitle: "Premium Portable Digital Ultrasound System",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Portable_Ultrasound_Team%2C_Belize.jpg",
+    image: "assets/synergymed_usg_hres20.png",
     specs: [
       "Flagship portable ultrasound platform with AI-assisted auto-measurements",
       "Multi-beam parallel processing for ultra-high frame rate imaging",
       "Continuous Wave (CW) Doppler & Tissue Doppler Imaging (TDI) integrated",
       "Customizable intuitive touch workflow & multiple transducer connectivity",
       "Ruggedized lightweight chassis designed for emergency and bedside ultrasound"
+    ],
+    brochure: "SynergyMed_Ultrasound.pdf"
+  },
+  {
+    id: "usg-port-04",
+    title: "Hres 30",
+    subtitle: "High-End Portable Ultrasound Workstation with Mobile Cart",
+    category: "Ultrasound",
+    image: "assets/synergymed_usg_hres30.png",
+    specs: [
+      "High-end portable ultrasound platform with dedicated mobile workstation cart",
+      "Multi-beam parallel architecture for exceptional spatial and contrast resolution",
+      "Comprehensive Doppler capabilities (Color, Power, PW, CW, and TDI)",
+      "Smart clinical workflow with customizable presets for Cardiology, Vascular, and MSK",
+      "Dual active probe connectors with integrated cable management and accessory trays"
     ],
     brochure: "SynergyMed_Ultrasound.pdf"
   },
@@ -1067,7 +1082,7 @@ const productsData = [
     title: "Hres 18",
     subtitle: "Cart-Based Console Color Doppler Ultrasound Workstation",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Sonoscape_Ultrasound_Machine.jpg",
+    image: "assets/synergymed_usg_hres18.png",
     specs: [
       "Ergonomic cart-based console with articulated multi-axis monitor arm",
       "21.5-inch Full HD medical display with 10.4-inch command touchscreen",
@@ -1082,7 +1097,7 @@ const productsData = [
     title: "Hres 20 Console",
     subtitle: "Premium Multi-Disciplinary Console Ultrasound System",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/A_modern_medical_ultrasound_scanner.jpg",
+    image: "assets/synergymed_usg_hres20.png",
     specs: [
       "Top-tier cart-based ultrasound workstation with advanced 3D/4D volumetric imaging",
       "23.8-inch high-resolution IPS display with floating motorized control panel",
@@ -1099,7 +1114,7 @@ const productsData = [
     title: "Kosmos by EchoNous",
     subtitle: "AI-Powered Handheld Point-of-Care Ultrasound (POCUS)",
     category: "Ultrasound",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/69/Pocus_%28ultrasound%29_semi-portable.jpg",
+    image: "assets/synergymed_usg_kosmos.png",
     specs: [
       "Ultra-portable AI-guided handheld ultrasound with cart-grade diagnostic image quality",
       "Triple-probe technology (Phased, Curved, Linear) supporting CW, PW, TDI & Color Doppler",

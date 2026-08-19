@@ -1668,6 +1668,247 @@ const productsData = [
       "Bahan kain elastis antimikroba yang nyaman dipakai seharian di dalam sepatu"
     ],
     brochure: null
+  },
+
+  // =====================================================================
+  // --- ORTHO & NEURO ---
+  // =====================================================================
+
+  // --- ORTHO & NEURO: ARTHROPLASTY ---
+  {
+    id: "on-arthro-01",
+    title: "Arthroplasty System",
+    subtitle: "Total Hip & Knee Arthroplasty Implant Solutions",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem implan penggantian sendi panggul (Total Hip) & lutut (Total Knee) tingkat lanjut",
+      "Material bio-kompatibel premium: Titanium alloy, CoCrMo, dan Cross-linked Polyethylene (XLPE)",
+      "Desain femoral stem anatomis dengan fiksasi press-fit hidroksiapatit (HA-coated) optimal",
+      "Stabilitas sendi maksimal, meminimalkan aus partikel (wear rate), dan memperpanjang usia implan",
+      "Dilengkapi set instrumen presisi ergonomis untuk efisiensi prosedur intraoperatif bedah ortopedi"
+    ],
+    brochure: "https://drive.google.com/file/d/1HN9X5txcYN4hds4C-Cy70oNJ5YGw2NCM/view"
+  },
+
+  // --- ORTHO & NEURO: ARTHROSCOPY SYSTEM ---
+  {
+    id: "on-as-01",
+    title: "ACL Reconstruction Solution",
+    subtitle: "Arthroscopic Anterior Cruciate Ligament (ACL) Reconstruction",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Solusi fiksasi rekonstruksi ligamen ACL dengan adjustable loop cortical button & interference screw",
+      "Mekanisme penguncian kuat dengan daya tahan tarik (tensile strength) tinggi dan elongation minimal",
+      "Kompatibel untuk teknik autograft hamstring tendon, BTB (bone-tendon-bone), dan allograft",
+      "Memastikan integrasi fiksasi graft-to-bone yang kokoh dan mempercepat pemulihan stabilitas lutut",
+      "Dilengkapi drill guide anatomis dan instrumen pasase graft berpresisi tinggi"
+    ],
+    brochure: "https://drive.google.com/file/d/1YJwsTFsNrC_POdZlTV2vuBtcvjw_ZuG2/view"
+  },
+  {
+    id: "on-as-02",
+    title: "Meniscus Repair Solution",
+    subtitle: "Arthroscopic All-Inside Meniscus Repair System",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem perbaikan robekan meniskus all-inside dengan implan fiksasi PEEK / suture anchor ultra-low profile",
+      "Penetrasi jarum yang ramping dan atraumatik untuk melindungi struktur neurovaskular posterior",
+      "Benang suture berkekuatan tinggi (UHMWPE) dengan knot-less locking yang rapat dan presisi",
+      "Cocok untuk penanganan robekan meniskus zona red-red dan red-white",
+      "Mempersingkat waktu operasi artroskopi lutut dan meminimalkan trauma jaringan sekitar"
+    ],
+    brochure: "https://drive.google.com/file/d/1YJwsTFsNrC_POdZlTV2vuBtcvjw_ZuG2/view"
+  },
+  {
+    id: "on-as-03",
+    title: "Bankart Repair Solution",
+    subtitle: "Arthroscopic Glenoid Bankart Shoulder Repair System",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Solusi restorasi labrum glenoid pada instabilitas sendi bahu anterior (Bankart Lesion)",
+      "Suture anchor bio-absorbable / PEEK dengan daya fiksasi tulang kortikal superior",
+      "Jarum inserter berprofil mikro untuk visualisasi dan penempatan anchor optimal di bibir glenoid",
+      "Memberikan aproksimasi jaringan labrum ke tepi tulang tanpa risiko osteolisis",
+      "Dilengkapi suture retriever, knot pusher, dan rasp artroskopi bahu khusus"
+    ],
+    brochure: "https://drive.google.com/file/d/1YJwsTFsNrC_POdZlTV2vuBtcvjw_ZuG2/view"
+  },
+  {
+    id: "on-as-04",
+    title: "Rotator Cuff Repair Solution",
+    subtitle: "Suture Anchor Rotator Cuff Tendon Fixation Solution",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem rekoneksi tendon supraspinatus / rotator cuff dengan teknik single-row & double-row suture bridge",
+      "Implan suture anchor beralur ganda (fully threaded) dengan pull-out strength maksimal pada tuberositas mayor",
+      "Kombinasi benang jahitan braided non-absorbable untuk kompresi tendon-to-bone footprint merata",
+      "Mengurangi tegangan puncak jahitan dan menurunkan risiko robekan ulang pasca operasi",
+      "Instrumen punch, tap, dan driver ergonomis untuk penetrasi tulang yang terkontrol"
+    ],
+    brochure: "https://drive.google.com/file/d/1YJwsTFsNrC_POdZlTV2vuBtcvjw_ZuG2/view"
+  },
+
+  // --- ORTHO & NEURO: ARTHROSCOPY TOWER ---
+  {
+    id: "on-tow-01",
+    title: "Arthroscopy Tower",
+    subtitle: "4K UHD Endoscopic Arthroscopy Imaging & Shaver Workstation",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Tower sistem visualisasi artroskopi 4K Ultra-HD dengan kamera endoskopik sensitivitas tinggi",
+      "Sumber cahaya LED medis dingin dengan saturasi warna natural dan pencahayaan rongga sendi optimal",
+      "Sistem pompa irigasi artroskopi (arthroscopy fluid pump) dengan kontrol tekanan & debit otomatis",
+      "Integrated shaver & RF electrocution resection console untuk debridement jaringan sendi cepat",
+      "Sistem perekaman dan dokumentasi medis digital terintegrasi langsung ke PACS / HIS rumah sakit"
+    ],
+    brochure: "https://drive.google.com/file/d/1K8-nkII-_XbqEf2_w3K0tznJ39-uD9gc/view"
+  },
+
+  // --- ORTHO & NEURO: ENDOSPINE ---
+  {
+    id: "on-endo-01",
+    title: "Endospine",
+    subtitle: "Full-Endoscopic Spine Surgery System (Transforaminal & Interlaminar)",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem bedah endoskopi tulang belakang minimal invasif (Full-Endoscopic Spine Surgery)",
+      "Mendukung pendekatan transforaminal, interlaminar, dan unilateral biportal endoscopy (UBE)",
+      "Visualisasi sudut lebar definisi tinggi untuk disektomi, foraminotomi, dan dekompresi stenosis kanal",
+      "Instrumen mikro khusus (bone reamer, endoscopic punch, radiofrequency bipolar probe, dan burr)",
+      "Meminimalkan kerusakan otot paraspinal, perdarahan intraoperatif, dan mempercepat pemulihan pasien"
+    ],
+    brochure: "https://drive.google.com/file/d/1Uhan0O-88su42nwgqOAH8iF_xrIJ31UG/view"
+  },
+
+  // --- ORTHO & NEURO: SPINE ---
+  {
+    id: "on-spin-01",
+    title: "MIS Spine System",
+    subtitle: "Minimally Invasive Spine Pedicle Screw & Rod Fixation",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem stabilisasi tulang belakang perkutan torakolumbal minimal invasif (Percutaneous MIS)",
+      "Sekrup pedikel kanulasi (cannulated polyaxial pedicle screws) dengan guide sleeve self-holding",
+      "Teknik rod insertion percutaneus yang mulus tanpa diseksi otot terbuka secara luas",
+      "Mengurangi nyeri pasca bedah, risiko infeksi luka, serta kehilangan darah selama operasi",
+      "Kompatibel dengan panduan navigasi bedah spine dan fluoroskopi C-Arm real-time"
+    ],
+    brochure: "https://drive.google.com/file/d/1sAA5HMO9uflBGxZq51Y-LvG3vXOVVfGf/view"
+  },
+  {
+    id: "on-spin-02",
+    title: "Oblique Lateral Interbody Fusion Cage",
+    subtitle: "OLIF Interbody Fusion PEEK Cage System",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Implan fusi antar-korpus vertebra lateral oblik (OLIF) bahan bio-inert Radiopaque PEEK",
+      "Jendela fusi tulang (bone graft window) ekstra besar untuk fusi osteogenesis maksimal",
+      "Menyediakan koreksi kelengkungan lordosis lumbal dan dekompresi foramen indirek",
+      "Dilengkapi penanda tantalum x-ray untuk verifikasi posisi intraoperatif akurat",
+      "Tersedia berbagai pilihan sudut lordotik dan variasi ketinggian diskus"
+    ],
+    brochure: "https://drive.google.com/file/d/1sAA5HMO9uflBGxZq51Y-LvG3vXOVVfGf/view"
+  },
+  {
+    id: "on-spin-03",
+    title: "Spine GSS I System",
+    subtitle: "General Spinal System (GSS I) Posterior Fixation",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem fiksasi fusi spinal posterior komprehensif untuk vertebra thoracolumbar & lumbosacral",
+      "Sekrup pedikel monoaksial & poliaksial dengan daya penguncian ulir buttress thread anti-cross threading",
+      "Batang titanium (titanium rods), transverse crosslink, dan set screw berkekuatan tinggi",
+      "Efektif untuk deformitas tulang belakang (skoliosis/kifosis), trauma fraktur, spondylolisthesis, dan tumor",
+      "Instrumen reduksi, kompresi, dan distraksi ergonomis untuk kontrol biomekanik optimal"
+    ],
+    brochure: "https://drive.google.com/file/d/1sAA5HMO9uflBGxZq51Y-LvG3vXOVVfGf/view"
+  },
+  {
+    id: "on-spin-04",
+    title: "Anterior Cervical Intervertebral Locking Cage",
+    subtitle: "Zero-Profile Stand-Alone Anterior Cervical Fusion Cage",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Implan fusi servikal anterior stand-alone (Zero-Profile ACDF Cage) dengan sekrup pengunci terintegrasi",
+      "Tidak menonjol ke luar korpus vertebra untuk mencegah disfagia (sulit menelan) pasca operasi",
+      "Bahan PEEK dengan modul elastisitas mendekati tulang kortikal manusia untuk mencegah subsidence",
+      "Stabilitas fiksasi tri-kortikal langsung tanpa memerlukan plate anterior tambahan",
+      "Mengembalikan tinggi ruang diskus servikal dan kelengkungan lordosis fisiologis leher"
+    ],
+    brochure: "https://drive.google.com/file/d/1sAA5HMO9uflBGxZq51Y-LvG3vXOVVfGf/view"
+  },
+
+  // --- ORTHO & NEURO: TRAUMA ---
+  {
+    id: "on-trauma-01",
+    title: "Proximal Femoral Locking Plate",
+    subtitle: "Titanium Proximal Femur Anatomical Locking Compression Plate",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Plat fiksasi fraktur anatomis untuk regio femur proksimal, intertrokanterik, dan subtrokanterik",
+      "Konfigurasi multi-screw pengunci sudut tetap (fixed-angle locking) menahan gaya beban varus tinggi",
+      "Material paduan titanium medis (Ti-6Al-4V) dengan biokompatibilitas dan kekuatan fatigue superior",
+      "Desain ujung plat tapered memudahkan penyisipan submuskular teknik minimally invasive MIPO",
+      "Kombinasi lubang dinamis kompresi (LCP) mendukung fiksasi kompresi absolut maupun jembatan (bridge)"
+    ],
+    brochure: "https://drive.google.com/file/d/1JLlJI4UDwINr8An1hTtJl-B_IReJxTId/view"
+  },
+  {
+    id: "on-trauma-02",
+    title: "Advance Humeral Nail",
+    subtitle: "Intramedullary Humeral Interlocking Nail System",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Nail intrameduler titanium untuk fiksasi fraktur shaft dan proksimal humerus",
+      "Mendukung opsi insersi antegrade dan retrograde dengan panduan bidik (targeting guide) presisi",
+      "Konfigurasi sekrup pengunci multi-planar proksimal dan distal untuk stabilitas rotasi maksimal",
+      "Mempertahankan periosteum dan suplai vaskular hematoma fraktur untuk percepatan osteogenesis",
+      "Instrumen kanulasi yang kompatibel dengan guide wire dan teknik fiksasi tertutup"
+    ],
+    brochure: "https://drive.google.com/file/d/1JLlJI4UDwINr8An1hTtJl-B_IReJxTId/view"
+  },
+  {
+    id: "on-trauma-03",
+    title: "Titanium Elastic Nail",
+    subtitle: "Flexible Titanium Elastic Nail (TEN) for Long Bone Trauma",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Nail elastis fleksibel titanium untuk penanganan fraktur diafisis tulang panjang pediatrik dan dewasa",
+      "Prinsip biomekanik stabilisasi elastis tiga titik (three-point dynamic bracing)",
+      "Ujung bullet tip melengkung memfasilitasi navigasi kanalis medularis tanpa menembus korteks",
+      "Minimal invasif dengan insersi entry point ekstra-artikular yang aman bagi lempeng pertumbuhan (physis)",
+      "Tersedia berbagai diameter (1.5mm - 4.0mm) dengan pengenal warna anodized"
+    ],
+    brochure: "https://drive.google.com/file/d/1JLlJI4UDwINr8An1hTtJl-B_IReJxTId/view"
+  },
+  {
+    id: "on-trauma-04",
+    title: "Distal Humeral Locking Plate",
+    subtitle: "Anatomical Distal Humerus Medial & Lateral Locking Compression Plate",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [
+      "Sistem plat anatomis ganda (orthogonal / parallel plating) untuk fraktur humerus distal dan intra-artikular",
+      "Kontur plat pra-bentuk mengikuti morfologi kolumna medial dan lateral siku secara presisi",
+      "Penempatan sekrup pengunci subkondilar multipel untuk rekonsiliasi fragmen artikular fossa olekrani",
+      "Profil plat ultra-low contact untuk menjaga perfusi periosteal dan mencegah iritasi jaringan lunak",
+      "Mendukung mobilisasi dini sendi siku pasca reduksi fraktur kompleks AO Tipe C"
+    ],
+    brochure: "https://drive.google.com/file/d/1JLlJI4UDwINr8An1hTtJl-B_IReJxTId/view"
   }
 ];
 

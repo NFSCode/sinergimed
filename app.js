@@ -1347,7 +1347,7 @@ const productsData = [
       "Multi-frequency convex, linear, and micro-convex transducer support",
       "Built-in rechargeable battery & dual probe ports for point-of-care mobility"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_e5536a52fc9145e8b0e41ecfdebf2611.pdf"
   },
   {
     id: "usg-port-02",
@@ -1362,7 +1362,7 @@ const productsData = [
       "Fast boot-up time with direct DICOM 3.0 network PACS transfer",
       "Dedicated clinical presets for Abdominal, OB/GYN, MSK, and Small Parts"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/17ZIiFyV3F8fLIjzumfTVRhYTYsF6sVXj/view"
   },
   {
     id: "usg-port-03",
@@ -1377,7 +1377,7 @@ const productsData = [
       "Customizable intuitive touch workflow & multiple transducer connectivity",
       "Ruggedized lightweight chassis designed for emergency and bedside ultrasound"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/1iniuBFVgY2nLZrAh_2YvBURv-HEeeItc/view"
   },
   {
     id: "usg-port-04",
@@ -1392,7 +1392,7 @@ const productsData = [
       "Smart clinical workflow with customizable presets for Cardiology, Vascular, and MSK",
       "Dual active probe connectors with integrated cable management and accessory trays"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/14SPZ58cz2WPS0X9A76fO5KFHT6oH6Mvf/view"
   },
 
   // --- ULTRASOUND: CONSOLE ---
@@ -1409,7 +1409,7 @@ const productsData = [
       "Broadband multi-frequency probes for deep abdominal & vascular diagnostics",
       "Full DICOM structured reporting & seamless HIS/PACS workflow integration"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/1G7J0bdXdTo2c3xooQcp8PQrKJ5ABR0b9/view"
   },
   {
     id: "usg-cons-02",
@@ -1424,7 +1424,7 @@ const productsData = [
       "AI-powered anatomical boundary recognition and cardiac auto-EF quantification",
       "Comprehensive cardiology, radiology, OB/GYN, and shared-service clinical packages"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/1iniuBFVgY2nLZrAh_2YvBURv-HEeeItc/view"
   },
 
   // --- ULTRASOUND: HANDHELD ---
@@ -1441,7 +1441,7 @@ const productsData = [
       "IP67 waterproof & ruggedized drop-tested probe for bedside, ICU, and emergency triage",
       "Seamless iOS, Android & Kosmos Bridge tablet compatibility with cloud PACS synchronization"
     ],
-    brochure: "SynergyMed_Ultrasound.pdf"
+    brochure: "https://drive.google.com/file/d/1p4F1qXwRYCBoDv22eLcw3C3JhKM7JPXO/view?usp=drive_link"
   },
 
   // =====================================================================

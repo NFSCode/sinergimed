@@ -703,7 +703,7 @@ const productsData = [
     title: "AccuBreathe AN20",
     subtitle: "Anesthesia Machine — Entry Level",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    image: "assets/synergymed_an20.png",
     specs: [
       "Compact anesthesia workstation for general anesthesia",
       "Electronic gas mixer with flow control",
@@ -718,7 +718,7 @@ const productsData = [
     title: "AccuBreathe AN30",
     subtitle: "Anesthesia Machine — Mid-Range",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    image: "assets/synergymed_an30.png",
     specs: [
       "Advanced anesthesia delivery system with dual vaporizers",
       "10.4-inch touchscreen with intuitive UI",
@@ -733,7 +733,7 @@ const productsData = [
     title: "AccuBreathe AN50",
     subtitle: "Anesthesia Machine — Premium Workstation",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    image: "assets/synergymed_an50.png",
     specs: [
       "High-end anesthesia workstation with full electronic gas management",
       "15-inch HD touchscreen with multi-waveform display",
@@ -750,7 +750,7 @@ const productsData = [
     title: "AccuSign CMS 10",
     subtitle: "Central Monitoring Station — 32 Beds",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign10.png",
     specs: [
       "Centralized patient surveillance for up to 32 beds",
       "32-inch HD display with multi-patient grid view",
@@ -765,7 +765,7 @@ const productsData = [
     title: "AccuSign CMS 30 & 40",
     subtitle: "Central Monitoring Station — 64 Beds",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign30_40.png",
     specs: [
       "Enterprise-grade central monitoring for up to 64 beds",
       "Dual 32-inch display configuration",
@@ -782,7 +782,7 @@ const productsData = [
     title: "AccuTop 10",
     subtitle: "Fetal Monitor — Single Fetal Heart Rate",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Cardiotocography_in_Pijnacker%2C_2019.jpg",
+    image: "assets/synergymed_accutop10.png",
     specs: [
       "Continuous fetal heart rate (FHR) monitoring",
       "Ultrasound Doppler transducer — 1 MHz",
@@ -797,7 +797,7 @@ const productsData = [
     title: "AccuTop 20",
     subtitle: "Fetal Monitor — Twins Monitoring",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Cardiotocography_in_Pijnacker%2C_2019.jpg",
+    image: "assets/synergymed_accutop20.png",
     specs: [
       "Dual-channel FHR monitoring for twin pregnancies",
       "Dual ultrasound Doppler transducers",
@@ -814,7 +814,7 @@ const productsData = [
     title: "AccuShock 10",
     subtitle: "Defibrillator — Portable AED",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Defibrillator_Monitor.jpg",
+    image: "assets/synergymed_accushock10.png",
     specs: [
       "Automated External Defibrillator (AED) with manual override",
       "Biphasic waveform for effective defibrillation",
@@ -829,7 +829,7 @@ const productsData = [
     title: "AccuShock 60",
     subtitle: "Defibrillator/Monitor — Professional Grade",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Defibrillator_Monitor.jpg",
+    image: "assets/synergymed_accushock60.png",
     specs: [
       "Manual defibrillator with AED mode & synchronized cardioversion",
       "12-lead ECG acquisition & interpretation",
@@ -846,7 +846,7 @@ const productsData = [
     title: "AccuRead 10",
     subtitle: "12-Channel ECG — Portable Digital",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    image: "assets/synergymed_accuread10.png",
     specs: [
       "12-channel digital ECG with simultaneous acquisition",
       "4.3-inch touchscreen display",
@@ -861,7 +861,7 @@ const productsData = [
     title: "AccuRead 15",
     subtitle: "12-Channel ECG — Enhanced Portable",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    image: "assets/synergymed_accuread10.png",
     specs: [
       "12-channel ECG with 7-inch color LCD",
       "Enhanced noise filtering & baseline correction",
@@ -876,7 +876,7 @@ const productsData = [
     title: "AccuRead 20",
     subtitle: "12-Channel ECG — PC-Based Workstation",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    image: "assets/synergymed_accuread20.png",
     specs: [
       "PC-based 12-channel ECG workstation system",
       "Wireless Bluetooth ECG acquisition module",
@@ -891,7 +891,7 @@ const productsData = [
     title: "AccuRead 25",
     subtitle: "12-Channel ECG — Touchscreen Advanced",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    image: "assets/synergymed_accuread30.png",
     specs: [
       "12-channel ECG with 10.1-inch touchscreen",
       "Real-time rhythm analysis & arrhythmia detection",
@@ -906,7 +906,7 @@ const productsData = [
     title: "AccuRead 30",
     subtitle: "12-Channel ECG — Premium Digital",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/12_lead_generated_ECG.jpg",
+    image: "assets/synergymed_accuread30.png",
     specs: [
       "Premium 12-channel digital ECG system",
       "12.1-inch HD touchscreen with multi-lead preview",
@@ -923,7 +923,7 @@ const productsData = [
     title: "Hippo I50",
     subtitle: "Infant Incubator — Neonatal Intensive Care",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    image: "assets/synergymed_hippoi50.png",
     specs: [
       "Double-wall canopy for optimal thermal insulation",
       "Servo-controlled skin & air temperature modes",
@@ -940,7 +940,7 @@ const productsData = [
     title: "Hippo W30",
     subtitle: "Infant Radiant Warmer — Open Care System",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    image: "assets/synergymed_hippow30.png",
     specs: [
       "Overhead radiant heater with servo skin temperature control",
       "Open-access design for immediate neonatal care",
@@ -957,7 +957,7 @@ const productsData = [
     title: "AccuDrip 10",
     subtitle: "Volumetric Infusion Pump",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    image: "assets/synergymed_accudrip10.png",
     specs: [
       "Volumetric infusion pump for standard IV sets",
       "Flow rate: 0.1–1200 mL/h with high accuracy",
@@ -972,7 +972,7 @@ const productsData = [
     title: "AccuDrip 15",
     subtitle: "Volumetric Infusion Pump — Enhanced",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    image: "assets/synergymed_accudrip15.png",
     specs: [
       "Enhanced volumetric infusion pump with dose calculation",
       "Dual CPU safety architecture",
@@ -987,7 +987,7 @@ const productsData = [
     title: "AccuDrip 20",
     subtitle: "Syringe Pump — Precision Delivery",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    image: "assets/synergymed_accudrip20.png",
     specs: [
       "Motorized syringe pump for precise micro-infusion",
       "Flow rate: 0.01–1500 mL/h",
@@ -1002,7 +1002,7 @@ const productsData = [
     title: "AccuDrip 25",
     subtitle: "Syringe Pump — Advanced",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    image: "assets/synergymed_accudrip25.png",
     specs: [
       "Advanced syringe pump with TCI (Target Controlled Infusion)",
       "Integrated drug library with DERS (Dose Error Reduction System)",
@@ -1019,7 +1019,7 @@ const productsData = [
     title: "Solar 10",
     subtitle: "LED Surgical Operating Lamp — Single Dome",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    image: "assets/synergymed_solar10.png",
     specs: [
       "Single-dome LED surgical light",
       "Shadow-free illumination up to 130,000 lux",
@@ -1034,7 +1034,7 @@ const productsData = [
     title: "Solar 20",
     subtitle: "LED Surgical Operating Lamp — Dual Dome",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    image: "assets/synergymed_solar20.png",
     specs: [
       "Dual-dome LED surgical lamp system",
       "Main dome: 160,000 lux / satellite dome: 120,000 lux",
@@ -1049,7 +1049,7 @@ const productsData = [
     title: "Solar 30",
     subtitle: "LED Surgical Operating Lamp — Advanced",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    image: "assets/synergymed_solar30.png",
     specs: [
       "Advanced LED operating lamp with ambient lighting system",
       "180,000 lux center illumination intensity",
@@ -1064,7 +1064,7 @@ const productsData = [
     title: "Solar 40",
     subtitle: "LED Surgical Operating Lamp — Premium",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Op-Leuchte.jpg",
+    image: "assets/synergymed_solar40.png",
     specs: [
       "Premium dual-dome LED surgical lighting system",
       "Main: 200,000 lux / Satellite: 160,000 lux",
@@ -1081,7 +1081,7 @@ const productsData = [
     title: "Staflex 10",
     subtitle: "Operating Table — Electro-Hydraulic",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_staflex10.png",
     specs: [
       "Electro-hydraulic multi-purpose surgical table",
       "Height, Trendelenburg, lateral tilt, back & leg adjustment",
@@ -1096,7 +1096,7 @@ const productsData = [
     title: "Staflex 10 Premium",
     subtitle: "Operating Table — Premium Electro-Hydraulic",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_staflex10_premium.png",
     specs: [
       "Premium electro-hydraulic surgical table with memory positioning",
       "Motorized all-section adjustment with programmable presets",
@@ -1111,7 +1111,7 @@ const productsData = [
     title: "Staflex 10 Platinum",
     subtitle: "Operating Table — Platinum Series",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_staflex10_platinum.png",
     specs: [
       "Top-tier electro-hydraulic surgical table — Platinum edition",
       "Fully motorized with joystick & wireless remote control",
@@ -1128,7 +1128,7 @@ const productsData = [
     title: "AccuSign 5",
     subtitle: "Patient Monitor — Compact Bedside",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign5.png",
     specs: [
       "Compact 7-inch bedside patient monitor",
       "ECG (3/5-lead), SpO2, NIBP, Pulse Rate",
@@ -1143,7 +1143,7 @@ const productsData = [
     title: "AccuSign 10",
     subtitle: "Patient Monitor — Standard",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign10.png",
     specs: [
       "10.4-inch color patient monitor",
       "ECG, SpO2, NIBP, Temperature, Respiration",
@@ -1158,7 +1158,7 @@ const productsData = [
     title: "AccuSign 20",
     subtitle: "Patient Monitor — Multi-Parameter",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign20.png",
     specs: [
       "12.1-inch touchscreen multi-parameter monitor",
       "ECG (12-lead), SpO2, NIBP, IBP, Temp, EtCO2, Resp",
@@ -1173,7 +1173,7 @@ const productsData = [
     title: "AccuSign 30",
     subtitle: "Patient Monitor — Advanced ICU",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign30.png",
     specs: [
       "15-inch HD touchscreen ICU-grade patient monitor",
       "Full multi-parameter: ECG, SpO2, NIBP, IBP x2, Temp x2, EtCO2",
@@ -1188,7 +1188,7 @@ const productsData = [
     title: "AccuSign 40",
     subtitle: "Patient Monitor — Premium Modular",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accusign40.png",
     specs: [
       "17-inch HD modular patient monitoring platform",
       "Expandable module slots for BIS, NMT, Cardiac Output, Gas Analysis",
@@ -1205,7 +1205,7 @@ const productsData = [
     title: "Stellar 10",
     subtitle: "Medical Pendant — Single Arm",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_stellar10.png",
     specs: [
       "Single-arm ceiling-mounted medical pendant",
       "Gas outlets: O2, Air, Vacuum, N2O",
@@ -1220,7 +1220,7 @@ const productsData = [
     title: "Stellar 20",
     subtitle: "Medical Pendant — Dual Arm",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_stellar20.png",
     specs: [
       "Dual-arm ceiling pendant for OR & ICU environments",
       "Wet arm (gas/electrical) + dry arm (monitor/equipment)",
@@ -1235,7 +1235,7 @@ const productsData = [
     title: "Stellar 30",
     subtitle: "Medical Pendant — Bridge System",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Operationssaal_Charit%C3%A9.jpg",
+    image: "assets/synergymed_stellar30.png",
     specs: [
       "ICU bridge pendant system with sliding shelves",
       "Configurable wet/dry separation on bridge rail",
@@ -1269,7 +1269,7 @@ const productsData = [
     title: "AccuWS Pump Work Station",
     subtitle: "Infusion Pump Docking Station — Multi-Channel",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Infusion_Pump.jpg",
+    image: "assets/synergymed_accuws.png",
     specs: [
       "Multi-channel docking station for AccuDrip pump series",
       "Supports up to 8 syringe/infusion pumps simultaneously",
@@ -1286,7 +1286,7 @@ const productsData = [
     title: "AccuBreathe VI30",
     subtitle: "ICU Ventilator — Standard",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    image: "assets/synergymed_accubreathe_vi30.png",
     specs: [
       "ICU mechanical ventilator for adult & pediatric patients",
       "Ventilation modes: VCV, PCV, SIMV, PSV, CPAP, BiPAP",
@@ -1301,7 +1301,7 @@ const productsData = [
     title: "AccuBreathe VI40",
     subtitle: "ICU Ventilator — Advanced with NIV",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Maquet_Flow-i_anesthesia_machine.jpg",
+    image: "assets/synergymed_accubreathe_vi40.png",
     specs: [
       "Advanced ICU ventilator for adult, pediatric & neonatal patients",
       "Full invasive & non-invasive ventilation (NIV) capability",
@@ -1318,7 +1318,7 @@ const productsData = [
     title: "Accu Vital 10",
     subtitle: "Vital Sign Monitor — Portable Spot Check",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/ICU_Monitor.jpg",
+    image: "assets/synergymed_accuvital10.png",
     specs: [
       "Portable vital sign spot-check monitor",
       "NIBP, SpO2, Pulse Rate, Temperature measurement",

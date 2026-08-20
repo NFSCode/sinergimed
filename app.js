@@ -711,7 +711,7 @@ const productsData = [
       "7-inch color display with real-time waveforms",
       "Built-in ventilator with volume & pressure modes"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/149Ahn3-iCDay5eNOsvvHDHo3tvXmB5bd/view"
   },
   {
     id: "cc-anes-02",
@@ -726,7 +726,7 @@ const productsData = [
       "Low-flow anesthesia capability for agent conservation",
       "Integrated patient monitoring module (SpO2, ECG, EtCO2)"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1WckCYsWv4tG7au-9Od8-UVmApSyVMNx9/view"
   },
   {
     id: "cc-anes-03",
@@ -741,7 +741,7 @@ const productsData = [
       "Advanced ventilation modes: VCV, PCV, PSV, SIMV",
       "Comprehensive monitoring: hemodynamics, gas analysis, spirometry"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1r-woBtHgzr4lyWZ6iuoA-4l-pzkLVoNF/view"
   },
 
   // --- CRITICAL CARE: CENTRAL MONITOR ---
@@ -758,7 +758,7 @@ const productsData = [
       "Full disclosure recording with trend analysis",
       "Network integration with AccuSign bedside monitors"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1cSTQFBbx4GvEB9ITivjxN8WlH4zCCPXH/view"
   },
   {
     id: "cc-cmon-02",
@@ -773,7 +773,7 @@ const productsData = [
       "HL7/DICOM integration for HIS/EMR connectivity",
       "Long-term data storage with full event review"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1TZb3W9tccIhf-bMRP5C-JF9YfLAmPAFk/view?usp=drive_link"
   },
 
   // --- CRITICAL CARE: CARDIOTOCOGRAPHY (CTG) ---
@@ -790,7 +790,7 @@ const productsData = [
       "7-inch LCD display with real-time CTG trace",
       "Thermal printer for paper CTG recording"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_f4a52c3e759340d3b10b345f5783c40a.pdf"
   },
   {
     id: "cc-ctg-02",
@@ -805,7 +805,7 @@ const productsData = [
       "10.4-inch color touchscreen display",
       "Wireless connectivity for central station monitoring"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_574c6eafc86543a6a300a6322bb16e01.pdf"
   },
 
   // --- CRITICAL CARE: DEFIBRILLATOR ---
@@ -822,7 +822,7 @@ const productsData = [
       "Voice-guided CPR coaching",
       "Lightweight portable design — under 4 kg"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_7e47de9269ee4428aeb48c25a1bc77e6.pdf"
   },
   {
     id: "cc-defib-02",
@@ -837,7 +837,7 @@ const productsData = [
       "10.4-inch high-resolution display with multi-parameter monitoring",
       "SpO2, NIBP, EtCO2 integrated monitoring modules"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: null
   },
 
   // --- CRITICAL CARE: ELECTROCARDIOGRAPHY (ECG) ---
@@ -854,7 +854,7 @@ const productsData = [
       "Auto-interpretation with measurement report",
       "USB & Wi-Fi data transfer"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/19fcC6DrMa23FpE8e9wMxifl0YDcEmyZf/view"
   },
   {
     id: "cc-ecg-02",
@@ -869,7 +869,7 @@ const productsData = [
       "Configurable report formats with patient database",
       "Bluetooth connectivity to PC workstation"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_b16e917231984b55b4e3d0ec14d16c61.pdf"
   },
   {
     id: "cc-ecg-03",
@@ -884,7 +884,7 @@ const productsData = [
       "Advanced interpretation algorithms with Glasgow scoring",
       "Unlimited record storage with cloud backup option"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1f2Rp6TbcxDKf04loAV68CRbffvKvG9Mn/view?usp=drive_link"
   },
   {
     id: "cc-ecg-04",
@@ -899,7 +899,7 @@ const productsData = [
       "Stress test (ergometry) compatible",
       "Barcode scanner for patient ID integration"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/10wiAdgeS77CuKTreAC1X252vuCs4aJnQ/view?usp=drive_link"
   },
   {
     id: "cc-ecg-05",
@@ -914,7 +914,7 @@ const productsData = [
       "Simultaneous 12-lead display & recording",
       "Full network connectivity: Wi-Fi, LAN, USB, Bluetooth"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1GO7UdgDOVYi7Btz1F0OGBBoPyWauA1ND/view"
   },
 
   // --- CRITICAL CARE: INCUBATOR ---
@@ -931,7 +931,7 @@ const productsData = [
       "Tiltable bassinet for Trendelenburg positioning",
       "Access ports with iris diaphragms for minimal heat loss"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1UjViXfofdMud5mtXgBwb_hNSyLzFyI8S/view"
   },
 
   // --- CRITICAL CARE: INFANT WARMER ---
@@ -948,7 +948,7 @@ const productsData = [
       "Phototherapy-ready with optional LED blue light unit",
       "X-ray cassette tray under bassinet for imaging"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1Cb2zfE62_9A91m5QB-5ovb6m923ecxan/view"
   },
 
   // --- CRITICAL CARE: SYRINGE & INFUSION PUMP ---
@@ -965,7 +965,7 @@ const productsData = [
       "Occlusion pressure monitoring with adjustable alarm levels",
       "Color LCD display with drug library"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1ZeDBs6WFm1lJX0YTaYjvxu2nw7zBeDHd/view"
   },
   {
     id: "cc-pump-02",
@@ -980,7 +980,7 @@ const productsData = [
       "Wi-Fi connectivity for pump fleet management",
       "Compatible with all major IV set brands"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1mPGcX13qeeL7ZdpecJQUT9gI7p5FGIzd/view?usp=drive_link"
   },
   {
     id: "cc-pump-03",
@@ -995,7 +995,7 @@ const productsData = [
       "Dual CPU with automatic/manual bolus function",
       "Stackable design for multi-channel configuration"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1AYpTiFfj3XFH9FTWh8nsWqkcsHwy8Qi3/view"
   },
   {
     id: "cc-pump-04",
@@ -1010,7 +1010,7 @@ const productsData = [
       "Nurse call & network alarm integration",
       "Battery backup for uninterrupted delivery"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/160G-fEaJeCoowtlgyEqHeVLpL66HWjJ2/view"
   },
 
   // --- CRITICAL CARE: OPERATING LAMP ---
@@ -1027,7 +1027,7 @@ const productsData = [
       "CRI ≥ 95 for accurate tissue color rendering",
       "Sterilizable central handle for positioning"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1oR6DQ9ejv4E2jKtIqU8t9FKTtOGBDPqN/view"
   },
   {
     id: "cc-lamp-02",
@@ -1042,7 +1042,7 @@ const productsData = [
       "Endoscopic mode with reduced light intensity",
       "HD camera integration option for surgical recording"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1Dn8m74JNQ3Okjso5r0_mpoP9a4OHyci1/view"
   },
   {
     id: "cc-lamp-03",
@@ -1057,7 +1057,7 @@ const productsData = [
       "Multiple light field sizes: 15–30 cm diameter",
       "Integrated Full HD camera with live video output"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1mKi0WgXR6IDLibCRhQREMqA_5pim5FDA/view"
   },
   {
     id: "cc-lamp-04",
@@ -1072,7 +1072,7 @@ const productsData = [
       "Color rendering index Ra ≥ 97 — medical grade",
       "4K camera integration with OR video management"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1LfQiBRGK9UUOd8WvHyAjX4JfDdOF00sO/view"
   },
 
   // --- CRITICAL CARE: OPERATING TABLE ---
@@ -1089,7 +1089,7 @@ const productsData = [
       "Weight capacity: 250 kg",
       "Stainless steel construction — easy to clean & sterilize"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1PHhYB2NUUcFKAMXnyS1oY6McLZrDnXXm/view"
   },
   {
     id: "cc-table-02",
@@ -1104,7 +1104,7 @@ const productsData = [
       "Integrated battery backup for emergency positioning",
       "Weight capacity: 300 kg — bariatric compatible"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_03e07961cc7542e2b99839b51e444022.pdf"
   },
   {
     id: "cc-table-03",
@@ -1119,7 +1119,7 @@ const productsData = [
       "Integrated heating pad & patient transfer system",
       "Weight capacity: 360 kg — heavy-duty bariatric"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_b7f8b46e014143a5a41c582ab6412196.pdf"
   },
 
   // --- CRITICAL CARE: PATIENT MONITOR ---
@@ -1136,7 +1136,7 @@ const productsData = [
       "Audible & visual alarm system with configurable limits",
       "Lightweight & portable — ideal for transport"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_4c9c21b4ca1546dfba79182dae5ef4d8.pdf"
   },
   {
     id: "cc-pmon-02",
@@ -1151,7 +1151,7 @@ const productsData = [
       "96-hour trend data storage with alarm event log",
       "Central station networking via LAN/Wi-Fi"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/19GaBeCBGCqYALVAb0wH15xJUbwIAQxZl/view"
   },
   {
     id: "cc-pmon-03",
@@ -1166,7 +1166,7 @@ const productsData = [
       "Built-in recorder for waveform printout",
       "Drug calculation & hemodynamic computation"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1sBfqTAay3JbWGGUsq83_u51ao5gZpHpT/view"
   },
   {
     id: "cc-pmon-04",
@@ -1181,7 +1181,7 @@ const productsData = [
       "Dual-screen display with configurable layouts",
       "HL7 integration for EMR/HIS data exchange"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1WZrpIEfoIrlFKuiU9hqlSTuKPtXQIHBP/view"
   },
   {
     id: "cc-pmon-05",
@@ -1196,7 +1196,7 @@ const productsData = [
       "Enterprise networking with central station integration",
       "Touchscreen + rotary knob for intuitive operation"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1ECrWRzSLJwUn5JbrZEkpyCER-mp2dWZ3/view"
   },
 
   // --- CRITICAL CARE: PENDANT ---
@@ -1213,7 +1213,7 @@ const productsData = [
       "360° horizontal rotation with pneumatic brake",
       "Load capacity: 150 kg for equipment mounting"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1OD5AfUgu8KtuE4pa2jD_xY58PAY3_ndO/view"
   },
   {
     id: "cc-pend-02",
@@ -1228,7 +1228,7 @@ const productsData = [
       "12x power sockets, 8x gas outlets, network connections",
       "Load capacity: 250 kg total"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/130-Dm7Jz4LeIsGtE1L4I48NznVDPKtEE/view"
   },
   {
     id: "cc-pend-03",
@@ -1243,7 +1243,7 @@ const productsData = [
       "Integrated LED ambient lighting",
       "Modular design for customized ICU bed layout"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1SsbX_ODQRmZxyMkniY5ZWJFbP2oC0mdH/view"
   },
 
   // --- CRITICAL CARE: PHOTOTHERAPY ---
@@ -1260,7 +1260,7 @@ const productsData = [
       "Adjustable stand — fits over incubator or bassinet",
       "LED lifespan > 50,000 hours — low maintenance"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1g_SxQGIhA5uI6uYYFNMXCezx4mGZNGqC/view"
   },
 
   // --- CRITICAL CARE: PUMP WORK STATION ---
@@ -1277,7 +1277,7 @@ const productsData = [
       "Network hub for pump fleet data management",
       "IV pole mount with adjustable height & tilt"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1AG_PS3nXkKbkU1MTzp7XI_Mv9SjVCnLi/view?usp=drive_link"
   },
 
   // --- CRITICAL CARE: VENTILATOR ---
@@ -1294,7 +1294,7 @@ const productsData = [
       "Integrated high-performance turbine — no external air supply needed",
       "FiO2 range: 21%–100% with precision O2 blender"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1k-3x76GnxHIm8v7QQ99FaWak43WumWoN/view"
   },
   {
     id: "cc-vent-02",
@@ -1309,7 +1309,7 @@ const productsData = [
       "Lung protection tools: auto-PEEP, P0.1, NIF measurement",
       "Integrated nebulizer & heated humidifier interface"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1vl-uXsCJ1Eev4-kK0kQqs-PAPOn61eGW/view"
   },
 
   // --- CRITICAL CARE: VITAL SIGN ---
@@ -1326,7 +1326,7 @@ const productsData = [
       "Rechargeable lithium battery for mobile ward rounds",
       "Data transfer via Wi-Fi to central EMR system"
     ],
-    brochure: "SynergyMed_CriticalCare.pdf"
+    brochure: "https://drive.google.com/file/d/1ys3N2Ap4VvD8B7e6s5X5O7OEj-7QlyFS/view"
   },
 
   // =====================================================================

@@ -1451,31 +1451,31 @@ const productsData = [
   // --- ENVIRO: INSTALASI PENGOLAHAN AIR LIMBAH (IPAL) ---
   {
     id: "env-ipal-01",
-    title: "IPAL BioFilter",
-    subtitle: "Instalasi Pengolahan Air Limbah — BioFilter System",
+    title: "IPAL with Grease Trap & Solar Panel",
+    subtitle: "Solar-Powered Wastewater Treatment Plant with Integrated Grease Trap",
     category: "Enviro",
-    image: "assets/enviro_ipal.jpg",
+    image: "assets/synergymed_enviro_ipal_solar.png",
     specs: [
-      "Sistem pengolahan air limbah biologis efisiensi tinggi (Anaerobic & Aerobic Biofilter)",
-      "Memenuhi baku mutu limbah cair lingkungan rumah sakit (BOD, COD, TSS, Coliform)",
-      "Desain modular compact, ramah lingkungan dan minim bau (low odor)",
-      "Operasional stabil, hemat energi listrik dan biaya perawatan rendah",
-      "Dilengkapi sistem sedimentasi dan disinfeksi klorinasi/ozon akhir"
+      "Integrated Wastewater Treatment Plant (WWTP/IPAL) with grease trap & energy-independent solar power system",
+      "Heavy-duty fiberglass reinforced plastic (FRP) primary tank resistant to corrosion and harsh chemicals",
+      "High-efficiency grease trap captures fats, oils, and grease (FOG) prior to biological processing",
+      "Eco-friendly solar photovoltaic power supply for energy-saving pump operation and aeration",
+      "Meets strict healthcare and industrial wastewater environmental discharge standards (BOD, COD, TSS)"
     ],
     brochure: "https://drive.google.com/file/u/7/d/1tzAZW05FOTrdR1i2RKiB2WLqR-rel5h2/view?usp=drive_link"
   },
   {
     id: "env-ipal-02",
-    title: "IPAL with Grease Trap & Solar Panel",
-    subtitle: "Instalasi Pengolahan Air Limbah — Hybrid Solar & Grease Trap",
+    title: "IPAL Biofilter",
+    subtitle: "Anaerobic-Aerobic Biofilter Wastewater Treatment Plant",
     category: "Enviro",
-    image: "assets/enviro_ipal.jpg",
+    image: "assets/synergymed_enviro_ipal_biofilter.png",
     specs: [
-      "Dilengkapi Grease Trap multi-kompartemen untuk pemisahan minyak, lemak & limbah dapur",
-      "Tenaga hybrid Solar Panel fotovoltaik untuk efisiensi energi mandiri",
-      "Teknologi biofilter canggih dengan aerasi terintegrasi",
-      "Monitoring otomatis debit limbah dan sensor kualitas air",
-      "Sesuai regulasi baku mutu lingkungan KLHK & Kemenkes RI"
+      "Domestic and medical wastewater treatment utilizing advanced Anaerobic-Aerobic Biofilter technology",
+      "High-density contact biofilter media maximizes organic pollutant breakdown and microbial digestion",
+      "Durable cylindrical FRP multi-compartment tank construction with multi-access inspection manholes",
+      "High pollutant reduction efficiency with minimal sludge production and odor-free operation",
+      "Low operational and maintenance costs with stable biological performance and no excessive chemicals"
     ],
     brochure: "https://drive.google.com/file/u/7/d/1tzAZW05FOTrdR1i2RKiB2WLqR-rel5h2/view?usp=drive_link"
   },
@@ -1483,31 +1483,31 @@ const productsData = [
   // --- ENVIRO: WATER TREATMENT PLANT (WTP) ---
   {
     id: "env-wtp-01",
-    title: "WTP with Ozone Technology",
-    subtitle: "Water Treatment Plant — Advanced Ozone Sterilization",
+    title: "Water Treatment Plant (WTP) With Ozone Technology",
+    subtitle: "Advanced Ozone Disinfection & Oxidation Water Treatment System",
     category: "Enviro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_enviro_wtp_ozone.png",
     specs: [
-      "Teknologi sterilisasi & oksidasi ozon (O3) berdaya basmi bakteri/virus tinggi",
-      "Menghilangkan mikroorganisme patogen tanpa residu kimia berbahaya",
-      "Oksidasi zat besi (Fe), mangan (Mn), sulfida, dan senyawa organik terlarut",
-      "Menghasilkan air bersih & higienis untuk kebutuhan medis dan operasional RS",
-      "Dilengkapi generator ozon otomatis dengan sistem pengaman over-flow"
+      "Water purification system powered by high-output Ozone (O3) gas injection and oxidation generators",
+      "Rapid disinfection capability eliminating 99.9% of bacteria, viruses, spores, and waterborne pathogens",
+      "Effectively oxidizes dissolved iron (Fe), manganese (Mn), sulfides, and organic micropollutants",
+      "Smart digital control panel with emergency stop, parameter monitoring, and integrated cooling fan",
+      "Produces hospital-grade clean and hygienic water without hazardous chemical residues"
     ],
     brochure: "https://drive.google.com/file/u/7/d/1tzAZW05FOTrdR1i2RKiB2WLqR-rel5h2/view?usp=drive_link"
   },
   {
     id: "env-wtp-02",
-    title: "WTP with Sand Carbon Filter & UF",
-    subtitle: "Water Treatment Plant — Sand Carbon & Ultrafiltration (UF)",
+    title: "Water Treatment Plant With Sand Carbon Filter & UF",
+    subtitle: "Multi-Stage Sand, Activated Carbon & Ultrafiltration (UF) WTP",
     category: "Enviro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_enviro_wtp_uf.png",
     specs: [
-      "Multi-media filtration: Pasir silika & karbon aktif berdaya serap iodine tinggi",
-      "Membran Ultrafiltrasi (UF) pori 0.01 mikron untuk penyaringan partikel & bakteri",
-      "Menghilangkan bau, rasa, warna, kekeruhan (turbidity), dan zat klorin",
-      "Sistem automatic backwash & fast rinse untuk perawatan membran yang mudah",
-      "Suplai air filtrasi konsisten untuk hemodialisa, CSSD, dan seluruh fasilitas RS"
+      "Multi-stage filtration train: Silica Sand Filter, Activated Carbon Filter, and Ultrafiltration (UF) Membrane",
+      "Dual-vessel FRP/steel pressure tanks equipped with front-facing piping manifold and pressure gauges",
+      "Comprehensive removal of total suspended solids (TSS), chlorine, odor, turbidity, and organic matter",
+      "0.01-micron UF hollow fiber membrane blocks fine colloids, bacteria, and suspended micro-particles",
+      "Automated/manual multiport backwash & fast-rinse valves for convenient filter media regeneration"
     ],
     brochure: "https://drive.google.com/file/u/7/d/1tzAZW05FOTrdR1i2RKiB2WLqR-rel5h2/view?usp=drive_link"
   },
@@ -1522,7 +1522,7 @@ const productsData = [
     title: "Kangduo SR2000",
     subtitle: "Robotic Surgical System — Multi-Arm Endoscopic Console",
     category: "Endosurgery",
-    image: "assets/hero_slider_robotic.png",
+    image: "assets/synergymed_kangduo_sr2000.png",
     specs: [
       "Sistem bedah robotik presisi tinggi dengan konsol ergonomis master controller",
       "Instrumen wristed 7-DOF dengan artikulasi multi-arah & tremor filter < 0.1 mm",
@@ -1539,7 +1539,7 @@ const productsData = [
     title: "Surgical Staplers Series",
     subtitle: "Endocutter & Circular Surgical Stapling Systems",
     category: "Endosurgery",
-    image: "assets/hero_slider_surgery.png",
+    image: "assets/endo_staplers.png",
     specs: [
       "Endoscopic linear cutter & circular staplers dengan teknologi titanium staples",
       "Mekanisme tembakan halus satu tangan (one-handed firing) dengan tactile feedback",
@@ -1556,7 +1556,7 @@ const productsData = [
     title: "Trocar & Disposable Instruments",
     subtitle: "Optical Bladeless Trocar & Single-Use Laparoscopic Tools",
     category: "Endosurgery",
-    image: "assets/synergymed_surgery_1785816546977.png",
+    image: "assets/endo_trocar.png",
     specs: [
       "Optical bladeless trocar transparan dengan fiksasi dinding perut yang stabil",
       "Universal seal kedap udara mendukung instrumen ukuran 5mm, 10mm, dan 12mm",
@@ -1573,7 +1573,7 @@ const productsData = [
     title: "Surgical Clips & Appliers",
     subtitle: "Polymer & Titanium Hemostatic Ligation Clips",
     category: "Endosurgery",
-    image: "assets/synergymed_surgery_1785816546977.png",
+    image: "assets/endo_clips.png",
     specs: [
       "Klip ligasi hemostatik bahan polymer non-absorbable & titanium medis murni",
       "Mekanisme penguncian aman anti-slip dengan penutupan pembuluh darah presisi",
@@ -1590,7 +1590,7 @@ const productsData = [
     title: "2D Mesh Implants",
     subtitle: "Polypropylene Surgical Hernia Mesh",
     category: "Endosurgery",
-    image: "assets/synergymed_surgery_1785816546977.png",
+    image: "assets/endo_mesh.png",
     specs: [
       "Bahan monofilament polypropylene rajutan medis berkualitas tinggi",
       "Struktur 2D planar fleksibel dengan kekuatan tensil & elastisitas optimal",
@@ -1773,15 +1773,15 @@ const productsData = [
   {
     id: "pr-neck-01",
     title: "Universal Clinic Collar",
-    subtitle: "Cervical Spine Support & Immobilization Collar",
+    subtitle: "Cervical Spine Support & Immobilization Collar (All Size)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_collar.png",
     specs: [
+      "Provides support and limits neck motion for injury recovery",
       "Penyangga leher anatomis untuk imobilisasi servikal & pemulihan cedera leher",
       "Material busa densitas medium berpori dengan lapisan katun lembut ramah kulit",
-      "Dilengkapi sistem perekat hook-and-loop untuk penyesuaian ukuran universal",
-      "Membantu meredakan nyeri pada cervical spondylosis, whiplash injury, dan torticollis",
-      "Ringan, nyaman dipakai sehari-hari dan mudah dibersihkan"
+      "Dilengkapi sistem perekat hook-and-loop untuk penyesuaian ukuran universal (All Size)",
+      "Membantu meredakan nyeri pada cervical spondylosis, whiplash injury, dan torticollis"
     ],
     brochure: null
   },
@@ -1790,30 +1790,30 @@ const productsData = [
   {
     id: "pr-shld-01",
     title: "UltraSling® III",
-    subtitle: "Shoulder Immobilization & Neutral Abduction Sling",
+    subtitle: "Shoulder Immobilization & Neutral Abduction Sling (Size L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_ultrasling.png",
     specs: [
+      "Advanced shoulder immobilization and comfortable support",
       "Penyangga bahu ergonomis dengan bantal abduksi netral (neutral abduction 10°-15°)",
       "Tali bahu berbusa empuk dengan distribusi beban merata untuk kenyamanan maksimal",
       "Bahan jala bernapas (breathable mesh fabric) memaksimalkan sirkulasi udara",
-      "Ideal untuk pemulihan pasca operasi rotator cuff, dislokasi bahu, dan labral repair",
-      "Dilengkapi stress ball terintegrasi untuk stimulasi sirkulasi darah otot lengan"
+      "Ideal untuk pemulihan pasca operasi rotator cuff, dislokasi bahu, dan labral repair"
     ],
     brochure: null
   },
   {
     id: "pr-wrst-01",
     title: "Quick-Fit™ W.T.O.",
-    subtitle: "Wrist-Thumb Orthosis (WTO) Support Brace",
+    subtitle: "Wrist-Thumb Orthosis Support Brace (Left / Right)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_quickfit.png",
     specs: [
+      "Removable splint for wrist and thumb stabilization (LT / RT)",
       "Ortosis pergelangan tangan dan ibu jari (Wrist-Thumb Spica) imobilisasi presisi",
       "Dilengkapi stay palmar & dorsal aluminium yang dapat dibentuk secara anatomis",
       "Desain single-pull strap memudahkan pemakaian dan pengencangan mandiri satu tangan",
-      "Efektif untuk penanganan De Quervain's tenosynovitis, carpal tunnel & sprain ligamen",
-      "Material felt liner lembut dan breathable untuk kenyamanan pemakaian siang & malam"
+      "Efektif untuk penanganan De Quervain's tenosynovitis, carpal tunnel & sprain ligamen"
     ],
     brochure: null
   },
@@ -1822,45 +1822,45 @@ const productsData = [
   {
     id: "pr-spin-01",
     title: "Immostrap®",
-    subtitle: "Dynamic Lumbar & Postural Support Belt",
+    subtitle: "Dynamic Lumbar & Postural Support Belt (S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_immostrap.png",
     specs: [
+      "Low-profile support for lumbar stabilization and compression",
       "Korset lumbal dinamis dengan sistem tarikan ganda (double bilateral straps)",
       "Memberikan dekompresi dan stabilisasi optimal pada area lumbar spine (L1-S1)",
       "Struktur penyangga posterior ergonomis menyesuaikan kontur lordosis tulang belakang",
-      "Meredakan nyeri pada low back pain akut/kronis, sciatica, dan disc herniation",
-      "Bahan elastis tenun premium yang tipis, pas di bawah pakaian dan tidak mudah bergeser"
+      "Meredakan nyeri pada low back pain akut/kronis, sciatica, dan disc herniation"
     ],
     brochure: null
   },
   {
     id: "pr-spin-02",
     title: "BB Exos® FORM® 626",
-    subtitle: "Sagittal Lumbar Orthosis (LSO) Spinal Brace",
+    subtitle: "Sagittal Lumbar Orthosis Spinal Brace (S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_exos626.png",
     specs: [
-      "Brace tulang belakang lumbal LSO (Lumbar Sacral Orthosis) dengan teknologi Exos thermoformable",
+      "Spinal support with flexible adjustment and comfort",
+      "Brace tulang belakang lumbal LSO dengan teknologi Exos thermoformable",
       "Panel anterior dan posterior dapat disesuaikan untuk imobilisasi bidang sagital presisi",
       "Sistem pengencangan mekanis Boa® / micro-adjustable strap untuk kompresi seragam",
-      "Indikasi untuk pasca laminektomi, spondylolisthesis, dan fraktur kompresi stabil",
-      "Desain modular ringan yang higienis, tahan air (waterproof), dan mudah dicuci"
+      "Indikasi untuk pasca laminektomi, spondylolisthesis, dan fraktur kompresi stabil"
     ],
     brochure: null
   },
   {
     id: "pr-spin-03",
     title: "BB Exos® FORM® 631",
-    subtitle: "Sagittal-Coronal Lumbar Spine Orthosis (LSO Plus)",
+    subtitle: "Sagittal-Coronal Lumbar Spine Orthosis (S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_exos631.png",
     specs: [
+      "Rugged spinal support for optimal immobilization",
       "Ortosis spinal komprehensif untuk kontrol gerak sagital dan koronal (LSO Full Support)",
       "Dilengkapi panel lateral ekspansi untuk stabilitas lateral dan rotasi tulang belakang",
       "Memberikan penopang rigid dari vertebra torakolumbal hingga area sakrum",
-      "Efektif untuk rehabilitasi fusi spinal, instabilitas lumbal kronis, dan stenosis spinal",
-      "Panel thermoformable yang dapat dicetak ulang mengikuti bentuk anatomis spesifik pasien"
+      "Efektif untuk rehabilitasi fusi spinal, instabilitas lumbal kronis, dan stenosis spinal"
     ],
     brochure: null
   },
@@ -1869,59 +1869,59 @@ const productsData = [
   {
     id: "pr-knee-01",
     title: "Action Hinged Knee Wrap",
-    subtitle: "Bilateral Hinged Wrap-Around Knee Support",
+    subtitle: "Bilateral Hinged Wrap-Around Knee Support (S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_action_knee.png",
     specs: [
+      "Hinged support for stability and controlled motion",
       "Dukungan lutut model wrap-around dengan engsel bilateral baja polisentris",
       "Desain bukaan depan memudahkan pemasangan pada lutut bengkak atau lansia",
       "Mencegah hiperekstensi lutut dan memberikan stabilitas ligamen kolateral (MCL/LCL)",
-      "Bantalan patela terbuka (open patella) dengan penstabil cincin untuk pelacakan patela",
-      "Material neoprene kelas medis menjaga kehangatan sendi dan kompresi terapeutik"
+      "Bantalan patela terbuka (open patella) dengan penstabil cincin untuk pelacakan patela"
     ],
     brochure: null
   },
   {
     id: "pr-knee-02",
     title: "Sport Hinged Knee Wrap",
-    subtitle: "High-Performance Hinged Knee Stabilizer",
+    subtitle: "High-Performance Hinged Knee Stabilizer (S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_sport_knee.png",
     specs: [
+      "Hinged support for stability and controlled motion in sports",
       "Stabilisator lutut berengsel untuk aktivitas olahraga dan rehabilitasi gerak dinamis",
       "Engsel aluminium ringan tahan korosi dengan kontrol batas ekstensi / fleksi",
       "Tali pengikat melingkar ganda untuk penahanan posisi stabil anti-merosot",
-      "Mengurangi nyeri akibat cedera ligamen, meniskus, dan instabilitas kronis",
-      "Kain kompresi fleksibel dan bernapas, nyaman digunakan saat latihan intensif"
+      "Mengurangi nyeri akibat cedera ligamen, meniskus, dan instabilitas kronis"
     ],
     brochure: null
   },
   {
     id: "pr-knee-03",
     title: "Drytex Lateral J",
-    subtitle: "Patellofemoral Tracking Knee Brace with J-Buttress",
+    subtitle: "Patellofemoral Tracking Knee Brace (Left/Right: S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_drytex_knee.png",
     specs: [
+      "Lateral stabilization and support for patellar tracking & knee injuries",
       "Brace lutut khusus disfungsi pelacakan patela dan instabilitas patelofemoral",
       "Dilengkapi bantalan penahan tubular lateral berbentuk huruf 'J' (J-Buttress)",
       "Tali tarikan medial membantu koreksi subluksasi dan dislokasi patela",
-      "Material Drytex alternatif neoprene yang bebas lateks, sejuk, dan tidak lembap",
-      "Ideal untuk patellar tendonitis, chondromalacia, dan pelari / atlet aktif"
+      "Material Drytex alternatif neoprene yang bebas lateks, sejuk, dan tidak lembap"
     ],
     brochure: null
   },
   {
     id: "pr-knee-04",
     title: "X-ROM Post Op (Knee Brace Universal)",
-    subtitle: "Post-Operative Range-of-Motion (ROM) Knee Brace",
+    subtitle: "Post-Operative Range-of-Motion Knee Brace (Universal)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_xrom_knee.png",
     specs: [
+      "Telescoping ROM brace with advanced cooling technology (Universal)",
       "Brace lutut pasca operasi teleskopik dengan pengaturan Range-of-Motion (ROM) presisi",
       "Engsel pengatur sudut fleksi (0°-120°) dan ekstensi (0°-90°) dengan sistem quick-lock",
       "Panjang lengan teleskopik (slider bar) yang dapat disesuaikan tinggi badan pasien",
-      "Bantalan busa berkontur anti-slip memberikan kenyamanan fiksasi jangka panjang",
       "Protokol standar untuk pemulihan rekonstruksi ACL/PCL/MCL dan perbaikan meniskus"
     ],
     brochure: null
@@ -1931,44 +1931,44 @@ const productsData = [
   {
     id: "pr-foot-01",
     title: "AirSelect® Short",
-    subtitle: "Short Pneumatic Walking Boot & Fracture Cast",
+    subtitle: "Short Pneumatic Walking Boot & Fracture Cast (S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_airselect_short.png",
     specs: [
+      "Low-profile air support for foot & ankle stability",
       "Sepatu boot gips berjalan pneumatik tipe pendek untuk cedera kaki depan & pergelangan kaki",
-      "Sistem pompa udara terintegrasi (integrated air pump) untuk kustomisasi kompresi individual",
+      "Sistem pompa udara terintegrasi (integrated air pump) untuk kustomisasi kompresi",
       "Sol luar rocker-bottom ergonomis memfasilitasi pola jalan natural dan meredam benturan",
-      "Panel berventilasi semi-rigid untuk perlindungan kokoh dan kenyamanan bernapas",
-      "Diindikasikan untuk fraktur metatarsal, pasca operasi bunionektomi, dan sprain pergelangan kaki"
+      "Diindikasikan untuk fraktur metatarsal, pasca operasi bunionektomi, dan sprain ankle"
     ],
     brochure: null
   },
   {
     id: "pr-foot-02",
     title: "AirSelect® Standard",
-    subtitle: "Full-Length Pneumatic Walking Boot",
+    subtitle: "Full-Length Pneumatic Walking Boot (S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_airselect_standard.png",
     specs: [
+      "Air support for moderate to severe sprains & fractures",
       "Sepatu boot gips berjalan pneumatik tinggi untuk imobilisasi komprehensif tungkai bawah",
       "Dua sel udara bilateral yang dapat dikompresi secara terpisah untuk reduksi edema optimal",
       "Cangkang luar semi-rigid memberikan proteksi maksimal pengganti gips konvensional",
-      "Teknologi SoftStrike menyerap hentakan tumit saat menapak dan berjalan",
-      "Standar rehabilitasi fraktur fibula/tibia distal, ruptur tendon achilles, dan sprain grade III"
+      "Teknologi SoftStrike menyerap hentakan tumit saat menapak dan berjalan"
     ],
     brochure: null
   },
   {
     id: "pr-foot-03",
     title: "A60® Ankle Support",
-    subtitle: "Prophylactic Sports Ankle Stabilizer",
+    subtitle: "Prophylactic Sports Ankle Stabilizer (Left/Right: S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_a60_ankle.png",
     specs: [
+      "Comfortable compression and support designed at 60-degree angle",
       "Penyangga pergelangan kaki profil ramping yang dirancang dengan sudut 60 derajat",
       "Memberikan proteksi maksimal terhadap cedera inversi / terkilir tanpa membatasi kelincahan",
-      "Desain single-strap memudahkan pemakaian cepat tanpa tali rumit",
-      "Sangat tipis, pas dan nyaman masuk ke dalam sepatu olahraga atau sepatu kasual",
+      "Desain single-strap memudahkan pemakaian cepat langsung ke dalam sepatu olahraga",
       "Bahan Breath-O-Prene® menjaga kaki tetap sejuk, kering, dan higienis"
     ],
     brochure: null
@@ -1976,30 +1976,30 @@ const productsData = [
   {
     id: "pr-foot-04",
     title: "Air-Stirrup® Ankle Brace",
-    subtitle: "Pneumatic Ankle Stirrup with Duplex™ Air-Cell",
+    subtitle: "Pneumatic Ankle Stirrup with Duplex™ Air-Cell (Left/Right: S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_airstirrup.png",
     specs: [
+      "Ankle stabilization for sprains and soft tissue injuries",
       "Brace pergelangan kaki stirrup legendaris dengan sistem kantong udara Duplex™ ganda",
-      "Menghasilkan kompresi pulsatil saat berjalan untuk mempercepat resolusi pembengkakan (edema)",
+      "Menghasilkan kompresi pulsatil saat berjalan untuk mempercepat resolusi edema",
       "Cangkang samping anatomis membatasi gerakan inversi/eversi sambil mempertahankan dorsofleksi",
-      "Baku emas medis untuk pemulihan sprain pergelangan kaki akut dan instabilitas ligamen",
-      "Dapat dikenakan langsung dengan kaos kaki dan sepatu sneakers"
+      "Baku emas medis untuk pemulihan sprain pergelangan kaki akut"
     ],
     brochure: null
   },
   {
     id: "pr-foot-05",
     title: "Air Heel®",
-    subtitle: "Plantar Fasciitis & Achilles Tendonitis Support",
+    subtitle: "Plantar Fasciitis & Achilles Tendonitis Support (S, M, L)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/synergymed_pr_airheel.png",
     specs: [
-      "Penyangga pneumatik khusus untuk meredakan nyeri tumit, plantar fasciitis, dan tendinitis achilles",
+      "Achilles support and protection for recovery & plantar fasciitis",
+      "Penyangga pneumatik khusus untuk meredakan nyeri tumit, plantar fasciitis & tendinitis",
       "Dua bantalan udara interkoneksi di bawah tumit dan di belakang tendon achilles",
-      "Memberikan kompresi komparatif dinamis yang memijat dan meredakan ketegangan fasia setiap melangkah",
-      "Desain slip-on yang ringan, ringkas, dan sangat mudah digunakan",
-      "Bahan kain elastis antimikroba yang nyaman dipakai seharian di dalam sepatu"
+      "Memberikan kompresi komparatif dinamis yang memijat dan meredakan ketegangan fasia",
+      "Desain slip-on yang ringan, ringkas, dan sangat mudah digunakan di dalam sepatu"
     ],
     brochure: null
   },

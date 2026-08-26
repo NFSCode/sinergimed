@@ -2394,7 +2394,7 @@ function openBrochureLink(url, title) {
 // 4. WHATSAPP & MODAL INQUIRIES
 function inquireProduct(productName) {
   const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
-  window.open(`https://wa.me/628131306711?text=${text}`, '_blank');
+  window.open(`https://wa.me/6282372021970?text=${text}`, '_blank');
 }
 
 function openProductDetailModal(productId) {
@@ -2502,7 +2502,7 @@ function openChatModal() {
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">SynergyMed Live Specialist</h3>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px;">Hubungi tim konsultan elektromedis dan spesialis alat kesehatan PT Sinergi Medika Utama secara langsung via WhatsApp.</p>
       
-      <a href="https://wa.me/628131306711?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20solusi%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
+      <a href="https://wa.me/6282372021970?text=Halo%20SynergyMed%20Specialist,%20saya%20membutuhkan%20informasi%20mengenai%20solusi%20dan%20layanan" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
         <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Start WhatsApp Live Chat
       </a>
     </div>
@@ -2827,21 +2827,7 @@ function openJobApplicationModal(positionName) {
           </div>
         </div>
 
-        <div>
-          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
-            Pendidikan Terakhir & Jurusan <span style="color: #ef4444;">*</span>
-          </label>
-          <input type="text" id="app-education" required placeholder="Contoh: S1 Keperawatan / D3 Desain Grafis / S1 Farmasi" 
-            style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
-        </div>
 
-        <div>
-          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 4px;">
-            Pengalaman Kerja Singkat <span style="color: #ef4444;">*</span>
-          </label>
-          <input type="text" id="app-experience" required placeholder="Contoh: 2 Tahun Sales Alkes / Fresh Graduate" 
-            style="width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none;">
-        </div>
 
         <button type="submit" id="app-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, #15803d 0%, #16a34a 100%); color: #ffffff; border: none; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25); margin-top: 4px;">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i> Kirim Lamaran &amp; Buka WhatsApp
@@ -2866,11 +2852,9 @@ async function submitJobApplication(event, positionName) {
   const name = document.getElementById('app-name')?.value.trim();
   const phone = document.getElementById('app-phone')?.value.trim();
   const email = document.getElementById('app-email')?.value.trim();
-  const education = document.getElementById('app-education')?.value.trim();
-  const experience = document.getElementById('app-experience')?.value.trim();
 
   // Client-Side Validation
-  if (!name || !phone || !email || !education || !experience) {
+  if (!name || !phone || !email) {
     if (errorBox) {
       errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
       errorBox.style.display = 'block';
@@ -2900,8 +2884,6 @@ async function submitJobApplication(event, positionName) {
     name: name,
     phone: phone,
     email: email,
-    education: education,
-    experience: experience,
     position: positionName
   };
 
@@ -2951,7 +2933,7 @@ async function submitJobApplication(event, positionName) {
 }
 
 function generateCareerWhatsAppUrl(payload) {
-  const waNumber = "628131306711";
+  const waNumber = "6282372021970";
 
   const lines = [
     `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
@@ -2962,8 +2944,6 @@ function generateCareerWhatsAppUrl(payload) {
     `• Nama Lengkap: ${payload.name}`,
     `• Nomor WhatsApp / Telp: ${payload.phone}`,
     `• Email Aktif: ${payload.email}`,
-    `• Pendidikan Terakhir: ${payload.education}`,
-    `• Pengalaman Kerja: ${payload.experience}`,
     ``,
     `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
     ``,
@@ -3030,14 +3010,6 @@ function renderApplicationSuccessView(payload, waUrl) {
           <div>
             <span style="color: #64748b; display: block; font-size: 0.74rem;">Email:</span>
             <span style="color: #0f172a; font-weight: 600;">${payload.email}</span>
-          </div>
-          <div style="grid-column: 1 / -1; border-top: 1px dashed #e2e8f0; padding-top: 6px; margin-top: 2px;">
-            <span style="color: #64748b; display: block; font-size: 0.74rem;">Pendidikan Terakhir:</span>
-            <span style="color: #0f172a; font-weight: 600;">${payload.education}</span>
-          </div>
-          <div style="grid-column: 1 / -1;">
-            <span style="color: #64748b; display: block; font-size: 0.74rem;">Pengalaman Kerja:</span>
-            <span style="color: #0f172a; font-weight: 600;">${payload.experience}</span>
           </div>
         </div>
       </div>

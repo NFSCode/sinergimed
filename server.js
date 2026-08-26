@@ -234,7 +234,7 @@ const server = http.createServer(async (req, res) => {
       const hrReviewUrl = `http://localhost:${PORT}/api/applications/${applicationId}`;
       const hrNotification = {
         recipient: 'hr@synergymed.id',
-        whatsappChannel: '08131306711',
+        whatsappChannel: '082372021970',
         subject: `[New Candidate Application] ${cleanPosition} - ${cleanName} (${applicationId})`,
         sentAt: submissionTimestamp,
         status: 'Delivered',
@@ -308,7 +308,7 @@ const server = http.createServer(async (req, res) => {
       console.log(`   Candidate: ${cleanName} (${cleanEmail} / ${cleanPhone})`);
       console.log(`   CV Method: ${storedFileName ? storedFileName : 'Sent via WhatsApp Chat'}`);
       console.log(`   Status: Applied`);
-      console.log(`   HR Notification: Dispatched to hr@synergymed.id & WA 0813-1306-711\n`);
+      console.log(`   HR Notification: Dispatched to hr@synergymed.id & WA 0823-7202-1970\n`);
 
       // 7. RESPOND TO CLIENT
       res.writeHead(200, { 'Content-Type': 'application/json' });

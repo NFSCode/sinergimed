@@ -5,13 +5,13 @@
 // 1. SOLUTIONS CATALOG DATA
 const productsData = [
 
-  // --- RADIOTHERAPY & SURGERY ---
+  // --- RADIATION ONCOLOGY ---
   {
-    id: "rs-01",
-    title: "Zap-X",
+    id: "ro-01",
+    title: "Zap-X Gyroscopic Radiosurgery",
     subtitle: "Gyroscopic Stereotactic Radiosurgery System",
     category: "Radiation Oncology",
-    image: "assets/zap_x.jpg",
+    image: "assets/zapx.png",
     specs: [
       "Self-shielded dual-gantry gyroscopic design — no bunker required",
       "Frameless stereotactic radiosurgery for intracranial & cervical spine",
@@ -21,14 +21,12 @@ const productsData = [
     ],
     brochure: "https://drive.google.com/file/d/1_K5iGL9FJk3EWWZ9SeIqwbxiCLsWyLLL/view?usp=sharing"
   },
-
-  // --- RADIATION ONCOLOGY: ADVANCED PROTON & RADIOTHERAPY SYSTEMS ---
   {
-    id: "ro-mev-01",
-    title: "MEVION S250i",
+    id: "ro-02",
+    title: "Mevion S250i",
     subtitle: "Proton Therapy System with HYPERSCAN™ Pencil Beam Scanning",
     category: "Radiation Oncology",
-    image: "assets/zap_x.jpg",
+    image: "assets/mevion_s250i.png",
     specs: [
       "Sistem terapi proton tercanggih dengan teknologi HYPERSCAN™ Pencil Beam Scanning (PBS)",
       "Adaptive Aperture™ mikro-kolimasi layer-by-layer untuk penajaman tepi berkas proton hingga 3 mm",
@@ -36,14 +34,14 @@ const productsData = [
       "Visualisasi 3D IGRT & robotik 6-DOF couch fiksasi posisi pasien berpresisi sub-milimeter",
       "Ideal untuk radioterapi pediatrik, tumor basis kranii, SSP, kepala-leher, dan kanker paru/prostat"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-mev-02",
-    title: "MEVION S250-FIT",
+    id: "ro-03",
+    title: "Mevion S250-Fit",
     subtitle: "Full-Featured Compact Proton Therapy System (Vault-Fit)",
     category: "Radiation Oncology",
-    image: "assets/zap_x.jpg",
+    image: "assets/mevion_fit.png",
     specs: [
       "Sistem terapi proton pertama di dunia yang dapat dipasang langsung di dalam bunker LINAC konvensional",
       "Teknologi FLASH-ready untuk pengiriman dosis ultra-tinggi dalam hitungan milidetik",
@@ -51,14 +49,14 @@ const productsData = [
       "Dilengkapi sistem pencitraan CT diagnostik in-room dan gantry robotik adaptif",
       "Memperluas akses terapi proton presisi tinggi untuk pusat onkologi dan rumah sakit modern"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-linac-01",
-    title: "LINAC",
+    id: "ro-04",
+    title: "Linac",
     subtitle: "High-Precision Multi-Energy Radiotherapy Linear Accelerator System",
     category: "Radiation Oncology",
-    image: "assets/zap_x.jpg",
+    image: "assets/linac.png",
     specs: [
       "Akselerator linier medis multi-energi foton dan elektron untuk radioterapi modern",
       "Mendukung teknik penyinaran 3D-CRT, IMRT, VMAT / RapidArc, SRS, dan SBRT",
@@ -66,14 +64,14 @@ const productsData = [
       "Sistem pencitraan On-Board Imager (OBI) kV Cone-Beam CT (CBCT) untuk verifikasi posisi real-time",
       "High-Dose-Rate Flattening Filter Free (FFF) mode untuk mempersingkat waktu fraksinasi terapi"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-brachy-01",
+    id: "ro-05",
     title: "Brakhiterapi",
     subtitle: "High-Dose-Rate (HDR) Afterloading Brachytherapy System",
     category: "Radiation Oncology",
-    image: "assets/zap_x.jpg",
+    image: "assets/brakhiterapi.png",
     specs: [
       "Sistem afterloading brakhiterapi laju dosis tinggi (HDR) berbasis sumber radioaktif Iridium-192 / Cobalt-60",
       "Kanal transfer multi-channel (hingga 30+ kanal) dengan motor penggerak kawat sumber ultra-presisi",
@@ -81,31 +79,29 @@ const productsData = [
       "Sistem proteksi radiasi terintegrasi, sensor pendeteksi radiasi otomatis, dan manual emergency retractor",
       "Treatment Planning System (TPS) 3D inverse planning terintegrasi langsung dengan CT/MRI"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
-
-  // --- RADIATION ONCOLOGY: PATIENT POSITIONING & IMMOBILIZATION SYSTEMS ---
   {
-    id: "ro-pos-01",
-    title: "EQUILIBRIUM™ VMAT TBI Overlay System",
-    subtitle: "Total Body Irradiation (TBI) Patient Positioning & Treatment Overlay",
+    id: "ro-06",
+    title: "Lumora Custom Bolus",
+    subtitle: "Custom 3D-Printed Radiotherapy Bolus",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/lumora.png",
     specs: [
-      "Sistem overlay khusus penyinaran seluruh tubuh Total Body Irradiation (TBI) berbasis teknik VMAT",
-      "Material serat karbon homogen ultra-ringan dengan atenuasi radiasi sangat rendah (< 1%)",
-      "Indeks fiksasi universal terkalibrasi untuk reposisi pasien dari kepala hingga ujung kaki",
-      "Mengoptimalkan homogenitas distribusi dosis dan melindungi organ-at-risk (paru-paru & ginjal)",
-      "Kompatibel dengan semua jenis meja couch LINAC dan CT Simulator onkologi"
+      "Custom-fit bolus designed to conform perfectly to patient anatomy",
+      "Enhances superficial dose delivery in photon and electron therapy",
+      "Reduces air gaps compared to standard flat bolus materials",
+      "3D printed for optimal thickness and homogeneity",
+      "Improves patient comfort and setup reproducibility"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-02",
-    title: "FREEDOMX™ Total Body Patient Positioning System",
+    id: "ro-07",
+    title: "Freedomx – Radiotherapy Positioning System",
     subtitle: "Modular All-in-One Patient Immobilization & Positioning Platform",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/freedomx.png",
     specs: [
       "Platform imobilisasi modular seluruh tubuh all-in-one untuk radioterapi stereotaktik dan konformal",
       "Desain rel indeks terintegrasi untuk integrasi modul kepala, bahu, toraks, pelvis, dan ekstremitas",
@@ -113,164 +109,14 @@ const productsData = [
       "Meningkatkan reprodusibilitas posisi fraksi harian dan meminimalkan setup margin",
       "Sistem penguncian cepat (quick-release lock) yang aman dan efisien bagi radioterapis"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-03",
-    title: "FREEDOMX™ Comprehensive Overlay Module",
-    subtitle: "Full-Couch Carbon Fiber Overlay Board for Linear Accelerators",
+    id: "ro-08",
+    title: "Sabellaflex – Breast & Thorax",
+    subtitle: "Dual Access Positioning System",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Papan overlay serat karbon penuh untuk meja couch treatment dan simulasi radioterapi",
-      "Permukaan datar terindeks presisi tinggi untuk menyamakan geometri CT sim dan LINAC",
-      "Atenuasi sinar foton homogen seragam tanpa pergeseran berkas non-linear",
-      "Daya tahan beban tinggi (hingga 250 kg) dengan defleksi kelenturan minimal",
-      "Kompatibel dengan sistem fiksasi termoplastik, vac-bag, dan indexing bars standar internasional"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-04",
-    title: "FREEDOMX™ PowerWEDGE Module",
-    subtitle: "Adjustable Incline Wedge Positioning Module for Thorax & Breast",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Modul baji kemiringan sudut multi-posisi (0°, 5°, 10°, 15°, 20°) untuk fiksasi toraks & payudara",
-      "Membantu pasien dengan keterbatasan mobilitas pernapasan dan elevasi lengan",
-      "Struktur busa berkepadatan tinggi / serat karbon tahan benturan dan mudah didisinfeksi",
-      "Penguncian sudut presisi tinggi dengan indikator derajat kemiringan yang jelas",
-      "Mendukung teknik Deep Inspiration Breath Hold (DIBH) untuk proteksi jantung"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-05",
-    title: "FREEDOMX™ SBRT Module",
-    subtitle: "Stereotactic Body Radiation Therapy (SBRT) Immobilization System",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Sistem fiksasi stereotaktik SBRT / SABR untuk kanker paru-paru, hepar, dan organ abdomen",
-      "Dilengkapi jembatan kompresi abdominal (abdominal compression bridge) untuk reduksi gerak pernapasan",
-      "Sabuk penahan diafragma pneumatik dengan pengukur tekanan digital presisi",
-      "Imobilisasi kaku dengan vacuum cushion berkontur kustom mengikuti anatomi pasien",
-      "Toleransi pergeseran target intra-fraksi kurang dari 1.5 mm"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-06",
-    title: "FREEDOMX™ Comprehensive Spine Module",
-    subtitle: "Stereotactic Spine Radiosurgery (SRS/SBRT) Positioning Board",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Modul imobilisasi spine stereotaktik berpresisi tinggi untuk lesi vertebra servikal, torakal, dan lumbal",
-      "Sistem penjepit bahu dan penyangga kurvatura lordotik tulang belakang yang dapat disesuaikan",
-      "Kompatibel dengan masker termoplastik kepala-leher-bahu dan bantal vakum posterior",
-      "Memberikan isolasi gerak rigid untuk pengiriman dosis ablatif tinggi per fraksi",
-      "Bahan non-logam bersertifikasi MR-Conditional & CT-transparent"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-07",
-    title: "FREEDOMX™ Hand Indexer + Shoulder Modules",
-    subtitle: "Upper Extremity & Shoulder Retraction Immobilization Module",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Modul penarik bahu (shoulder depression) dan penahan posisi tangan terindeks",
-      "Menarik bahu ke arah kaudal secara konsisten untuk membebaskan area leher dari berkas radiasi lateral",
-      "Pegangan tangan ergonomis bernomor indeks untuk kenyamanan dan reprodusibilitas pasien",
-      "Sistem tali pengatur tegangan simetris bilateral dengan kunci pengaman cepat",
-      "Sangat penting untuk radioterapi tumor kepala & leher (Head and Neck)"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-08",
-    title: "FREEDOMX™ DUO Mask Modules",
-    subtitle: "Dual-Locking Frame System for Frameless SRS & Head-Neck Masks",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Sistem rangka fiksasi masker ganda (Dual-Locking) untuk masker termoplastik anterior & posterior",
-      "Fiksasi 3D 360 derajat mengunci kranial secara presisi setara rigid frame konvensional",
-      "Profil bingkai ultra-rendah tidak mengganggu sudut tembakan non-coplanar",
-      "Mekanisme klik presisi tanpa memerlukan alat bantu tambahan saat pemasangan",
-      "Mendukung protokol SRS/SRT intrakranial tanpa cincin invasif (frameless)"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-09",
-    title: "FREEDOMX™ Intuition Click™ Module",
-    subtitle: "Fast-Locking Intuitive Mechanism for Thermoplastic Mask Fastening",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Mekanisme pengunci masker termoplastik inovatif dengan sistem umpan balik sentuhan 'Click'",
-      "Pemasangan masker dalam hitungan detik tanpa risiko pinch jaringan kulit pasien",
-      "Memastikan ketegangan masker merata dan mencegah pelepasan tidak disengaja selama fraksinasi",
-      "Dibuat dari material polimer medis berkekuatan tinggi yang tahan radiasi kumulatif",
-      "Mempersingkat waktu setup di ruang simulasi dan bunker LINAC"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-10",
-    title: "FREEDOMX™ Mask Stabilization Module",
-    subtitle: "Rigid Cranial & Cervical Mask Stabilization Unit",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Unit stabilisasi masker kranial dan servikal untuk membatasi rotasi kepala pitch, roll, dan yaw",
-      "Dilengkapi penyangga dagu anatomis dan fiksator titik fusi oksipital",
-      "Mengurangi deformasi masker termoplastik selama masa pendinginan pencetakan",
-      "Kompatibel dengan sistem pelacakan permukaan optik (Surface Guided Radiation Therapy - SGRT)",
-      "Memaksimalkan kenyamanan pasien claustrophobic dengan ventilasi optimal"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-11",
-    title: "FREEDOMX™ Couch Extensions",
-    subtitle: "Carbon Fiber Treatment Couch Extension Panels",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Panel ekstensi meja couch serat karbon untuk memperluas jangkauan penyinaran kranial dan pelvis",
-      "Bebas bayangan struktur logam (metal-free window) untuk tembakan sudut 360 derajat tanpa halangan",
-      "Koneksi docking rigid yang kokoh dan presisi dengan meja couch utama",
-      "Bobot sangat ringan memudahkan pemasangan dan pelepasan oleh staf medis",
-      "Memenuhi standar uji beban lendutan mekanis internasional"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-12",
-    title: "FREEDOMX™ Accessories",
-    subtitle: "Comprehensive Positioning Accessories & Adaptor Kit",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Paket aksesori lengkap: Adaptor meja couch, pin pengunci cepat, spacer elevasi, dan indexing bars",
-      "Penyangga lutut dan kaki berkontur (KneeFix & FeetFix) terindeks presisi",
-      "Tali pengaman pasien hipoalergenik dengan pengatur panjang elastis",
-      "Material tahan pembersih kimia rumah sakit dan mudah didekontaminasi",
-      "Menjamin modularitas penuh antar seluruh lini produk FreedomX™"
-    ],
-    brochure: null
-  },
-  {
-    id: "ro-pos-13",
-    title: "SABELLA FLEX™ Dual Access Positioning System",
-    subtitle: "Bilateral Breast & Thoracic Radiotherapy Positioning System",
-    category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/sabellaflex.png",
     specs: [
       "Sistem fiksasi payudara bilateral dan toraks dengan akses ganda fleksibel",
       "Pengaturan posisi lengan independen kiri dan kanan (bilateral arm supports) multi-axis",
@@ -278,29 +124,74 @@ const productsData = [
       "Penyangga kepala dan pergelangan tangan berkontur empuk untuk kenyamanan pasien",
       "Kompatibel dengan teknik IMRT, VMAT, dan gating pernapasan (respiratory gating)"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-14",
-    title: "PROCLINE™ Breast Positioning System",
-    subtitle: "Inclined Breast Board with Anatomical Arm & Wrist Rests",
+    id: "ro-09",
+    title: "Duo Adjust™ Cranial Srs Immobilization",
+    subtitle: "Adjustable Dual-Locking Frame System for Frameless SRS",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/duo_adjust.png",
     specs: [
-      "Papan fiksasi payudara ergonomis dengan sudut inklinasi presisi (5° hingga 25°)",
-      "Penahan bokong (bottom stop) dan penyangga panggul yang dapat digeser sesuai tinggi pasien",
-      "Bahan serat karbon 100% homogen untuk meminimalkan dosis hamburan pada kulit (skin sparing)",
-      "Penyangga lengan atas overhead dan lengan bawah dengan skala indeks mudah dibaca",
-      "Mendukung penanganan fraksinasi radioterapi kanker payudara unifokal dan multifokal"
+      "Sistem rangka fiksasi masker ganda (Dual-Locking) untuk masker termoplastik anterior & posterior",
+      "Fiksasi 3D 360 derajat mengunci kranial secara presisi setara rigid frame konvensional",
+      "Profil bingkai ultra-rendah tidak mengganggu sudut tembakan non-coplanar",
+      "Mekanisme penyesuaian presisi untuk mengakomodasi berbagai ukuran kepala",
+      "Mendukung protokol SRS/SRT intrakranial tanpa cincin invasif (frameless)"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-15",
-    title: "KOILIA MIKROS™ Belly Board",
+    id: "ro-10",
+    title: "Instaform Pro – Water-Activated Custom Support Cushion",
+    subtitle: "Custom Patient Support Cushion",
+    category: "Radiation Oncology",
+    image: "assets/instaform_pro.png",
+    specs: [
+      "Water-activated custom molding cushion for perfect anatomical adaptation",
+      "Quick and easy preparation in the simulation room",
+      "Maintains rigid shape throughout the entire treatment course",
+      "Radiolucent material with minimal beam attenuation",
+      "Enhances patient comfort and immobilization accuracy"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-11",
+    title: "Procline™ – Prone Breast Radiotherapy Positioning",
+    subtitle: "Inclined Prone Breast Board",
+    category: "Radiation Oncology",
+    image: "assets/procline.png",
+    specs: [
+      "Papan fiksasi payudara ergonomis untuk posisi tengkurap (prone)",
+      "Memisahkan jaringan payudara dari dinding dada untuk mengurangi dosis ke jantung dan paru-paru",
+      "Bahan serat karbon 100% homogen untuk meminimalkan dosis hamburan pada kulit (skin sparing)",
+      "Penyangga lengan dan kepala yang nyaman dan dapat disesuaikan",
+      "Mendukung penanganan fraksinasi radioterapi kanker payudara secara presisi"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-12",
+    title: "Equilibrium™ – Rotational Radiotherapy Positioning Platform",
+    subtitle: "Rotational Overlay System",
+    category: "Radiation Oncology",
+    image: "assets/equilibrium.png",
+    specs: [
+      "Sistem overlay rotasional presisi untuk radioterapi konformal dan stereotaktik",
+      "Material serat karbon homogen ultra-ringan dengan atenuasi radiasi sangat rendah (< 1%)",
+      "Indeks fiksasi universal terkalibrasi untuk reposisi pasien yang konsisten",
+      "Mendukung teknik rotasional kompleks dan penyinaran multi-isocenter",
+      "Kompatibel dengan semua jenis meja couch LINAC dan CT Simulator onkologi"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-13",
+    title: "Kolia Mikrostm™ – Belly Board",
     subtitle: "Prone Pelvic & Small Bowel Sparing Positioning Board",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/koilia_mikros.png",
     specs: [
       "Papan fiksasi posisi tengkurap (prone) khusus untuk radioterapi rektum, prostat, dan ginekologi",
       "Bukaan abdominal anatomis (belly hole) dengan insert modular untuk memindahkan usus halus ke anterior",
@@ -308,37 +199,82 @@ const productsData = [
       "Penyangga dada, dagu, dan tungkai berkontur busa empuk untuk stabilitas tengkurap yang nyaman",
       "Konstruksi serat karbon ringan dengan sistem pengunci indeks meja treatment"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-16",
-    title: "HEXSPAND LT THERMOPLASTICS",
+    id: "ro-14",
+    title: "Lt-Thermoplastics™ Immobilization",
     subtitle: "Low-Temperature Thermoplastic Masks & Immobilization Sheets",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/lt_thermoplastics.png",
     specs: [
-      "Masker termoplastik suhu rendah (Low Temperature Thermoplastics) dengan struktur pori mikro Hexspand",
-      "Formulasi polimer anti-lengket (non-stick coating) tidak menempel pada rambut atau kulit pasien",
+      "Masker termoplastik suhu rendah dengan struktur pori mikro untuk kenyamanan pasien",
+      "Formulasi polimer anti-lengket (non-stick coating) tidak menempel pada rambut atau kulit",
       "Peregangan elastis seragam dengan memori bentuk sempurna dan penyusutan (shrinkage) minimal",
-      "Tersedia tipe Head Only (3-point), Head-Neck-Shoulder (4 & 5-point), serta lembaran padat/berpori",
-      "Waktu pemanasan cepat (1-2 menit pada air 65°-70°C) dan waktu kerja elastis yang nyaman"
+      "Tersedia tipe Head Only (3-point), Head-Neck-Shoulder, serta lembaran khusus",
+      "Waktu pemanasan cepat dan waktu kerja elastis yang nyaman"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
-    id: "ro-pos-17",
-    title: "Radiation Oncology Accessories",
-    subtitle: "Index Bars, Precision Table Pads, Digital Heating, Bolus, Head Supports, Wedges & MR Compatible",
+    id: "ro-15",
+    title: "Extremity Lock™ Immobilization",
+    subtitle: "Upper & Lower Extremity Immobilization Module",
     category: "Radiation Oncology",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/extremity_lock.png",
+    specs: [
+      "Modul fiksasi presisi untuk ekstremitas atas dan bawah (lengan, tungkai, kaki)",
+      "Sistem penguncian kaku untuk mencegah pergerakan tak disengaja selama penyinaran",
+      "Kompatibel dengan masker termoplastik dan bantal penyangga vakum khusus ekstremitas",
+      "Indeks referensi jelas untuk reprodusibilitas posisi fraksi harian yang akurat",
+      "Ideal untuk radioterapi sarkoma dan tumor pada area ekstremitas"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-16",
+    title: "Totim™ – Custom Patient Support Cushions",
+    subtitle: "Polyurethane Foam Custom Immobilization Cushions",
+    category: "Radiation Oncology",
+    image: "assets/totim.png",
+    specs: [
+      "Bantal penyangga kustom berbasis busa poliuretan yang mengembang menyesuaikan kontur tubuh",
+      "Imobilisasi kaku namun nyaman untuk kepala, leher, dan area ekstremitas",
+      "Radiolusen tinggi tanpa menimbulkan artefak pada CT atau mempengaruhi distribusi dosis LINAC",
+      "Proses pencetakan cepat dan mudah langsung di ruang simulasi CT",
+      "Tahan lama sepanjang masa perawatan radioterapi"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-17",
+    title: "Vacuum Lock™",
+    subtitle: "Vacuum Immobilization Bags",
+    category: "Radiation Oncology",
+    image: "assets/vacuum_lock.png",
+    specs: [
+      "Bantal vakum presisi tinggi untuk imobilisasi tubuh pasien secara menyeluruh atau sebagian",
+      "Material luar tahan lama yang mempertahankan bentuk kaku tanpa kebocoran udara",
+      "Isi microbeads halus yang menyebar rata dan mengunci kontur tubuh pasien dengan sempurna",
+      "Dilengkapi katup udara ganda dan terindeks kompatibel dengan meja couch standar",
+      "Mudah dibersihkan dan dapat digunakan kembali untuk pasien yang berbeda"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
+    id: "ro-18",
+    title: "Accessories",
+    subtitle: "Comprehensive Positioning Accessories & Consumables",
+    category: "Radiation Oncology",
+    image: "assets/accessories.png",
     specs: [
       "Index Bars aluminium & serat karbon untuk fiksasi universal meja couch Varian, Elekta, dan Siemens",
-      "Precision Table Pads & Vac-Bags: Matras meja couch penyerap tekanan dan bantal vakum cetak anatomis",
       "Digital Heating & Water Baths: Pemanas air digital presisi untuk aktivasi masker termoplastik",
-      "Bolus Radioterapi: Bolus silikon setara jaringan (tissue-equivalent) untuk penyesuaian dosis build-up kulit",
-      "Head Supports, Cutting/Marking, Wedges & Aksesori bersertifikasi MR-Compatible"
+      "Head Supports, penyangga lutut, guling kaki, dan bantalan meja treatment",
+      "Aksesori bersertifikasi MR-Compatible untuk lingkungan MRI-LINAC",
+      "Berbagai alat bantu pengaturan posisi pasien lainnya untuk optimasi alur kerja radioterapi"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
 
   // --- MEDICAL IMAGING: C-ARM ---
@@ -2359,25 +2295,13 @@ function renderProductGrid() {
 
   // Render cards HTML
   container.innerHTML = filtered.map(item => `
-    <div class="product-card">
+    <div class="product-card" style="cursor: pointer;" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}')">
       <div class="product-card-img">
         <span class="product-category-tag">${item.category}</span>
         <img src="${item.image}" alt="${item.title}" loading="lazy">
       </div>
-      <div class="product-card-body">
-        <h3 class="product-title">${item.title}</h3>
-        <div class="product-subtitle">${item.subtitle}</div>
-        <ul class="product-specs-list">
-          ${item.specs.map(spec => `<li>${spec}</li>`).join('')}
-        </ul>
-        <div class="product-card-footer">
-          <button class="btn-card-inquire" onclick="inquireProduct('${item.title}')">
-            <i class="fa-brands fa-whatsapp"></i> Inquire Quote
-          </button>
-          <button class="btn-card-details" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}')" title="${item.brochure ? 'View Brochure' : 'Hubungi Sales untuk Brosur / Spek'}">
-            <i class="fa-solid ${item.brochure ? 'fa-eye' : 'fa-headset'}"></i>
-          </button>
-        </div>
+      <div class="product-card-body" style="text-align: center; padding-bottom: 20px;">
+        <h3 class="product-title" style="margin-bottom: 0;">${item.title}</h3>
       </div>
     </div>
   `).join('');

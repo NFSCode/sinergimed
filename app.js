@@ -392,7 +392,7 @@ const productsData = [
     title: "Synergy Imaging XSD-50F",
     subtitle: "Digital Stationary X-Ray System — 50 kW Floor-mounted",
     category: "Medical Imaging",
-    image: "assets/synergymed_xsd50f.png",
+    image: "assets/xsd_50f.png",
     specs: [
       "50 kW high-frequency generator, floor-mounted",
       "Digital flat panel detector",
@@ -458,7 +458,7 @@ const productsData = [
     title: "Synergy RX-1",
     subtitle: "Wireless Digital Flat Panel Detector",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Flat_panel_detector.jpg",
+    image: "assets/synergy_rx1.png",
     specs: [
       "High-resolution amorphous silicon flat panel",
       "Wireless & wired connectivity",
@@ -475,7 +475,7 @@ const productsData = [
     title: "ASA-200E",
     subtitle: "CT Contrast Media Injector — Dual Head",
     category: "Medical Imaging",
-    image: "assets/synergymed_injector.jpg",
+    image: "assets/asa_200e.png",
     specs: [
       "Dual-head injector for CT contrast media delivery",
       "Programmable injection protocols",
@@ -490,7 +490,7 @@ const productsData = [
     title: "ASA-300P",
     subtitle: "MRI Contrast Media Injector — Power Injector",
     category: "Medical Imaging",
-    image: "assets/synergymed_injector.jpg",
+    image: "assets/asa_300p.png",
     specs: [
       "MRI-compatible power injector system",
       "Single & dual syringe configurations",
@@ -524,7 +524,7 @@ const productsData = [
     title: "G-Scan Open",
     subtitle: "Weight-Bearing Tilting Open MRI System by Esaote",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    image: "assets/g_scan.png",
     specs: [
       "Innovative tilting design from horizontal to vertical (0° to 90°)",
       "True weight-bearing spine & joint dynamic musculoskeletal imaging",
@@ -539,7 +539,7 @@ const productsData = [
     title: "O-Scan Smart",
     subtitle: "Dedicated Extremity & Joint MRI System by Esaote",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    image: "assets/o_scan.png",
     specs: [
       "Specialized MRI for knee, calf, ankle, foot, hand, wrist & forearm",
       "Ultra-compact footprint — installs in a 9 m² standard room",
@@ -554,7 +554,7 @@ const productsData = [
     title: "S-Scan Open",
     subtitle: "Open Musculoskeletal & Spine MRI System by Esaote",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    image: "assets/s_scan.png",
     specs: [
       "Complete musculoskeletal & full spine diagnostic coverage",
       "Wide asymmetric open design for easy patient access",
@@ -569,7 +569,7 @@ const productsData = [
     title: "Magnifico Open",
     subtitle: "Total Body Open MRI System by Esaote",
     category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
+    image: "assets/magnifico.png",
     specs: [
       "State-of-the-art open MRI for whole body & neuro-imaging",
       "Permanent magnet design with true open gantry architecture",
@@ -579,21 +579,7 @@ const productsData = [
     ],
     brochure: "https://drive.google.com/file/d/1hH5Qz8WsXeJLMfVwWD2sA6kTLR3oQAto/view"
   },
-  {
-    id: "img-mri-02",
-    title: "Synergy Imaging MRI",
-    subtitle: "MagniVue 1.5T Superconductive MRI System",
-    category: "Medical Imaging",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/MRI-Philips.JPG",
-    specs: [
-      "1.5T high-field superconducting magnet with helium-free technology",
-      "Wide 70 cm bore for premium patient comfort",
-      "Advanced neuro, cardiac, orthopedic & whole-body imaging",
-      "Silent scan acoustic noise reduction system",
-      "AI-powered clinical workflow and high-speed image reconstruction"
-    ],
-    brochure: null
-  },
+
 
   // --- MEDICAL IMAGING: PACS ---
   {
@@ -601,7 +587,7 @@ const productsData = [
     title: "NovaPACS",
     subtitle: "Picture Archiving & Communication System",
     category: "Medical Imaging",
-    image: "assets/synergymed_novapacs.png",
+    image: "assets/novapacs.png",
     specs: [
       "Scalable cloud & on-premise PACS solution",
       "DICOM 3.0 compliant — integrates with all modalities",
@@ -1547,7 +1533,7 @@ const productsData = [
     title: "Wound Drainage Reservoir System",
     subtitle: "Closed Wound Suction Evacuator System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/wound_drainage.png",
     specs: [
       "Sistem drainase luka vakum tertutup (closed wound suction system)",
       "Reservoir silikon / PVC fleksibel dengan katup anti-refluks (one-way valve)",
@@ -1564,7 +1550,7 @@ const productsData = [
     title: "Chest Drainage Bottle - Double",
     subtitle: "Double Chamber Chest Drainage System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/chest_drainage_double.png",
     specs: [
       "Sistem drainase rongga dada ganda (Double Chamber water seal system)",
       "Pemisahan ruang pengumpulan eksudat (collection) dan water seal chamber",
@@ -1579,7 +1565,7 @@ const productsData = [
     title: "Chest Drainage Bottle - Single",
     subtitle: "Single Chamber Chest Drainage System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/chest_drainage_single.png",
     specs: [
       "Botol drainase dada chamber tunggal kompak & steril",
       "Underwater seal terintegrasi untuk mencegah pneumotoraks terbuka",
@@ -1594,7 +1580,7 @@ const productsData = [
     title: "Chest Drainage Bottle - Three Classic",
     subtitle: "Three-Chamber Classic Chest Drainage System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/chest_drainage_three_classic.png",
     specs: [
       "Desain klasik 3-ruang: Collection chamber, Water seal chamber & Suction control",
       "Regulasi tekanan hisap vakum stabil dan akurat",
@@ -1609,7 +1595,7 @@ const productsData = [
     title: "Chest Drainage Bottle - Three New",
     subtitle: "Three-Chamber Advanced Chest Drainage System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/chest_drainage_three_new.png",
     specs: [
       "Generasi terbaru unit drainase dada 3-ruang dengan sistem filter antibakteri",
       "Desain ergonomis anti-tumpah (anti-siphon & spill-proof valves)",
@@ -1623,25 +1609,10 @@ const productsData = [
   // --- MED SUPPLIES: SUCTION LINER CANISTER BAG ---
   {
     id: "med-suc-01",
-    title: "Suction Liner",
-    subtitle: "Disposable Medical Suction Liner Bag",
+    title: "Suction Liner Canister Single",
+    subtitle: "Single Suction Liner Canister Bracket System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Kantong penampung suction sekali pakai (disposable liner bag) steril & higienis",
-      "Dilengkapi filter hidrofobik & katup shut-off otomatis anti-meluap (overflow protection)",
-      "Opsi serbuk pemadat gel (solidifier agent) untuk keamanan pembuangan limbah B3 medis",
-      "Port hisap dan sambungan tubing universal anti-bocor",
-      "Tersedia kapasitas 1000ml, 1500ml, 2000ml, dan 3000ml"
-    ],
-    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_3bdf16bd0add4724914cc8c173aa8224.pdf"
-  },
-  {
-    id: "med-suc-02",
-    title: "Suction Liner Canister",
-    subtitle: "Reusable Outer Canister Bracket for Suction Liner",
-    category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/suction_single.png",
     specs: [
       "Tabung canister luar transparan polikarbonat tahan banting (shatterproof)",
       "Skala ukur volume eksudat tercetak tebal dan jelas",
@@ -1651,55 +1622,38 @@ const productsData = [
     ],
     brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_3bdf16bd0add4724914cc8c173aa8224.pdf"
   },
-
-  // --- MED SUPPLIES: ENDOTRACHEAL & RESPIRATORY CONSUMABLES ---
   {
-    id: "med-endo-01",
-    title: "Oxygen Tube",
-    subtitle: "Medical Grade Oxygen Connecting Tube",
+    id: "med-suc-02",
+    title: "Suction Liner Canister - Double Set Rolling",
+    subtitle: "Mobile Double Canister Suction Stand with Rolling Wheels",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/suction_double_rolling.png",
     specs: [
-      "Selang oksigen medis transparan non-toxic PVC grade medis",
-      "Desain lumen anti-kink (star lumen) menjaga aliran oksigen tetap lancar tanpa tertekuk",
-      "Konektor corong lembut fleksibel kompatibel dengan flowmeter dan regulator O2",
-      "Tersedia berbagai panjang selang (2m, 3m, 5m)",
-      "Bebas DEHP dan tidak berbau menyengat untuk kenyamanan pasien"
+      "Stand suction ganda bergerak (mobile trolley) dengan roda kastor pengunci halus",
+      "Mendukung 2 tabung canister suction berkapasitas besar untuk operasi cairan tinggi",
+      "Dilengkapi regulator vacuum manometer dan katup manifold pengalih hisap",
+      "Rangka aluminium & stainless steel tahan karat dan mudah dibersihkan",
+      "Ideal untuk ruang operasi, ICU, dan unit gawat darurat"
     ],
     brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_3bdf16bd0add4724914cc8c173aa8224.pdf"
   },
   {
-    id: "med-endo-02",
-    title: "Nasal Oxygen Cannula",
-    subtitle: "Soft Curved Tip Nasal Oxygen Cannula",
+    id: "med-suc-03",
+    title: "Suction Liner Canister - Four Set Rolling",
+    subtitle: "Mobile Four Canister High-Capacity Suction Stand System",
     category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/suction_four_rolling.png",
     specs: [
-      "Kanul hidung oksigen dengan prong bengkok (curved soft prong) sangat lembut",
-      "Mengurangi iritasi mukosa hidung dan daun telinga pada pemakaian jangka panjang",
-      "Over-the-ear style dengan cincin pengatur ukuran yang mudah disesuaikan",
-      "Tersedia ukuran dewasa (adult), anak (pediatric), dan bayi (neonatal)",
-      "Kemasan steril per unit siap pakai di ruang rawat inap dan IGD"
+      "Stand mobile suction 4 canister kapasitas ekstra besar untuk prosedur bedah mayor",
+      "Sistem manifold paralel tandem otomatis untuk evakuasi cairan continue tanpa henti",
+      "Roda heavy-duty 360° dengan rem stabilitas maksimal saat prosedur operasi",
+      "Dilengkapi pengatur tekanan hisap sentral presisi dan selang penghubung tebal",
+      "Sangat cocok untuk bedah ortopedi, urologi, dan bedah kardiotoraks"
     ],
     brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_3bdf16bd0add4724914cc8c173aa8224.pdf"
   },
 
-  // --- MED SUPPLIES: SURGICAL GOWN & DRAPING SYSTEM ---
-  {
-    id: "med-gown-01",
-    title: "Mask & Surgical Cap",
-    subtitle: "Medical Protective Mask & Sterile Surgical Cap",
-    category: "Med Supplies",
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [
-      "Masker bedah 3-ply / 4-ply dengan filtrasi efisiensi tinggi (BFE & PFE ≥ 99%)",
-      "Surgical cap / nurse cap non-woven spunbond bernapas (breathable) & elastis",
-      "Tahan terhadap percikan cairan darah dan droplet patogen",
-      "Hypoallergenic, bebas lateks, dan tidak menyebabkan iritasi kulit",
-      "Perlindungan standar kamar bedah operasi (OR) dan ruang isolasi"
-    ],
-    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/6d5749_3bdf16bd0add4724914cc8c173aa8224.pdf"
-  },
+
 
   // =====================================================================
   // --- PAIN & REHAB ---

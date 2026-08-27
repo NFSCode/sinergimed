@@ -1950,7 +1950,7 @@ const productsData = [
     title: "Arthroplasty System",
     subtitle: "Total Hip & Knee Arthroplasty Implant Solutions",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/arthroplasty.png",
     specs: [
       "Sistem implan penggantian sendi panggul (Total Hip) & lutut (Total Knee) tingkat lanjut",
       "Material bio-kompatibel premium: Titanium alloy, CoCrMo, dan Cross-linked Polyethylene (XLPE)",
@@ -1967,7 +1967,7 @@ const productsData = [
     title: "ACL Reconstruction Solution",
     subtitle: "Arthroscopic Anterior Cruciate Ligament (ACL) Reconstruction",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/acl.png",
     specs: [
       "Solusi fiksasi rekonstruksi ligamen ACL dengan adjustable loop cortical button & interference screw",
       "Mekanisme penguncian kuat dengan daya tahan tarik (tensile strength) tinggi dan elongation minimal",
@@ -1982,7 +1982,7 @@ const productsData = [
     title: "Meniscus Repair Solution",
     subtitle: "Arthroscopic All-Inside Meniscus Repair System",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/meniscus.png",
     specs: [
       "Sistem perbaikan robekan meniskus all-inside dengan implan fiksasi PEEK / suture anchor ultra-low profile",
       "Penetrasi jarum yang ramping dan atraumatik untuk melindungi struktur neurovaskular posterior",
@@ -1997,7 +1997,7 @@ const productsData = [
     title: "Bankart Repair Solution",
     subtitle: "Arthroscopic Glenoid Bankart Shoulder Repair System",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/bankart.png",
     specs: [
       "Solusi restorasi labrum glenoid pada instabilitas sendi bahu anterior (Bankart Lesion)",
       "Suture anchor bio-absorbable / PEEK dengan daya fiksasi tulang kortikal superior",
@@ -2012,7 +2012,7 @@ const productsData = [
     title: "Rotator Cuff Repair Solution",
     subtitle: "Suture Anchor Rotator Cuff Tendon Fixation Solution",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/rotator_cuff.png",
     specs: [
       "Sistem rekoneksi tendon supraspinatus / rotator cuff dengan teknik single-row & double-row suture bridge",
       "Implan suture anchor beralur ganda (fully threaded) dengan pull-out strength maksimal pada tuberositas mayor",
@@ -2029,7 +2029,7 @@ const productsData = [
     title: "Arthroscopy Tower",
     subtitle: "4K UHD Endoscopic Arthroscopy Imaging & Shaver Workstation",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/arthroscopy_tower.png",
     specs: [
       "Tower sistem visualisasi artroskopi 4K Ultra-HD dengan kamera endoskopik sensitivitas tinggi",
       "Sumber cahaya LED medis dingin dengan saturasi warna natural dan pencahayaan rongga sendi optimal",
@@ -2046,7 +2046,7 @@ const productsData = [
     title: "Endospine",
     subtitle: "Full-Endoscopic Spine Surgery System (Transforaminal & Interlaminar)",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/endospine.png",
     specs: [
       "Sistem bedah endoskopi tulang belakang minimal invasif (Full-Endoscopic Spine Surgery)",
       "Mendukung pendekatan transforaminal, interlaminar, dan unilateral biportal endoscopy (UBE)",
@@ -2063,7 +2063,7 @@ const productsData = [
     title: "MIS Spine System",
     subtitle: "Minimally Invasive Spine Pedicle Screw & Rod Fixation",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/mis_spine.png",
     specs: [
       "Sistem stabilisasi tulang belakang perkutan torakolumbal minimal invasif (Percutaneous MIS)",
       "Sekrup pedikel kanulasi (cannulated polyaxial pedicle screws) dengan guide sleeve self-holding",
@@ -2078,7 +2078,7 @@ const productsData = [
     title: "Oblique Lateral Interbody Fusion Cage",
     subtitle: "OLIF Interbody Fusion PEEK Cage System",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/oblique_lateral.png",
     specs: [
       "Implan fusi antar-korpus vertebra lateral oblik (OLIF) bahan bio-inert Radiopaque PEEK",
       "Jendela fusi tulang (bone graft window) ekstra besar untuk fusi osteogenesis maksimal",
@@ -2093,7 +2093,7 @@ const productsData = [
     title: "Spine GSS I System",
     subtitle: "General Spinal System (GSS I) Posterior Fixation",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/spine_gss.png",
     specs: [
       "Sistem fiksasi fusi spinal posterior komprehensif untuk vertebra thoracolumbar & lumbosacral",
       "Sekrup pedikel monoaksial & poliaksial dengan daya penguncian ulir buttress thread anti-cross threading",
@@ -2108,7 +2108,7 @@ const productsData = [
     title: "Anterior Cervical Intervertebral Locking Cage",
     subtitle: "Zero-Profile Stand-Alone Anterior Cervical Fusion Cage",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/cervical_cage.png",
     specs: [
       "Implan fusi servikal anterior stand-alone (Zero-Profile ACDF Cage) dengan sekrup pengunci terintegrasi",
       "Tidak menonjol ke luar korpus vertebra untuk mencegah disfagia (sulit menelan) pasca operasi",
@@ -2125,7 +2125,7 @@ const productsData = [
     title: "Proximal Femoral Locking Plate",
     subtitle: "Titanium Proximal Femur Anatomical Locking Compression Plate",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/proximal_femoral_plate.png",
     specs: [
       "Plat fiksasi fraktur anatomis untuk regio femur proksimal, intertrokanterik, dan subtrokanterik",
       "Konfigurasi multi-screw pengunci sudut tetap (fixed-angle locking) menahan gaya beban varus tinggi",
@@ -2140,7 +2140,7 @@ const productsData = [
     title: "Advance Humeral Nail",
     subtitle: "Intramedullary Humeral Interlocking Nail System",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/humeral_nail.png",
     specs: [
       "Nail intrameduler titanium untuk fiksasi fraktur shaft dan proksimal humerus",
       "Mendukung opsi insersi antegrade dan retrograde dengan panduan bidik (targeting guide) presisi",
@@ -2155,7 +2155,7 @@ const productsData = [
     title: "Titanium Elastic Nail",
     subtitle: "Flexible Titanium Elastic Nail (TEN) for Long Bone Trauma",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/elastic_nail.png",
     specs: [
       "Nail elastis fleksibel titanium untuk penanganan fraktur diafisis tulang panjang pediatrik dan dewasa",
       "Prinsip biomekanik stabilisasi elastis tiga titik (three-point dynamic bracing)",
@@ -2170,7 +2170,7 @@ const productsData = [
     title: "Distal Humeral Locking Plate",
     subtitle: "Anatomical Distal Humerus Medial & Lateral Locking Compression Plate",
     category: "Ortho & Neuro",
-    image: "assets/synergymed_hero_1785816523979.png",
+    image: "assets/distal_humeral_plate.png",
     specs: [
       "Sistem plat anatomis ganda (orthogonal / parallel plating) untuk fraktur humerus distal dan intra-artikular",
       "Kontur plat pra-bentuk mengikuti morfologi kolumna medial dan lateral siku secara presisi",

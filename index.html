@@ -10,10 +10,13 @@
 
   <!-- FontAwesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260819">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260828_nofootergap">
 </head>
 
-<body>
+<body class="home-page-active">
 
   <!-- Site Header -->
   <header class="site-header">
@@ -21,26 +24,31 @@
 
       <!-- Brand Logo -->
       <div class="brand-logo" onclick="switchPage('home')">
-        <img src="assets/logo.png" alt="SYNERGYMED™" class="site-logo-img">
+        <img src="assets/logo.png" alt="SYNERGYMED" class="site-logo-img">
       </div>
 
       <!-- Main Navigation -->
       <nav class="main-nav">
         <ul>
-          <li><span class="nav-link active" id="nav-home" onclick="switchPage('home')">Home</span></li>
-          <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">About Us</span></li>
-          <li><span class="nav-link" id="nav-solutions" onclick="switchPage('solutions')">Solutions</span></li>
-          <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">News & Event</span></li>
-          <li><span class="nav-link" id="nav-careers" onclick="switchPage('careers')">Careers</span></li>
-          <li><span class="nav-link nav-cta-btn" id="nav-contact" onclick="switchPage('contact')"><i
-                class="fa-solid fa-headset"></i> Contact Us</span></li>
+          <li><span class="nav-link active" id="nav-home" onclick="switchPage('home')">HOME</span></li>
+          <li><span class="nav-link" id="nav-about" onclick="switchPage('about')">ABOUT</span></li>
+          <li><span class="nav-link" id="nav-solutions" onclick="switchPage('solutions')">SOLUTIONS</span></li>
+          <li><span class="nav-link" id="nav-news" onclick="switchPage('news')">NEWS</span></li>
+          <li><span class="nav-link" id="nav-careers" onclick="switchPage('careers')">CAREERS</span></li>
         </ul>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <!-- Header Actions Right -->
+      <div class="header-right-actions">
+        <button class="nav-contact-pill" id="nav-contact" onclick="switchPage('contact')">
+          CONTACT
+        </button>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
     </div>
   </header>
 
@@ -52,82 +60,30 @@
     <!-- ========================================== -->
     <section id="page-home" class="page-view active">
       <div class="hero-section">
-        <div class="section-container">
-          <div class="hero-grid">
 
-            <!-- Hero Interactive Technology Showcase Slider -->
-            <div class="hero-slider-wrapper" id="hero-slider-wrapper"
-              aria-label="SynergyMed Featured Technologies Showcase">
-
-              <!-- Top Auto-Slide Progress Bar -->
-              <div class="slider-progress-bar">
-                <div class="slider-progress-fill" id="hero-slider-progress"></div>
-              </div>
-
-              <!-- Slider Slides Track -->
-              <div class="hero-slider-track" id="hero-slider-track">
-
-                <!-- Slide 1: MagniVue 1.5T MRI -->
-                <div class="hero-slide active" data-index="0">
-                  <div class="slide-image-box">
-                    <img src="assets/hero_slider_mri.png"
-                      alt="MagniVue 1.5T Helium Free Superconductive MRI - Synergy Imaging">
-                  </div>
-                </div>
-
-                <!-- Slide 2: Robotic Surgery System -->
-                <div class="hero-slide" data-index="1">
-                  <div class="slide-image-box">
-                    <img src="assets/hero_slider_robotic.png" alt="Robotic Surgery System - Sagebot Kangduo">
-                  </div>
-                </div>
-
-                <!-- Slide 3: Operating Theater Suite -->
-                <div class="hero-slide" data-index="2">
-                  <div class="slide-image-box">
-                    <img src="assets/hero_slider_surgery.png"
-                      alt="PrecisionMed Integrated Operating Theater & Medical Pendant">
-                  </div>
-                </div>
-
-                <!-- Slide 4: AR Surgical Navigation -->
-                <div class="hero-slide" data-index="3">
-                  <div class="slide-image-box">
-                    <img src="assets/hero_slider_visar.png"
-                      alt="VisAR Augmented Reality Surgical Navigation System by Novarad">
-                  </div>
-                </div>
-
-              </div>
+        <div class="section-container hero-container">
+          <div class="hero-content-wrapper">
+            <h1 class="hero-main-title">
+              <span class="title-line title-advance">ADVANCE</span>
+              <span class="title-line title-solutions">SOLUTIONS</span>
+              <span class="title-line title-healthcare">for healthcare</span>
+            </h1>
+            <p class="hero-description">
+              <strong>SynergyMed</strong> is committed to providing the latest innovation, excellence in service and
+              competitive pricing for medical devices to improve patient care in Indonesia.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-hero-catalog" onclick="switchPage('solutions')">
+                <span>EXPLORE CATALOG</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </button>
             </div>
-
-            <!-- Hero Text Content -->
-            <div class="hero-text-content">
-              <h1 class="hero-title">Advance Solutions<br>For Healthcare</h1>
-              <p class="hero-description">
-                <strong>SynergyMed</strong> is committed to providing the latest innovation, excellence in service and
-                competitive pricing for medical devices to improve patient care in Indonesia.
-              </p>
-              <div class="hero-actions">
-                <button class="btn-primary" onclick="switchPage('solutions')">
-                  <i class="fa-solid fa-boxes-stacked"></i> Explore Solutions Catalog
-                </button>
-                <button class="btn-secondary" onclick="switchPage('contact')">
-                  <i class="fa-solid fa-headset"></i> Contact Sales
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
+
       </div>
-
-
     </section>
 
-    <!-- ========================================== -->
-    <!-- 2. ABOUT US PAGE VIEW                      -->
-    <!-- ========================================== -->
     <!-- ========================================== -->
     <!-- 2. ABOUT US PAGE VIEW                      -->
     <!-- ========================================== -->

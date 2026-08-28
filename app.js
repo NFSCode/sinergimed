@@ -2152,6 +2152,13 @@ function switchPage(pageId) {
   // Alias 'product' to 'solutions' for backwards compatibility
   if (pageId === 'product') pageId = 'solutions';
 
+  // Toggle body class for full-viewport home layout
+  if (pageId === 'home') {
+    document.body.classList.add('home-page-active');
+  } else {
+    document.body.classList.remove('home-page-active');
+  }
+
   // Hide all page views
   const pages = document.querySelectorAll('.page-view');
   pages.forEach(p => p.classList.remove('active'));

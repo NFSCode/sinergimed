@@ -813,7 +813,7 @@ const productsData = [
     title: "AccuRead 25",
     subtitle: "12-Channel ECG — Touchscreen Advanced",
     category: "Critical Care",
-    image: "assets/synergymed_accuread30.png",
+    image: "assets/synergymed_accuread25.png",
     specs: [
       "12-channel ECG with 10.1-inch touchscreen",
       "Real-time rhythm analysis & arrhythmia detection",
@@ -1171,10 +1171,10 @@ const productsData = [
   // --- CRITICAL CARE: PHOTOTHERAPY ---
   {
     id: "cc-photo-01",
-    title: "L30 Infant Phototherapy",
-    subtitle: "LED Phototherapy Unit — Neonatal Jaundice Treatment",
+    title: "Hippo L30",
+    subtitle: "Infant Phototherapy Unit — Neonatal Jaundice Treatment",
     category: "Critical Care",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Premature_infant_incubator.jpg",
+    image: "assets/synergymed_hippol30.png",
     specs: [
       "High-intensity blue LED phototherapy (430–490 nm)",
       "Irradiance ≥ 40 µW/cm²/nm at treatment surface",

@@ -1216,16 +1216,25 @@ img {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .news-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--accent-cyan);
 }
 
 .news-card-body {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .news-date {

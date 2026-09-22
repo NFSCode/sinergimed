@@ -52,6 +52,21 @@ const productsData = [
     brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
   },
   {
+    id: "ro-mvision",
+    title: "MVision AI",
+    subtitle: "AI-Powered Auto-Contouring & Auto-Segmentation Radiotherapy Software",
+    category: "Radiation Oncology",
+    image: "assets/mvision.png",
+    specs: [
+      "Solusi auto-contouring berbasis Artificial Intelligence (AI) terdepan untuk radioterapi presisi",
+      "Segmentasi otomatis Organs at Risk (OARs) dan Lymph Nodes sesuai standar konsensus internasional (ESTRO, RTOG)",
+      "Integrasi mulus dengan PACS, CT Simulator, dan Treatment Planning System (TPS) melalui protokol DICOM",
+      "Mempercepat waktu konturing klinis hingga lebih dari 70% dengan konsistensi antar-operator tinggi",
+      "Mendukung citra modalitas CT & MRI untuk berbagai anatomi (Brain, Head & Neck, Thorax, Breast, Abdomen, Pelvis)"
+    ],
+    brochure: "https://drive.google.com/file/d/1XZUEzll7DxZnuys9vj5fMVR8vdAZC6lU/view?usp=sharing"
+  },
+  {
     id: "ro-04",
     title: "Linac",
     subtitle: "High-Precision Multi-Energy Radiotherapy Linear Accelerator System",
@@ -779,21 +794,6 @@ const productsData = [
     brochure: "https://drive.google.com/file/d/19fcC6DrMa23FpE8e9wMxifl0YDcEmyZf/view"
   },
   {
-    id: "cc-ecg-02",
-    title: "AccuRead 15",
-    subtitle: "12-Channel ECG — Enhanced Portable",
-    category: "Critical Care",
-    image: "assets/synergymed_accuread10.png",
-    specs: [
-      "12-channel ECG with 7-inch color LCD",
-      "Enhanced noise filtering & baseline correction",
-      "Built-in lithium battery for long field use",
-      "Configurable report formats with patient database",
-      "Bluetooth connectivity to PC workstation"
-    ],
-    brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_b16e917231984b55b4e3d0ec14d16c61.pdf"
-  },
-  {
     id: "cc-ecg-03",
     title: "AccuRead 20",
     subtitle: "12-Channel ECG — PC-Based Workstation",
@@ -1270,21 +1270,6 @@ const productsData = [
       "Built-in rechargeable battery & dual probe ports for point-of-care mobility"
     ],
     brochure: "https://b1bb2b5c-e1f6-4d2f-850a-38c517b478a9.filesusr.com/ugd/733872_e5536a52fc9145e8b0e41ecfdebf2611.pdf"
-  },
-  {
-    id: "usg-port-02",
-    title: "Hres 15",
-    subtitle: "Enhanced Portable Color Doppler Ultrasound",
-    category: "Ultrasound",
-    image: "assets/synergymed_usg_hres15.jpg",
-    specs: [
-      "All-digital beamformer with enhanced Color & Power Doppler sensitivity",
-      "15-inch anti-glare tiltable high-definition medical display",
-      "Tissue Harmonic Imaging (THI) & Spatial Compound Imaging (SCI)",
-      "Fast boot-up time with direct DICOM 3.0 network PACS transfer",
-      "Dedicated clinical presets for Abdominal, OB/GYN, MSK, and Small Parts"
-    ],
-    brochure: "https://drive.google.com/file/d/17ZIiFyV3F8fLIjzumfTVRhYTYsF6sVXj/view"
   },
   {
     id: "usg-port-03",

@@ -2130,7 +2130,34 @@ let searchQuery = '';
 document.addEventListener('DOMContentLoaded', () => {
   renderProductGrid();
   initHeroSlider();
+  handleUrlRouting();
 });
+
+// URL ROUTING — maps clean URL paths to catalog categories
+// e.g. synergymed.id/painrehab → Solutions filtered by 'Pain & Rehab'
+const URL_ROUTE_MAP = {
+  '/painrehab':        'Pain & Rehab',
+  '/radiationoncology':'Radiation Oncology',
+  '/orthoneuro':       'Ortho & Neuro',
+  '/medsupplies':      'Med Supplies',
+  '/medicalimaging':   'Medical Imaging',
+  '/endosurgery':      'Endosurgery',
+  '/criticalcare':     'Critical Care',
+  '/ultrasound':       'Ultrasound',
+  '/enviro':           'Enviro',
+};
+
+function handleUrlRouting() {
+  const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+  const category = URL_ROUTE_MAP[path];
+  if (category) {
+    // Tunggu sebentar agar renderProductGrid selesai dulu
+    setTimeout(() => {
+      history.replaceState(null, '', '/');
+      filterCatalog(category);
+    }, 50);
+  }
+}
 
 // 2. PAGE NAVIGATION SYSTEM
 function switchPage(pageId) {

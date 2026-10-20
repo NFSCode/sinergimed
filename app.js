@@ -2123,41 +2123,67 @@ const productsData = [
 
 // Current Filter & Search State
 
-let activeCategory = 'all';
+let activeCategory = (typeof defaultInitialCategory !== 'undefined') ? defaultInitialCategory : 'all';
 let searchQuery = '';
-
-// Initialize page on load
-document.addEventListener('DOMContentLoaded', () => {
-  renderProductGrid();
-  initHeroSlider();
-  handleUrlRouting();
-});
 
 // URL ROUTING — maps clean URL paths to catalog categories
 // e.g. synergymed.id/painrehab → Solutions filtered by 'Pain & Rehab'
 const URL_ROUTE_MAP = {
-  '/painrehab':        'Pain & Rehab',
-  '/radiationoncology':'Radiation Oncology',
-  '/orthoneuro':       'Ortho & Neuro',
-  '/medsupplies':      'Med Supplies',
-  '/medicalimaging':   'Medical Imaging',
-  '/endosurgery':      'Endosurgery',
-  '/criticalcare':     'Critical Care',
-  '/ultrasound':       'Ultrasound',
-  '/enviro':           'Enviro',
+  '/painrehab':          'Pain & Rehab',
+  '/pain-rehab':         'Pain & Rehab',
+  '/rehab':              'Pain & Rehab',
+  '/radiationoncology':  'Radiation Oncology',
+  '/radiation-oncology': 'Radiation Oncology',
+  '/orthoneuro':         'Ortho & Neuro',
+  '/ortho-neuro':        'Ortho & Neuro',
+  '/medsupplies':        'Med Supplies',
+  '/med-supplies':       'Med Supplies',
+  '/medicalimaging':     'Medical Imaging',
+  '/medical-imaging':    'Medical Imaging',
+  '/endosurgery':        'Endosurgery',
+  '/criticalcare':       'Critical Care',
+  '/critical-care':      'Critical Care',
+  '/ultrasound':         'Ultrasound',
+  '/enviro':             'Enviro',
 };
 
 function handleUrlRouting() {
   const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
-  const category = URL_ROUTE_MAP[path];
-  if (category) {
-    // Tunggu sebentar agar renderProductGrid selesai dulu
-    setTimeout(() => {
-      history.replaceState(null, '', '/');
-      filterCatalog(category);
-    }, 50);
+  const hash = window.location.hash.toLowerCase().replace(/^#\/?/, '');
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('category') || params.get('cat');
+
+  let targetCategory = URL_ROUTE_MAP[path];
+
+  if (!targetCategory && hash) {
+    targetCategory = URL_ROUTE_MAP['/' + hash] || URL_ROUTE_MAP['/' + hash.replace(/-/g, '')];
   }
+
+  if (!targetCategory && catParam) {
+    const cleanParam = catParam.toLowerCase().replace(/[^a-z0-9]/g, '');
+    for (const [key, val] of Object.entries(URL_ROUTE_MAP)) {
+      if (key.replace(/[^a-z0-9]/g, '') === cleanParam) {
+        targetCategory = val;
+        break;
+      }
+    }
+  }
+
+  if (targetCategory) {
+    filterCatalog(targetCategory);
+    return true;
+  }
+  return false;
 }
+
+// Initialize page on load
+document.addEventListener('DOMContentLoaded', () => {
+  const isRouted = handleUrlRouting();
+  if (!isRouted) {
+    renderProductGrid();
+  }
+  initHeroSlider();
+});
 
 // 2. PAGE NAVIGATION SYSTEM
 function switchPage(pageId) {

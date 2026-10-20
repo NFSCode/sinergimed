@@ -476,8 +476,14 @@ const server = http.createServer(async (req, res) => {
   // SPA Route Fallback — serve index.html for clean category URLs
   // e.g. /painrehab, /medicalimaging, etc. (client-side routing handles the rest)
   const SPA_ROUTES = [
-    '/painrehab', '/radiationoncology', '/orthoneuro', '/medsupplies',
-    '/medicalimaging', '/endosurgery', '/criticalcare', '/ultrasound', '/enviro'
+    '/painrehab', '/pain-rehab', '/rehab',
+    '/radiationoncology', '/radiation-oncology',
+    '/orthoneuro', '/ortho-neuro',
+    '/medsupplies', '/med-supplies',
+    '/medicalimaging', '/medical-imaging',
+    '/endosurgery',
+    '/criticalcare', '/critical-care',
+    '/ultrasound', '/enviro'
   ];
   if (SPA_ROUTES.includes(pathname.toLowerCase())) {
     pathname = '/index.html';

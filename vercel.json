@@ -2,5 +2,16 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/painrehab",         "destination": "/index.html" },
+    { "source": "/radiationoncology", "destination": "/index.html" },
+    { "source": "/orthoneuro",        "destination": "/index.html" },
+    { "source": "/medsupplies",       "destination": "/index.html" },
+    { "source": "/medicalimaging",    "destination": "/index.html" },
+    { "source": "/endosurgery",       "destination": "/index.html" },
+    { "source": "/criticalcare",      "destination": "/index.html" },
+    { "source": "/ultrasound",        "destination": "/index.html" },
+    { "source": "/enviro",            "destination": "/index.html" }
+  ]
 }

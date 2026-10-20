@@ -473,6 +473,16 @@ const server = http.createServer(async (req, res) => {
     pathname = '/index.html';
   }
 
+  // SPA Route Fallback — serve index.html for clean category URLs
+  // e.g. /painrehab, /medicalimaging, etc. (client-side routing handles the rest)
+  const SPA_ROUTES = [
+    '/painrehab', '/radiationoncology', '/orthoneuro', '/medsupplies',
+    '/medicalimaging', '/endosurgery', '/criticalcare', '/ultrasound', '/enviro'
+  ];
+  if (SPA_ROUTES.includes(pathname.toLowerCase())) {
+    pathname = '/index.html';
+  }
+
   // Prevent directory traversal attacks
   const safePath = path.normalize(pathname).replace(/^(\.\.[\/\\])+/, '');
   

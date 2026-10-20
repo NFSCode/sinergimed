@@ -2151,9 +2151,11 @@ function handleUrlRouting() {
   const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
   const category = URL_ROUTE_MAP[path];
   if (category) {
-    // Replace URL menjadi '/' agar back-button tetap bersih
-    history.replaceState(null, '', '/');
-    filterCatalog(category);
+    // Tunggu sebentar agar renderProductGrid selesai dulu
+    setTimeout(() => {
+      history.replaceState(null, '', '/');
+      filterCatalog(category);
+    }, 50);
   }
 }
 

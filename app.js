@@ -2169,6 +2169,28 @@ function handleUrlRouting() {
     }
   }
 
+  // Page-level routes (e.g. /solution, /solutions, /about, etc.)
+  const PAGE_ROUTE_MAP = {
+    '/solution':  'solutions',
+    '/solutions': 'solutions',
+    '/about':     'about',
+    '/news':      'news',
+    '/careers':   'careers',
+    '/career':    'careers',
+    '/contact':   'contact',
+  };
+
+  const targetPage = PAGE_ROUTE_MAP[path];
+  if (targetPage) {
+    switchPage(targetPage);
+    if (targetCategory) {
+      filterCatalog(targetCategory);
+    } else {
+      renderProductGrid();
+    }
+    return true;
+  }
+
   if (targetCategory) {
     filterCatalog(targetCategory);
     return true;

@@ -4,6 +4,12 @@
   "framework": null,
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/solution",           "destination": "/" },
+    { "source": "/solutions",          "destination": "/" },
+    { "source": "/about",              "destination": "/" },
+    { "source": "/news",               "destination": "/" },
+    { "source": "/careers",            "destination": "/" },
+    { "source": "/contact",            "destination": "/" },
     { "source": "/painrehab",          "destination": "/" },
     { "source": "/pain-rehab",         "destination": "/" },
     { "source": "/rehab",              "destination": "/" },

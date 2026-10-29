@@ -2318,7 +2318,6 @@ function renderProductGrid() {
   container.innerHTML = filtered.map(item => `
     <div class="product-card" style="cursor: pointer;" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}')">
       <div class="product-card-img">
-        <span class="product-category-tag">${item.category}</span>
         <img src="${item.image}" alt="${item.title}" loading="lazy">
       </div>
       <div class="product-card-body" style="text-align: center; padding-bottom: 20px;">

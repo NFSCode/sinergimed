@@ -1103,18 +1103,7 @@ img {
 }
 
 .product-category-tag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(11, 59, 96, 0.88);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(4px);
+  display: none !important;
 }
 
 .product-card-body {

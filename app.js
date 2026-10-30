@@ -2159,22 +2159,22 @@ let searchQuery = '';
 // URL ROUTING — maps clean URL paths to catalog categories
 // e.g. synergymed.id/painrehab → Solutions filtered by 'Pain & Rehab'
 const URL_ROUTE_MAP = {
-  '/painrehab':          'Pain & Rehab',
-  '/pain-rehab':         'Pain & Rehab',
-  '/rehab':              'Pain & Rehab',
-  '/radiationoncology':  'Radiation Oncology',
+  '/painrehab': 'Pain & Rehab',
+  '/pain-rehab': 'Pain & Rehab',
+  '/rehab': 'Pain & Rehab',
+  '/radiationoncology': 'Radiation Oncology',
   '/radiation-oncology': 'Radiation Oncology',
-  '/orthoneuro':         'Ortho & Neuro',
-  '/ortho-neuro':        'Ortho & Neuro',
-  '/medsupplies':        'Med Supplies',
-  '/med-supplies':       'Med Supplies',
-  '/medicalimaging':     'Medical Imaging',
-  '/medical-imaging':    'Medical Imaging',
-  '/endosurgery':        'Endosurgery',
-  '/criticalcare':       'Critical Care',
-  '/critical-care':      'Critical Care',
-  '/ultrasound':         'Ultrasound',
-  '/enviro':             'Enviro',
+  '/orthoneuro': 'Ortho & Neuro',
+  '/ortho-neuro': 'Ortho & Neuro',
+  '/medsupplies': 'Med Supplies',
+  '/med-supplies': 'Med Supplies',
+  '/medicalimaging': 'Medical Imaging',
+  '/medical-imaging': 'Medical Imaging',
+  '/endosurgery': 'Endosurgery',
+  '/criticalcare': 'Critical Care',
+  '/critical-care': 'Critical Care',
+  '/ultrasound': 'Ultrasound',
+  '/enviro': 'Enviro',
 };
 
 function handleUrlRouting() {
@@ -2201,13 +2201,13 @@ function handleUrlRouting() {
 
   // Page-level routes (e.g. /solution, /solutions, /about, etc.)
   const PAGE_ROUTE_MAP = {
-    '/solution':  'solutions',
+    '/solution': 'solutions',
     '/solutions': 'solutions',
-    '/about':     'about',
-    '/news':      'news',
-    '/careers':   'careers',
-    '/career':    'careers',
-    '/contact':   'contact',
+    '/about': 'about',
+    '/news': 'news',
+    '/careers': 'careers',
+    '/career': 'careers',
+    '/contact': 'contact',
   };
 
   const targetPage = PAGE_ROUTE_MAP[path];
@@ -2346,7 +2346,7 @@ function renderProductGrid() {
 
   // Render cards HTML
   container.innerHTML = filtered.map(item => `
-    <div class="product-card" style="cursor: pointer;" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}')">
+    <div class="product-card" style="cursor: pointer;" onclick="openBrochureLink(${item.brochure ? `'${item.brochure}'` : 'null'}, '${item.title}', '${item.category}')">
       <div class="product-card-img">
         <img src="${item.image}" alt="${item.title}" loading="lazy">
       </div>
@@ -2357,25 +2357,30 @@ function renderProductGrid() {
   `).join('');
 }
 
-function openBrochureLink(url, title) {
-  if (url && url !== 'null' && url !== 'undefined') {
-    window.open(url, '_blank');
-  } else {
-    inquireProduct(`${title} (Permintaan Brosur & Spesifikasi Resmi)`);
+  function openBrochureLink(url, title, category) {
+    // Semua produk Pain & Rehab diarahkan ke katalog brosur khusus
+    if (category === 'Pain & Rehab') {
+      window.open('https://drive.google.com/file/d/1t34Yl21mMD6wrbPI4mo2_g_85VOPFURc/view?usp=sharing', '_blank');
+      return;
+    }
+    if (url && url !== 'null' && url !== 'undefined') {
+      window.open(url, '_blank');
+    } else {
+      inquireProduct(`${title} (Permintaan Brosur & Spesifikasi Resmi)`);
+    }
   }
-}
 
-// 4. WHATSAPP & MODAL INQUIRIES
-function inquireProduct(productName) {
-  const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
-  window.open(`https://wa.me/6282372021970?text=${text}`, '_blank');
-}
+  // 4. WHATSAPP & MODAL INQUIRIES
+  function inquireProduct(productName) {
+    const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
+    window.open(`https://wa.me/6282372021970?text=${text}`, '_blank');
+  }
 
-function openProductDetailModal(productId) {
-  const item = productsData.find(p => p.id === productId);
-  if (!item) return;
+  function openProductDetailModal(productId) {
+    const item = productsData.find(p => p.id === productId);
+    if (!item) return;
 
-  const content = `
+    const content = `
     <div style="text-align: left;">
       <span style="background: #ebf5ff; color: var(--primary-blue); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 15px;">${item.category}</span>
       <h2 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.6rem; margin: 12px 0 6px 0;">${item.title}</h2>
@@ -2398,12 +2403,12 @@ function openProductDetailModal(productId) {
     </div>
   `;
 
-  showModal(content);
-}
+    showModal(content);
+  }
 
-// 5. EXTENSIBILITY DEMO MODAL ("Nanti Banyak")
-function openAddProductModal() {
-  const content = `
+  // 5. EXTENSIBILITY DEMO MODAL ("Nanti Banyak")
+  function openAddProductModal() {
+    const content = `
     <div style="text-align: left;">
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Quick Add Solution (Demo Extensibility)</h3>
       <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px;">Tambahkan solusi baru secara instan ke dalam memori aplikasi ini untuk menguji penambahan massal ("nanti banyak").</p>
@@ -2443,32 +2448,32 @@ function openAddProductModal() {
     </div>
   `;
 
-  showModal(content);
-}
+    showModal(content);
+  }
 
-function saveNewDemoProduct() {
-  const title = document.getElementById('new-prod-title')?.value || 'Demo Medical System';
-  const category = document.getElementById('new-prod-cat')?.value || 'Radiation Oncology';
-  const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solutions';
-  const spec = document.getElementById('new-prod-spec')?.value || 'AKD Kemenkes RI Certified';
+  function saveNewDemoProduct() {
+    const title = document.getElementById('new-prod-title')?.value || 'Demo Medical System';
+    const category = document.getElementById('new-prod-cat')?.value || 'Radiation Oncology';
+    const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solutions';
+    const spec = document.getElementById('new-prod-spec')?.value || 'AKD Kemenkes RI Certified';
 
-  productsData.unshift({
-    id: `demo-${Date.now()}`,
-    title: title,
-    subtitle: subtitle,
-    category: category,
-    image: "assets/synergymed_hero_1785816523979.png",
-    specs: [spec, "High Precision Clinical Workflow", "24/7 Technical Support Included"],
-    brochure: "SynergyMed_Company_Profile_2026.pdf"
-  });
+    productsData.unshift({
+      id: `demo-${Date.now()}`,
+      title: title,
+      subtitle: subtitle,
+      category: category,
+      image: "assets/synergymed_hero_1785816523979.png",
+      specs: [spec, "High Precision Clinical Workflow", "24/7 Technical Support Included"],
+      brochure: "SynergyMed_Company_Profile_2026.pdf"
+    });
 
-  closeModal();
-  filterCatalog(category);
-}
+    closeModal();
+    filterCatalog(category);
+  }
 
-// 6. CHAT & E-BROCHURE DOWNLOADS
-function openChatModal() {
-  const content = `
+  // 6. CHAT & E-BROCHURE DOWNLOADS
+  function openChatModal() {
+    const content = `
     <div style="text-align: center; padding: 10px;">
       <div style="width: 60px; height: 60px; background: #ebf5ff; color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 15px auto;">
         <i class="fa-solid fa-headset"></i>
@@ -2481,11 +2486,11 @@ function openChatModal() {
       </a>
     </div>
   `;
-  showModal(content);
-}
+    showModal(content);
+  }
 
-function downloadBrochure(fileName) {
-  const content = `
+  function downloadBrochure(fileName) {
+    const content = `
     <div style="text-align: center; padding: 10px;">
       <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 15px;"></i>
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Brochure Download Started</h3>
@@ -2493,13 +2498,13 @@ function downloadBrochure(fileName) {
       <button class="btn-secondary" onclick="closeModal()">Close Window</button>
     </div>
   `;
-  showModal(content);
-}
+    showModal(content);
+  }
 
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('contact-name')?.value || 'Guest';
-  const content = `
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('contact-name')?.value || 'Guest';
+    const content = `
     <div style="text-align: center; padding: 10px;">
       <i class="fa-solid fa-paper-plane" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Terima Kasih, ${name}!</h3>
@@ -2507,249 +2512,249 @@ function handleFormSubmit(e) {
       <button class="btn-primary" onclick="closeModal()">Kembali ke Beranda</button>
     </div>
   `;
-  showModal(content);
-}
-
-// 7. GENERIC UTILITIES
-function showModal(htmlContent) {
-  const modal = document.getElementById('generic-modal');
-  const body = document.getElementById('modal-content-body');
-  if (modal && body) {
-    body.innerHTML = htmlContent;
-    modal.classList.add('active');
-  }
-}
-
-function closeModal() {
-  const modal = document.getElementById('generic-modal');
-  if (modal) {
-    modal.classList.remove('active');
-  }
-}
-
-// Close modal when clicking backdrop
-document.addEventListener('click', (e) => {
-  const modal = document.getElementById('generic-modal');
-  if (modal && modal.classList.contains('active') && e.target === modal) {
-    closeModal();
+    showModal(content);
   }
 
-  // Close mobile nav when clicking outside header
-  const mainNav = document.querySelector('.main-nav');
-  const menuBtn = document.querySelector('.mobile-menu-btn');
-  if (mainNav && mainNav.classList.contains('mobile-open') && !mainNav.contains(e.target) && menuBtn && !menuBtn.contains(e.target)) {
-    mainNav.classList.remove('mobile-open');
+  // 7. GENERIC UTILITIES
+  function showModal(htmlContent) {
+    const modal = document.getElementById('generic-modal');
+    const body = document.getElementById('modal-content-body');
+    if (modal && body) {
+      body.innerHTML = htmlContent;
+      modal.classList.add('active');
+    }
   }
-});
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  function closeModal() {
+    const modal = document.getElementById('generic-modal');
+    if (modal) {
+      modal.classList.remove('active');
+    }
+  }
 
-function toggleMobileNav() {
-  const nav = document.querySelector('.main-nav');
-  const btnIcon = document.querySelector('.mobile-menu-btn i');
-  if (nav) {
-    nav.classList.toggle('mobile-open');
-    if (btnIcon) {
-      if (nav.classList.contains('mobile-open')) {
-        btnIcon.className = 'fa-solid fa-xmark';
-      } else {
-        btnIcon.className = 'fa-solid fa-bars';
+  // Close modal when clicking backdrop
+  document.addEventListener('click', (e) => {
+    const modal = document.getElementById('generic-modal');
+    if (modal && modal.classList.contains('active') && e.target === modal) {
+      closeModal();
+    }
+
+    // Close mobile nav when clicking outside header
+    const mainNav = document.querySelector('.main-nav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    if (mainNav && mainNav.classList.contains('mobile-open') && !mainNav.contains(e.target) && menuBtn && !menuBtn.contains(e.target)) {
+      mainNav.classList.remove('mobile-open');
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMobileNav() {
+    const nav = document.querySelector('.main-nav');
+    const btnIcon = document.querySelector('.mobile-menu-btn i');
+    if (nav) {
+      nav.classList.toggle('mobile-open');
+      if (btnIcon) {
+        if (nav.classList.contains('mobile-open')) {
+          btnIcon.className = 'fa-solid fa-xmark';
+        } else {
+          btnIcon.className = 'fa-solid fa-bars';
+        }
       }
     }
   }
-}
 
-// ==========================================================================
-// 8. HERO TECHNOLOGY SHOWCASE SLIDER ENGINE
-// ==========================================================================
-let currentHeroSlide = 0;
-const totalHeroSlides = 4;
-let heroSliderInterval = null;
-let heroSliderProgressInterval = null;
-const SLIDE_DURATION = 4800; // 4.8 seconds per slide
-let progressStartTime = 0;
-let isHeroSliderPaused = false;
+  // ==========================================================================
+  // 8. HERO TECHNOLOGY SHOWCASE SLIDER ENGINE
+  // ==========================================================================
+  let currentHeroSlide = 0;
+  const totalHeroSlides = 4;
+  let heroSliderInterval = null;
+  let heroSliderProgressInterval = null;
+  const SLIDE_DURATION = 4800; // 4.8 seconds per slide
+  let progressStartTime = 0;
+  let isHeroSliderPaused = false;
 
-function initHeroSlider() {
-  const container = document.getElementById('hero-slider-wrapper');
-  if (!container) return;
+  function initHeroSlider() {
+    const container = document.getElementById('hero-slider-wrapper');
+    if (!container) return;
 
-  // Touch Swipe Gesture Handling (Mobile/Tablet)
-  let touchStartX = 0;
-  let touchEndX = 0;
+    // Touch Swipe Gesture Handling (Mobile/Tablet)
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-  container.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    pauseHeroSlider();
-  }, { passive: true });
+    container.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      pauseHeroSlider();
+    }, { passive: true });
 
-  container.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    const swipeThreshold = 45;
-    if (touchEndX < touchStartX - swipeThreshold) {
-      nextHeroSlide();
-    } else if (touchEndX > touchStartX + swipeThreshold) {
-      prevHeroSlide();
-    }
-    resumeHeroSlider();
-  }, { passive: true });
-
-  // Hover to pause auto-slide
-  container.addEventListener('mouseenter', () => {
-    pauseHeroSlider();
-  });
-
-  container.addEventListener('mouseleave', () => {
-    resumeHeroSlider();
-  });
-
-  // Keyboard navigation when page is visible
-  document.addEventListener('keydown', (e) => {
-    const homePage = document.getElementById('page-home');
-    if (homePage && homePage.classList.contains('active')) {
-      if (e.key === 'ArrowLeft') {
+    container.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeThreshold = 45;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        nextHeroSlide();
+      } else if (touchEndX > touchStartX + swipeThreshold) {
         prevHeroSlide();
-      } else if (e.key === 'ArrowRight') {
+      }
+      resumeHeroSlider();
+    }, { passive: true });
+
+    // Hover to pause auto-slide
+    container.addEventListener('mouseenter', () => {
+      pauseHeroSlider();
+    });
+
+    container.addEventListener('mouseleave', () => {
+      resumeHeroSlider();
+    });
+
+    // Keyboard navigation when page is visible
+    document.addEventListener('keydown', (e) => {
+      const homePage = document.getElementById('page-home');
+      if (homePage && homePage.classList.contains('active')) {
+        if (e.key === 'ArrowLeft') {
+          prevHeroSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextHeroSlide();
+        }
+      }
+    });
+
+    // Start initial auto-play and progress bar
+    startHeroSliderTimer();
+  }
+
+  function updateHeroSlideUI() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const counterNum = document.getElementById('slider-curr-num');
+
+    slides.forEach((slide, idx) => {
+      if (idx === currentHeroSlide) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      if (idx === currentHeroSlide) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    if (counterNum) {
+      counterNum.textContent = String(currentHeroSlide + 1).padStart(2, '0');
+    }
+
+    resetProgressBar();
+  }
+
+  function goToHeroSlide(index) {
+    currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+    updateHeroSlideUI();
+    if (!isHeroSliderPaused) {
+      restartHeroSliderTimer();
+    }
+  }
+
+  function nextHeroSlide() {
+    goToHeroSlide(currentHeroSlide + 1);
+  }
+
+  function prevHeroSlide() {
+    goToHeroSlide(currentHeroSlide - 1);
+  }
+
+  function startHeroSliderTimer() {
+    progressStartTime = Date.now();
+
+    if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
+    heroSliderProgressInterval = setInterval(() => {
+      if (isHeroSliderPaused) return;
+      const elapsed = Date.now() - progressStartTime;
+      const progressPercent = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
+      const progressFill = document.getElementById('hero-slider-progress');
+      if (progressFill) {
+        progressFill.style.width = `${progressPercent}%`;
+      }
+    }, 40);
+
+    if (heroSliderInterval) clearInterval(heroSliderInterval);
+    heroSliderInterval = setInterval(() => {
+      if (!isHeroSliderPaused) {
         nextHeroSlide();
       }
-    }
-  });
-
-  // Start initial auto-play and progress bar
-  startHeroSliderTimer();
-}
-
-function updateHeroSlideUI() {
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.slider-dot');
-  const counterNum = document.getElementById('slider-curr-num');
-
-  slides.forEach((slide, idx) => {
-    if (idx === currentHeroSlide) {
-      slide.classList.add('active');
-    } else {
-      slide.classList.remove('active');
-    }
-  });
-
-  dots.forEach((dot, idx) => {
-    if (idx === currentHeroSlide) {
-      dot.classList.add('active');
-    } else {
-      dot.classList.remove('active');
-    }
-  });
-
-  if (counterNum) {
-    counterNum.textContent = String(currentHeroSlide + 1).padStart(2, '0');
+    }, SLIDE_DURATION);
   }
 
-  resetProgressBar();
-}
-
-function goToHeroSlide(index) {
-  currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
-  updateHeroSlideUI();
-  if (!isHeroSliderPaused) {
-    restartHeroSliderTimer();
+  function restartHeroSliderTimer() {
+    startHeroSliderTimer();
   }
-}
 
-function nextHeroSlide() {
-  goToHeroSlide(currentHeroSlide + 1);
-}
-
-function prevHeroSlide() {
-  goToHeroSlide(currentHeroSlide - 1);
-}
-
-function startHeroSliderTimer() {
-  progressStartTime = Date.now();
-
-  if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
-  heroSliderProgressInterval = setInterval(() => {
-    if (isHeroSliderPaused) return;
-    const elapsed = Date.now() - progressStartTime;
-    const progressPercent = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
+  function resetProgressBar() {
+    progressStartTime = Date.now();
     const progressFill = document.getElementById('hero-slider-progress');
     if (progressFill) {
-      progressFill.style.width = `${progressPercent}%`;
+      progressFill.style.width = '0%';
     }
-  }, 40);
+  }
 
-  if (heroSliderInterval) clearInterval(heroSliderInterval);
-  heroSliderInterval = setInterval(() => {
-    if (!isHeroSliderPaused) {
-      nextHeroSlide();
+  function pauseHeroSlider() {
+    isHeroSliderPaused = true;
+  }
+
+  function resumeHeroSlider() {
+    isHeroSliderPaused = false;
+    progressStartTime = Date.now();
+  }
+  // ==========================================================================
+  // 9. CAREERS FILTER ENGINE
+  // ==========================================================================
+  function filterJobs(dept, btnElement) {
+    const buttons = document.querySelectorAll('.career-filter-btn');
+    buttons.forEach(b => b.classList.remove('active'));
+    if (btnElement) {
+      btnElement.classList.add('active');
     }
-  }, SLIDE_DURATION);
-}
 
-function restartHeroSliderTimer() {
-  startHeroSliderTimer();
-}
+    const jobCards = document.querySelectorAll('.job-card');
+    let visibleCount = 0;
 
-function resetProgressBar() {
-  progressStartTime = Date.now();
-  const progressFill = document.getElementById('hero-slider-progress');
-  if (progressFill) {
-    progressFill.style.width = '0%';
-  }
-}
+    jobCards.forEach(card => {
+      const cardDept = card.getAttribute('data-dept');
+      if (dept === 'all' || cardDept === dept) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
 
-function pauseHeroSlider() {
-  isHeroSliderPaused = true;
-}
-
-function resumeHeroSlider() {
-  isHeroSliderPaused = false;
-  progressStartTime = Date.now();
-}
-// ==========================================================================
-// 9. CAREERS FILTER ENGINE
-// ==========================================================================
-function filterJobs(dept, btnElement) {
-  const buttons = document.querySelectorAll('.career-filter-btn');
-  buttons.forEach(b => b.classList.remove('active'));
-  if (btnElement) {
-    btnElement.classList.add('active');
-  }
-
-  const jobCards = document.querySelectorAll('.job-card');
-  let visibleCount = 0;
-
-  jobCards.forEach(card => {
-    const cardDept = card.getAttribute('data-dept');
-    if (dept === 'all' || cardDept === dept) {
-      card.style.display = 'flex';
-      visibleCount++;
-    } else {
-      card.style.display = 'none';
+    const countDisplay = document.getElementById('job-visible-count');
+    if (countDisplay) {
+      countDisplay.textContent = visibleCount;
     }
-  });
 
-  const countDisplay = document.getElementById('job-visible-count');
-  if (countDisplay) {
-    countDisplay.textContent = visibleCount;
+    const emptyState = document.getElementById('jobs-empty');
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
   }
 
-  const emptyState = document.getElementById('jobs-empty');
-  if (emptyState) {
-    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-  }
-}
+  // ==========================================================================
+  // 10. JOB APPLICATION MODAL & WHATSAPP REDIRECTION FLOW
+  // ==========================================================================
+  let isSubmittingApplication = false;
 
-// ==========================================================================
-// 10. JOB APPLICATION MODAL & WHATSAPP REDIRECTION FLOW
-// ==========================================================================
-let isSubmittingApplication = false;
+  function openJobApplicationModal(positionName) {
+    isSubmittingApplication = false;
 
-function openJobApplicationModal(positionName) {
-  isSubmittingApplication = false;
-
-  const content = `
+    const content = `
     <div style="text-align: left;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
         <div style="width: 40px; height: 40px; background: #e0f2fe; color: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
@@ -2810,126 +2815,126 @@ function openJobApplicationModal(positionName) {
       </form>
     </div>
   `;
-  showModal(content);
-}
-
-async function submitJobApplication(event, positionName) {
-  event.preventDefault();
-
-  if (isSubmittingApplication) return;
-
-  const errorBox = document.getElementById('app-form-error');
-  const submitBtn = document.getElementById('app-submit-btn');
-
-  if (errorBox) errorBox.style.display = 'none';
-
-  const name = document.getElementById('app-name')?.value.trim();
-  const phone = document.getElementById('app-phone')?.value.trim();
-  const email = document.getElementById('app-email')?.value.trim();
-
-  // Client-Side Validation
-  if (!name || !phone || !email) {
-    if (errorBox) {
-      errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
-      errorBox.style.display = 'block';
-    }
-    return;
+    showModal(content);
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    if (errorBox) {
-      errorBox.textContent = 'Format email tidak valid. Mohon masukkan email aktif Anda.';
-      errorBox.style.display = 'block';
-    }
-    return;
-  }
+  async function submitJobApplication(event, positionName) {
+    event.preventDefault();
 
-  // Prevent duplicate submission & show loading UI
-  isSubmittingApplication = true;
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyiapkan WhatsApp...`;
-    submitBtn.style.opacity = '0.8';
-    submitBtn.style.cursor = 'not-allowed';
-  }
+    if (isSubmittingApplication) return;
 
-  const payload = {
-    name: name,
-    phone: phone,
-    email: email,
-    position: positionName
-  };
+    const errorBox = document.getElementById('app-form-error');
+    const submitBtn = document.getElementById('app-submit-btn');
 
-  // Optional background sync to local server database if API endpoint is active
-  let result = {
-    success: true,
-    submittedAt: new Date().toISOString(),
-    status: 'Applied (WA CV Pending)',
-    candidate: {
-      name,
-      phone,
-      email,
-      position: positionName
-    }
-  };
+    if (errorBox) errorBox.style.display = 'none';
 
-  try {
-    const response = await fetch('/api/careers/apply', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
-    if (response.ok) {
-      const jsonRes = await response.json();
-      if (jsonRes) {
-        result = jsonRes;
+    const name = document.getElementById('app-name')?.value.trim();
+    const phone = document.getElementById('app-phone')?.value.trim();
+    const email = document.getElementById('app-email')?.value.trim();
+
+    // Client-Side Validation
+    if (!name || !phone || !email) {
+      if (errorBox) {
+        errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
+        errorBox.style.display = 'block';
       }
+      return;
     }
-  } catch (err) {
-    console.log('Background API sync skipped, proceeding directly to WhatsApp:', err);
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      if (errorBox) {
+        errorBox.textContent = 'Format email tidak valid. Mohon masukkan email aktif Anda.';
+        errorBox.style.display = 'block';
+      }
+      return;
+    }
+
+    // Prevent duplicate submission & show loading UI
+    isSubmittingApplication = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyiapkan WhatsApp...`;
+      submitBtn.style.opacity = '0.8';
+      submitBtn.style.cursor = 'not-allowed';
+    }
+
+    const payload = {
+      name: name,
+      phone: phone,
+      email: email,
+      position: positionName
+    };
+
+    // Optional background sync to local server database if API endpoint is active
+    let result = {
+      success: true,
+      submittedAt: new Date().toISOString(),
+      status: 'Applied (WA CV Pending)',
+      candidate: {
+        name,
+        phone,
+        email,
+        position: positionName
+      }
+    };
+
+    try {
+      const response = await fetch('/api/careers/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      if (response.ok) {
+        const jsonRes = await response.json();
+        if (jsonRes) {
+          result = jsonRes;
+        }
+      }
+    } catch (err) {
+      console.log('Background API sync skipped, proceeding directly to WhatsApp:', err);
+    }
+
+    // Generate WhatsApp Message
+    const waUrl = generateCareerWhatsAppUrl(payload);
+
+    // Trigger WhatsApp in new tab
+    try {
+      window.open(waUrl, '_blank');
+    } catch (e) {
+      console.log('Pop-up open triggered:', e);
+    }
+
+    // Render modal success & candidate instruction view
+    renderApplicationSuccessView(payload, waUrl);
   }
 
-  // Generate WhatsApp Message
-  const waUrl = generateCareerWhatsAppUrl(payload);
+  function generateCareerWhatsAppUrl(payload) {
+    const waNumber = "6282372021970";
 
-  // Trigger WhatsApp in new tab
-  try {
-    window.open(waUrl, '_blank');
-  } catch (e) {
-    console.log('Pop-up open triggered:', e);
+    const lines = [
+      `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
+      ``,
+      `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi ${payload.position}.`,
+      ``,
+      `Berikut adalah ringkasan data diri saya:`,
+      `• Nama Lengkap: ${payload.name}`,
+      `• Nomor WhatsApp / Telp: ${payload.phone}`,
+      `• Email Aktif: ${payload.email}`,
+      ``,
+      `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
+      ``,
+      `Besar harapan saya untuk berkesempatan mengikuti proses rekrutmen di PT Sinergi Medika Utama. Terima kasih.`
+    ];
+
+    const fullText = lines.join('\n');
+    return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
   }
 
-  // Render modal success & candidate instruction view
-  renderApplicationSuccessView(payload, waUrl);
-}
-
-function generateCareerWhatsAppUrl(payload) {
-  const waNumber = "6282372021970";
-
-  const lines = [
-    `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
-    ``,
-    `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi ${payload.position}.`,
-    ``,
-    `Berikut adalah ringkasan data diri saya:`,
-    `• Nama Lengkap: ${payload.name}`,
-    `• Nomor WhatsApp / Telp: ${payload.phone}`,
-    `• Email Aktif: ${payload.email}`,
-    ``,
-    `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
-    ``,
-    `Besar harapan saya untuk berkesempatan mengikuti proses rekrutmen di PT Sinergi Medika Utama. Terima kasih.`
-  ];
-
-  const fullText = lines.join('\n');
-  return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
-}
-
-function renderApplicationSuccessView(payload, waUrl) {
-  const successHtml = `
+  function renderApplicationSuccessView(payload, waUrl) {
+    const successHtml = `
     <div style="text-align: center; padding: 6px 4px;">
       <!-- Success Icon Badge -->
       <div style="width: 62px; height: 62px; background: #ecfdf5; color: #16a34a; border: 2px solid #bbf7d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 14px auto; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.15);">
@@ -3000,8 +3005,8 @@ function renderApplicationSuccessView(payload, waUrl) {
     </div>
   `;
 
-  showModal(successHtml);
-}
+    showModal(successHtml);
+  }
 
 
 

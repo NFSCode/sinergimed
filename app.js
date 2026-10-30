@@ -1644,7 +1644,7 @@ const productsData = [
   // --- PAIN & REHAB ---
   // =====================================================================
 
-  // --- PAIN & REHAB: HEAD & NECK SUPPORT ---
+  // --- PAIN & REHAB: 1. HEAD & NECK SUPPORT ---
   {
     id: "pr-neck-01",
     title: "Universal Clinic Collar",
@@ -1652,7 +1652,7 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_collar.png",
     specs: [
-      "Provides support and limits neck motion for injury recovery",
+      "Stabilize. Support. Recover (All Size)",
       "Penyangga leher anatomis untuk imobilisasi servikal & pemulihan cedera leher",
       "Material busa densitas medium berpori dengan lapisan katun lembut ramah kulit",
       "Dilengkapi sistem perekat hook-and-loop untuk penyesuaian ukuran universal (All Size)",
@@ -1661,15 +1661,15 @@ const productsData = [
     brochure: null
   },
 
-  // --- PAIN & REHAB: SHOULDER, ARM & WRIST SUPPORT ---
+  // --- PAIN & REHAB: 2. SHOULDER, ARM & WRIST SUPPORT ---
   {
     id: "pr-shld-01",
     title: "UltraSling® III",
-    subtitle: "Shoulder Immobilization & Neutral Abduction Sling (Size L)",
+    subtitle: "Shoulder Immobilization & Neutral Abduction Sling (S, M, L, XL)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_ultrasling.png",
     specs: [
-      "Advanced shoulder immobilization and comfortable support",
+      "Support. Stabilize. Perform (S, M, L, XL)",
       "Penyangga bahu ergonomis dengan bantal abduksi netral (neutral abduction 10°-15°)",
       "Tali bahu berbusa empuk dengan distribusi beban merata untuk kenyamanan maksimal",
       "Bahan jala bernapas (breathable mesh fabric) memaksimalkan sirkulasi udara",
@@ -1680,20 +1680,20 @@ const productsData = [
   {
     id: "pr-wrst-01",
     title: "Quick-Fit™ W.T.O.",
-    subtitle: "Wrist-Thumb Orthosis Support Brace (Left / Right)",
+    subtitle: "Wrist-Thumb Orthosis Support Brace (LT / RT)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_quickfit.png",
     specs: [
-      "Removable splint for wrist and thumb stabilization (LT / RT)",
+      "Removable splint for wrist and thumb stabilization (Left / Right)",
       "Ortosis pergelangan tangan dan ibu jari (Wrist-Thumb Spica) imobilisasi presisi",
       "Dilengkapi stay palmar & dorsal aluminium yang dapat dibentuk secara anatomis",
       "Desain single-pull strap memudahkan pemakaian dan pengencangan mandiri satu tangan",
-      "Efektif untuk penanganan De Quervain's tenosynovitis, carpal tunnel & sprain ligamen"
+      "Efektif untuk De Quervain's tenosynovitis, carpal tunnel syndrome & sprain ligamen"
     ],
     brochure: null
   },
 
-  // --- PAIN & REHAB: SPINE & BACK SUPPORT ---
+  // --- PAIN & REHAB: 3. SPINE & BACK SUPPORT ---
   {
     id: "pr-spin-01",
     title: "Immostrap®",
@@ -1701,8 +1701,8 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_immostrap.png",
     specs: [
-      "Low-profile support for lumbar stabilization and compression",
-      "Korset lumbal dinamis dengan sistem tarikan ganda (double bilateral straps)",
+      "Stabilize. Align. Relieve (S, M, L, XL)",
+      "Korset lumbal dinamis dengan sistem tarikan bilateral ganda (double bilateral straps)",
       "Memberikan dekompresi dan stabilisasi optimal pada area lumbar spine (L1-S1)",
       "Struktur penyangga posterior ergonomis menyesuaikan kontur lordosis tulang belakang",
       "Meredakan nyeri pada low back pain akut/kronis, sciatica, dan disc herniation"
@@ -1712,14 +1712,14 @@ const productsData = [
   {
     id: "pr-spin-02",
     title: "BB Exos® FORM® 626",
-    subtitle: "Sagittal Lumbar Orthosis Spinal Brace (S, M, L, XL)",
+    subtitle: "Sagittal Lumbar Orthosis Spinal Brace (S/M, L/XL)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_exos626.png",
     specs: [
-      "Spinal support with flexible adjustment and comfort",
-      "Brace tulang belakang lumbal LSO dengan teknologi Exos thermoformable",
-      "Panel anterior dan posterior dapat disesuaikan untuk imobilisasi bidang sagital presisi",
-      "Sistem pengencangan mekanis Boa® / micro-adjustable strap untuk kompresi seragam",
+      "Spinal support with flexible adjustment and thermoformable Exos technology (S/M, L/XL)",
+      "Brace tulang belakang lumbal LSO untuk kontrol gerak bidang sagital",
+      "Panel anterior dan posterior dapat disesuaikan untuk imobilisasi lordotik presisi",
+      "Sistem pengencangan mekanis Boa® micro-adjustable untuk kompresi seragam",
       "Indikasi untuk pasca laminektomi, spondylolisthesis, dan fraktur kompresi stabil"
     ],
     brochure: null
@@ -1727,20 +1727,35 @@ const productsData = [
   {
     id: "pr-spin-03",
     title: "BB Exos® FORM® 631",
-    subtitle: "Sagittal-Coronal Lumbar Spine Orthosis (S, M, L, XL)",
+    subtitle: "Sagittal-Coronal Lumbar Spine Orthosis (S/M, L/XL)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_exos631.png",
     specs: [
-      "Rugged spinal support for optimal immobilization",
+      "Rugged spinal support for optimal sagittal & coronal immobilization (S/M, L/XL)",
       "Ortosis spinal komprehensif untuk kontrol gerak sagital dan koronal (LSO Full Support)",
-      "Dilengkapi panel lateral ekspansi untuk stabilitas lateral dan rotasi tulang belakang",
+      "Dilengkapi panel lateral ekspansi untuk stabilitas lateral dan kontrol rotasi",
       "Memberikan penopang rigid dari vertebra torakolumbal hingga area sakrum",
       "Efektif untuk rehabilitasi fusi spinal, instabilitas lumbal kronis, dan stenosis spinal"
     ],
     brochure: null
   },
+  {
+    id: "pr-spin-04",
+    title: "ISOFORM® TLSO",
+    subtitle: "Thoracic Lumbar Sacral Orthosis Spinal System (S/M, L/XL)",
+    category: "Pain & Rehab",
+    image: "assets/synergymed_pr_isoform_tlso.png",
+    specs: [
+      "Comprehensive trunk restriction & stabilization from T3 to S1 (S/M, L/XL)",
+      "Sistem ortosis TLSO tri-planar dengan telescoping sternal Y-bar aluminium yang dapat diatur",
+      "Panel rigid anterior, posterior, dan lateral extension untuk dekompresi dan kontrol postur",
+      "Dual-pulley compression system untuk penyesuaian tekanan atas dan bawah secara independen",
+      "Indikasi untuk fraktur kompresi torakal/lumbal, osteoporosis berat, kifosis, dan pasca operasi fusi tulang belakang"
+    ],
+    brochure: null
+  },
 
-  // --- PAIN & REHAB: KNEE SUPPORT & OA BRACE ---
+  // --- PAIN & REHAB: 4. KNEE SUPPORT & OA BRACE ---
   {
     id: "pr-knee-01",
     title: "Action Hinged Knee Wrap",
@@ -1748,7 +1763,7 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_action_knee.png",
     specs: [
-      "Hinged support for stability and controlled motion",
+      "Protect. Relieve. Move Better (S, M, L)",
       "Dukungan lutut model wrap-around dengan engsel bilateral baja polisentris",
       "Desain bukaan depan memudahkan pemasangan pada lutut bengkak atau lansia",
       "Mencegah hiperekstensi lutut dan memberikan stabilitas ligamen kolateral (MCL/LCL)",
@@ -1763,46 +1778,61 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_sport_knee.png",
     specs: [
-      "Hinged support for stability and controlled motion in sports",
+      "Hinged support for stability and controlled motion in sports (S, M, L, XL)",
       "Stabilisator lutut berengsel untuk aktivitas olahraga dan rehabilitasi gerak dinamis",
       "Engsel aluminium ringan tahan korosi dengan kontrol batas ekstensi / fleksi",
       "Tali pengikat melingkar ganda untuk penahanan posisi stabil anti-merosot",
-      "Mengurangi nyeri akibat cedera ligamen, meniskus, dan instabilitas kronis"
+      "Mengurangi nyeri akibat cedera ligamen (ACL/MCL), meniskus, dan instabilitas kronis"
     ],
     brochure: null
   },
   {
     id: "pr-knee-03",
     title: "Drytex Lateral J",
-    subtitle: "Patellofemoral Tracking Knee Brace (Left/Right: S, M, L, XL)",
+    subtitle: "Patellofemoral Tracking Knee Brace (Left / Right: S, M, L)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_drytex_knee.png",
     specs: [
-      "Lateral stabilization and support for patellar tracking & knee injuries",
+      "Lateral stabilization and support for patellar tracking (L/R - S, M, L)",
       "Brace lutut khusus disfungsi pelacakan patela dan instabilitas patelofemoral",
       "Dilengkapi bantalan penahan tubular lateral berbentuk huruf 'J' (J-Buttress)",
       "Tali tarikan medial membantu koreksi subluksasi dan dislokasi patela",
-      "Material Drytex alternatif neoprene yang bebas lateks, sejuk, dan tidak lembap"
+      "Material Drytex alternatif neoprene yang bebas lateks, sejuk, bernapas, dan nyaman"
     ],
     brochure: null
   },
   {
     id: "pr-knee-04",
-    title: "X-ROM Post Op (Knee Brace Universal)",
+    title: "X-ROM Post Op",
     subtitle: "Post-Operative Range-of-Motion Knee Brace (Universal)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_xrom_knee.png",
     specs: [
-      "Telescoping ROM brace with advanced cooling technology (Universal)",
+      "Telescoping ROM brace with advanced tele-fit technology (Universal)",
       "Brace lutut pasca operasi teleskopik dengan pengaturan Range-of-Motion (ROM) presisi",
-      "Engsel pengatur sudut fleksi (0°-120°) dan ekstensi (0°-90°) dengan sistem quick-lock",
+      "Engsel pengatur sudut fleksi (-10° hingga 120°) dan ekstensi (-10° hingga 90°) dengan quick-lock",
       "Panjang lengan teleskopik (slider bar) yang dapat disesuaikan tinggi badan pasien",
-      "Protokol standar untuk pemulihan rekonstruksi ACL/PCL/MCL dan perbaikan meniskus"
+      "Protokol standar pemulihan rekonstruksi ACL/PCL/MCL/LCL dan perbaikan meniskus"
+    ],
+    brochure: null
+  },
+  {
+    id: "pr-knee-05",
+    title: "OA Reaction Web™",
+    subtitle: "Silicone Web Knee Brace for Osteoarthritis Pain (S, M, L, XL)",
+    category: "Pain & Rehab",
+    image: "assets/synergymed_pr_oa_reaction_web.png",
+    specs: [
+      "Custom silicone web design for targeted osteoarthritis off-loading (S, M, L, XL)",
+      "Matriks jaring silikon elastomer inovatif yang menyerap getaran dan mendispersikan beban lutut",
+      "Desain terbuka dan breathable memberikan kenyamanan maksimal untuk pemakaian harian",
+      "Meredakan nyeri osteoartritis (OA) kompartemen lutut medial atau lateral derajat ringan hingga sedang",
+      "Tali penyesuaian dinamis menjaga stabilitas patela saat fleksi maupun ekstensi"
     ],
     brochure: null
   },
 
-  // --- PAIN & REHAB: FOOT, ANKLE & LOWER LIMB SUPPORT ---
+  // --- PAIN & REHAB: 5. FOOT, ANKLE & LOWER LIMB SUPPORT ---
   {
     id: "pr-foot-01",
     title: "AirSelect® Short",
@@ -1810,7 +1840,7 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_airselect_short.png",
     specs: [
-      "Low-profile air support for foot & ankle stability",
+      "Low-profile air support for foot & ankle stability (S, M, L)",
       "Sepatu boot gips berjalan pneumatik tipe pendek untuk cedera kaki depan & pergelangan kaki",
       "Sistem pompa udara terintegrasi (integrated air pump) untuk kustomisasi kompresi",
       "Sol luar rocker-bottom ergonomis memfasilitasi pola jalan natural dan meredam benturan",
@@ -1825,7 +1855,7 @@ const productsData = [
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_airselect_standard.png",
     specs: [
-      "Air support for moderate to severe sprains & fractures",
+      "Air support for moderate to severe sprains & lower limb fractures (S, M, L)",
       "Sepatu boot gips berjalan pneumatik tinggi untuk imobilisasi komprehensif tungkai bawah",
       "Dua sel udara bilateral yang dapat dikompresi secara terpisah untuk reduksi edema optimal",
       "Cangkang luar semi-rigid memberikan proteksi maksimal pengganti gips konvensional",
@@ -1836,13 +1866,13 @@ const productsData = [
   {
     id: "pr-foot-03",
     title: "A60® Ankle Support",
-    subtitle: "Prophylactic Sports Ankle Stabilizer (Left/Right: S, M, L)",
+    subtitle: "Prophylactic Sports Ankle Stabilizer (Left / Right: S, M, L)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_a60_ankle.png",
     specs: [
-      "Comfortable compression and support designed at 60-degree angle",
-      "Penyangga pergelangan kaki profil ramping yang dirancang dengan sudut 60 derajat",
-      "Memberikan proteksi maksimal terhadap cedera inversi / terkilir tanpa membatasi kelincahan",
+      "Stabilize. Protect. Perform (Left / Right: S, M, L)",
+      "Penyangga pergelangan kaki profil ramping yang dirancang dengan sudut cetak 60 derajat",
+      "Memberikan proteksi maksimal terhadap cedera inversi / terkilir tanpa membatasi kelincahan gerak",
       "Desain single-strap memudahkan pemakaian cepat langsung ke dalam sepatu olahraga",
       "Bahan Breath-O-Prene® menjaga kaki tetap sejuk, kering, dan higienis"
     ],
@@ -1851,30 +1881,30 @@ const productsData = [
   {
     id: "pr-foot-04",
     title: "Air-Stirrup® Ankle Brace",
-    subtitle: "Pneumatic Ankle Stirrup with Duplex™ Air-Cell (Left/Right: S, M, L)",
+    subtitle: "Pneumatic Ankle Stirrup with Duplex™ Air-Cell (Left / Right: S, M, L)",
     category: "Pain & Rehab",
     image: "assets/synergymed_pr_airstirrup.png",
     specs: [
-      "Ankle stabilization for sprains and soft tissue injuries",
+      "Ankle stabilization for sprains and soft tissue injuries (Left / Right: S, M, L)",
       "Brace pergelangan kaki stirrup legendaris dengan sistem kantong udara Duplex™ ganda",
-      "Menghasilkan kompresi pulsatil saat berjalan untuk mempercepat resolusi edema",
+      "Menghasilkan kompresi pulsatil saat berjalan untuk mempercepat resolusi edema/bengkak",
       "Cangkang samping anatomis membatasi gerakan inversi/eversi sambil mempertahankan dorsofleksi",
-      "Baku emas medis untuk pemulihan sprain pergelangan kaki akut"
+      "Baku emas medis internasional untuk pemulihan sprain pergelangan kaki akut"
     ],
     brochure: null
   },
   {
     id: "pr-foot-05",
-    title: "Air Heel®",
-    subtitle: "Plantar Fasciitis & Achilles Tendonitis Support (S, M, L)",
+    title: "DonJoy AchiLax™",
+    subtitle: "Elastic Ankle Support with Achilles Tendon Pads (S, M, L, XL)",
     category: "Pain & Rehab",
-    image: "assets/synergymed_pr_airheel.png",
+    image: "assets/synergymed_pr_achilax.png",
     specs: [
-      "Achilles support and protection for recovery & plantar fasciitis",
-      "Penyangga pneumatik khusus untuk meredakan nyeri tumit, plantar fasciitis & tendinitis",
-      "Dua bantalan udara interkoneksi di bawah tumit dan di belakang tendon achilles",
-      "Memberikan kompresi komparatif dinamis yang memijat dan meredakan ketegangan fasia",
-      "Desain slip-on yang ringan, ringkas, dan sangat mudah digunakan di dalam sepatu"
+      "Relief of pain & inflammation associated with Achilles tendon area (S, M, L, XL)",
+      "Dukungan kompresi elastis dengan bantalan silikon viskoelastik di sekitar tendon Achilles",
+      "Meredakan nyeri dan inflamasi pada achilles tendonitis, pasca trauma, dan plantar fasciitis",
+      "Stimulasi neuromuskular dan proprioseptif melalui kompresi rajut anatomis multidimensi",
+      "Ideal untuk fase rehabilitasi aktif dan return to sport dengan kenyamanan bebas lipatan"
     ],
     brochure: null
   },
@@ -2123,7 +2153,7 @@ const productsData = [
 
 // Current Filter & Search State
 
-let activeCategory = (typeof defaultInitialCategory !== 'undefined') ? defaultInitialCategory : 'all';
+let activeCategory = (typeof defaultInitialCategory !== 'undefined') ? defaultInitialCategory : 'Radiation Oncology';
 let searchQuery = '';
 
 // URL ROUTING — maps clean URL paths to catalog categories

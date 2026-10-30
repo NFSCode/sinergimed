@@ -182,7 +182,7 @@ img {
 }
 
 .nav-contact-pill {
-  border: 1.5px solid #64748b;
+  border: none;
   background: transparent;
   color: #1e293b;
   font-family: var(--font-heading);
@@ -201,7 +201,6 @@ img {
 
 .nav-contact-pill:hover {
   background: var(--primary-blue);
-  border-color: var(--primary-blue);
   color: #ffffff;
   box-shadow: 0 4px 14px rgba(0, 71, 171, 0.25);
   transform: translateY(-1px);

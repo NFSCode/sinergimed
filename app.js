@@ -1927,7 +1927,7 @@ const productsData = [
       "Integrasi CT/MRI preoperatif untuk perencanaan trajektori pedikel dan dekompresi",
       "Mengurangi paparan radiasi intraoperatif dan meningkatkan akurasi penempatan sekrup pedikel"
     ],
-    brochure: null
+    brochure: "https://drive.google.com/file/d/12wBJGOYTh4Pi4IWt69tVKoi2y_WU2qYA/view?usp=sharing"
   },
 
   // --- ORTHO & NEURO: ARTHROPLASTY ---

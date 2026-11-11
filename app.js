@@ -1913,6 +1913,23 @@ const productsData = [
   // --- ORTHO & NEURO ---
   // =====================================================================
 
+  // --- ORTHO & NEURO: SPINE ROBOTICS ---
+  {
+    id: "on-spine-01",
+    title: "ORTHBOT - SPINE",
+    subtitle: "Robotic-Assisted Spine Surgery Navigation System",
+    category: "Ortho & Neuro",
+    image: "assets/synergymed_on_orthbot_spine.png",
+    specs: [
+      "Sistem robotik navigasi bedah tulang belakang dengan presisi submilimeter",
+      "Dual-monitor workstation dengan real-time intraoperative imaging & 3D planning",
+      "Robotic arm 6-axis dengan end-effector presisi tinggi untuk penempatan implant spinal",
+      "Integrasi CT/MRI preoperatif untuk perencanaan trajektori pedikel dan dekompresi",
+      "Mengurangi paparan radiasi intraoperatif dan meningkatkan akurasi penempatan sekrup pedikel"
+    ],
+    brochure: null
+  },
+
   // --- ORTHO & NEURO: ARTHROPLASTY ---
   {
     id: "on-arthro-01",
@@ -2148,7 +2165,7 @@ const productsData = [
       "Mendukung mobilisasi dini sendi siku pasca reduksi fraktur kompleks AO Tipe C"
     ],
     brochure: "https://drive.google.com/file/d/1JLlJI4UDwINr8An1hTtJl-B_IReJxTId/view"
-  }
+  },
 ];
 
 // Current Filter & Search State
@@ -2357,30 +2374,30 @@ function renderProductGrid() {
   `).join('');
 }
 
-  function openBrochureLink(url, title, category) {
-    // Semua produk Pain & Rehab diarahkan ke katalog brosur khusus
-    if (category === 'Pain & Rehab') {
-      window.open('https://drive.google.com/file/d/1t34Yl21mMD6wrbPI4mo2_g_85VOPFURc/view?usp=sharing', '_blank');
-      return;
-    }
-    if (url && url !== 'null' && url !== 'undefined') {
-      window.open(url, '_blank');
-    } else {
-      inquireProduct(`${title} (Permintaan Brosur & Spesifikasi Resmi)`);
-    }
+function openBrochureLink(url, title, category) {
+  // Semua produk Pain & Rehab diarahkan ke katalog brosur khusus
+  if (category === 'Pain & Rehab') {
+    window.open('https://drive.google.com/file/d/1t34Yl21mMD6wrbPI4mo2_g_85VOPFURc/view?usp=sharing', '_blank');
+    return;
   }
-
-  // 4. WHATSAPP & MODAL INQUIRIES
-  function inquireProduct(productName) {
-    const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
-    window.open(`https://wa.me/6282372021970?text=${text}`, '_blank');
+  if (url && url !== 'null' && url !== 'undefined') {
+    window.open(url, '_blank');
+  } else {
+    inquireProduct(`${title} (Permintaan Brosur & Spesifikasi Resmi)`);
   }
+}
 
-  function openProductDetailModal(productId) {
-    const item = productsData.find(p => p.id === productId);
-    if (!item) return;
+// 4. WHATSAPP & MODAL INQUIRIES
+function inquireProduct(productName) {
+  const text = encodeURIComponent(`Halo PT Sinergi Medika Utama (SynergyMed), saya tertarik dan ingin meminta penawaran harga / e-katalog untuk solusi: ${productName}. Terima kasih.`);
+  window.open(`https://wa.me/6282372021970?text=${text}`, '_blank');
+}
 
-    const content = `
+function openProductDetailModal(productId) {
+  const item = productsData.find(p => p.id === productId);
+  if (!item) return;
+
+  const content = `
     <div style="text-align: left;">
       <span style="background: #ebf5ff; color: var(--primary-blue); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 15px;">${item.category}</span>
       <h2 style="font-family: var(--font-heading); color: var(--primary-dark); font-size: 1.6rem; margin: 12px 0 6px 0;">${item.title}</h2>
@@ -2403,12 +2420,12 @@ function renderProductGrid() {
     </div>
   `;
 
-    showModal(content);
-  }
+  showModal(content);
+}
 
-  // 5. EXTENSIBILITY DEMO MODAL ("Nanti Banyak")
-  function openAddProductModal() {
-    const content = `
+// 5. EXTENSIBILITY DEMO MODAL ("Nanti Banyak")
+function openAddProductModal() {
+  const content = `
     <div style="text-align: left;">
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Quick Add Solution (Demo Extensibility)</h3>
       <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px;">Tambahkan solusi baru secara instan ke dalam memori aplikasi ini untuk menguji penambahan massal ("nanti banyak").</p>
@@ -2448,32 +2465,32 @@ function renderProductGrid() {
     </div>
   `;
 
-    showModal(content);
-  }
+  showModal(content);
+}
 
-  function saveNewDemoProduct() {
-    const title = document.getElementById('new-prod-title')?.value || 'Demo Medical System';
-    const category = document.getElementById('new-prod-cat')?.value || 'Radiation Oncology';
-    const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solutions';
-    const spec = document.getElementById('new-prod-spec')?.value || 'AKD Kemenkes RI Certified';
+function saveNewDemoProduct() {
+  const title = document.getElementById('new-prod-title')?.value || 'Demo Medical System';
+  const category = document.getElementById('new-prod-cat')?.value || 'Radiation Oncology';
+  const subtitle = document.getElementById('new-prod-sub')?.value || 'Certified Medical Solutions';
+  const spec = document.getElementById('new-prod-spec')?.value || 'AKD Kemenkes RI Certified';
 
-    productsData.unshift({
-      id: `demo-${Date.now()}`,
-      title: title,
-      subtitle: subtitle,
-      category: category,
-      image: "assets/synergymed_hero_1785816523979.png",
-      specs: [spec, "High Precision Clinical Workflow", "24/7 Technical Support Included"],
-      brochure: "SynergyMed_Company_Profile_2026.pdf"
-    });
+  productsData.unshift({
+    id: `demo-${Date.now()}`,
+    title: title,
+    subtitle: subtitle,
+    category: category,
+    image: "assets/synergymed_hero_1785816523979.png",
+    specs: [spec, "High Precision Clinical Workflow", "24/7 Technical Support Included"],
+    brochure: "SynergyMed_Company_Profile_2026.pdf"
+  });
 
-    closeModal();
-    filterCatalog(category);
-  }
+  closeModal();
+  filterCatalog(category);
+}
 
-  // 6. CHAT & E-BROCHURE DOWNLOADS
-  function openChatModal() {
-    const content = `
+// 6. CHAT & E-BROCHURE DOWNLOADS
+function openChatModal() {
+  const content = `
     <div style="text-align: center; padding: 10px;">
       <div style="width: 60px; height: 60px; background: #ebf5ff; color: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 15px auto;">
         <i class="fa-solid fa-headset"></i>
@@ -2486,11 +2503,11 @@ function renderProductGrid() {
       </a>
     </div>
   `;
-    showModal(content);
-  }
+  showModal(content);
+}
 
-  function downloadBrochure(fileName) {
-    const content = `
+function downloadBrochure(fileName) {
+  const content = `
     <div style="text-align: center; padding: 10px;">
       <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 15px;"></i>
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Brochure Download Started</h3>
@@ -2498,13 +2515,13 @@ function renderProductGrid() {
       <button class="btn-secondary" onclick="closeModal()">Close Window</button>
     </div>
   `;
-    showModal(content);
-  }
+  showModal(content);
+}
 
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    const name = document.getElementById('contact-name')?.value || 'Guest';
-    const content = `
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('contact-name')?.value || 'Guest';
+  const content = `
     <div style="text-align: center; padding: 10px;">
       <i class="fa-solid fa-paper-plane" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
       <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 8px;">Terima Kasih, ${name}!</h3>
@@ -2512,249 +2529,249 @@ function renderProductGrid() {
       <button class="btn-primary" onclick="closeModal()">Kembali ke Beranda</button>
     </div>
   `;
-    showModal(content);
+  showModal(content);
+}
+
+// 7. GENERIC UTILITIES
+function showModal(htmlContent) {
+  const modal = document.getElementById('generic-modal');
+  const body = document.getElementById('modal-content-body');
+  if (modal && body) {
+    body.innerHTML = htmlContent;
+    modal.classList.add('active');
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('generic-modal');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+}
+
+// Close modal when clicking backdrop
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('generic-modal');
+  if (modal && modal.classList.contains('active') && e.target === modal) {
+    closeModal();
   }
 
-  // 7. GENERIC UTILITIES
-  function showModal(htmlContent) {
-    const modal = document.getElementById('generic-modal');
-    const body = document.getElementById('modal-content-body');
-    if (modal && body) {
-      body.innerHTML = htmlContent;
-      modal.classList.add('active');
+  // Close mobile nav when clicking outside header
+  const mainNav = document.querySelector('.main-nav');
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  if (mainNav && mainNav.classList.contains('mobile-open') && !mainNav.contains(e.target) && menuBtn && !menuBtn.contains(e.target)) {
+    mainNav.classList.remove('mobile-open');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleMobileNav() {
+  const nav = document.querySelector('.main-nav');
+  const btnIcon = document.querySelector('.mobile-menu-btn i');
+  if (nav) {
+    nav.classList.toggle('mobile-open');
+    if (btnIcon) {
+      if (nav.classList.contains('mobile-open')) {
+        btnIcon.className = 'fa-solid fa-xmark';
+      } else {
+        btnIcon.className = 'fa-solid fa-bars';
+      }
     }
   }
+}
 
-  function closeModal() {
-    const modal = document.getElementById('generic-modal');
-    if (modal) {
-      modal.classList.remove('active');
+// ==========================================================================
+// 8. HERO TECHNOLOGY SHOWCASE SLIDER ENGINE
+// ==========================================================================
+let currentHeroSlide = 0;
+const totalHeroSlides = 4;
+let heroSliderInterval = null;
+let heroSliderProgressInterval = null;
+const SLIDE_DURATION = 4800; // 4.8 seconds per slide
+let progressStartTime = 0;
+let isHeroSliderPaused = false;
+
+function initHeroSlider() {
+  const container = document.getElementById('hero-slider-wrapper');
+  if (!container) return;
+
+  // Touch Swipe Gesture Handling (Mobile/Tablet)
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  container.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    pauseHeroSlider();
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeThreshold = 45;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextHeroSlide();
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+      prevHeroSlide();
     }
-  }
+    resumeHeroSlider();
+  }, { passive: true });
 
-  // Close modal when clicking backdrop
-  document.addEventListener('click', (e) => {
-    const modal = document.getElementById('generic-modal');
-    if (modal && modal.classList.contains('active') && e.target === modal) {
-      closeModal();
-    }
+  // Hover to pause auto-slide
+  container.addEventListener('mouseenter', () => {
+    pauseHeroSlider();
+  });
 
-    // Close mobile nav when clicking outside header
-    const mainNav = document.querySelector('.main-nav');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    if (mainNav && mainNav.classList.contains('mobile-open') && !mainNav.contains(e.target) && menuBtn && !menuBtn.contains(e.target)) {
-      mainNav.classList.remove('mobile-open');
+  container.addEventListener('mouseleave', () => {
+    resumeHeroSlider();
+  });
+
+  // Keyboard navigation when page is visible
+  document.addEventListener('keydown', (e) => {
+    const homePage = document.getElementById('page-home');
+    if (homePage && homePage.classList.contains('active')) {
+      if (e.key === 'ArrowLeft') {
+        prevHeroSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextHeroSlide();
+      }
     }
   });
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  // Start initial auto-play and progress bar
+  startHeroSliderTimer();
+}
 
-  function toggleMobileNav() {
-    const nav = document.querySelector('.main-nav');
-    const btnIcon = document.querySelector('.mobile-menu-btn i');
-    if (nav) {
-      nav.classList.toggle('mobile-open');
-      if (btnIcon) {
-        if (nav.classList.contains('mobile-open')) {
-          btnIcon.className = 'fa-solid fa-xmark';
-        } else {
-          btnIcon.className = 'fa-solid fa-bars';
-        }
-      }
+function updateHeroSlideUI() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  const counterNum = document.getElementById('slider-curr-num');
+
+  slides.forEach((slide, idx) => {
+    if (idx === currentHeroSlide) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
     }
-  }
+  });
 
-  // ==========================================================================
-  // 8. HERO TECHNOLOGY SHOWCASE SLIDER ENGINE
-  // ==========================================================================
-  let currentHeroSlide = 0;
-  const totalHeroSlides = 4;
-  let heroSliderInterval = null;
-  let heroSliderProgressInterval = null;
-  const SLIDE_DURATION = 4800; // 4.8 seconds per slide
-  let progressStartTime = 0;
-  let isHeroSliderPaused = false;
-
-  function initHeroSlider() {
-    const container = document.getElementById('hero-slider-wrapper');
-    if (!container) return;
-
-    // Touch Swipe Gesture Handling (Mobile/Tablet)
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    container.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      pauseHeroSlider();
-    }, { passive: true });
-
-    container.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const swipeThreshold = 45;
-      if (touchEndX < touchStartX - swipeThreshold) {
-        nextHeroSlide();
-      } else if (touchEndX > touchStartX + swipeThreshold) {
-        prevHeroSlide();
-      }
-      resumeHeroSlider();
-    }, { passive: true });
-
-    // Hover to pause auto-slide
-    container.addEventListener('mouseenter', () => {
-      pauseHeroSlider();
-    });
-
-    container.addEventListener('mouseleave', () => {
-      resumeHeroSlider();
-    });
-
-    // Keyboard navigation when page is visible
-    document.addEventListener('keydown', (e) => {
-      const homePage = document.getElementById('page-home');
-      if (homePage && homePage.classList.contains('active')) {
-        if (e.key === 'ArrowLeft') {
-          prevHeroSlide();
-        } else if (e.key === 'ArrowRight') {
-          nextHeroSlide();
-        }
-      }
-    });
-
-    // Start initial auto-play and progress bar
-    startHeroSliderTimer();
-  }
-
-  function updateHeroSlideUI() {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.slider-dot');
-    const counterNum = document.getElementById('slider-curr-num');
-
-    slides.forEach((slide, idx) => {
-      if (idx === currentHeroSlide) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
-    });
-
-    dots.forEach((dot, idx) => {
-      if (idx === currentHeroSlide) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
-    });
-
-    if (counterNum) {
-      counterNum.textContent = String(currentHeroSlide + 1).padStart(2, '0');
+  dots.forEach((dot, idx) => {
+    if (idx === currentHeroSlide) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
     }
+  });
 
-    resetProgressBar();
+  if (counterNum) {
+    counterNum.textContent = String(currentHeroSlide + 1).padStart(2, '0');
   }
 
-  function goToHeroSlide(index) {
-    currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
-    updateHeroSlideUI();
-    if (!isHeroSliderPaused) {
-      restartHeroSliderTimer();
-    }
+  resetProgressBar();
+}
+
+function goToHeroSlide(index) {
+  currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+  updateHeroSlideUI();
+  if (!isHeroSliderPaused) {
+    restartHeroSliderTimer();
   }
+}
 
-  function nextHeroSlide() {
-    goToHeroSlide(currentHeroSlide + 1);
-  }
+function nextHeroSlide() {
+  goToHeroSlide(currentHeroSlide + 1);
+}
 
-  function prevHeroSlide() {
-    goToHeroSlide(currentHeroSlide - 1);
-  }
+function prevHeroSlide() {
+  goToHeroSlide(currentHeroSlide - 1);
+}
 
-  function startHeroSliderTimer() {
-    progressStartTime = Date.now();
+function startHeroSliderTimer() {
+  progressStartTime = Date.now();
 
-    if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
-    heroSliderProgressInterval = setInterval(() => {
-      if (isHeroSliderPaused) return;
-      const elapsed = Date.now() - progressStartTime;
-      const progressPercent = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
-      const progressFill = document.getElementById('hero-slider-progress');
-      if (progressFill) {
-        progressFill.style.width = `${progressPercent}%`;
-      }
-    }, 40);
-
-    if (heroSliderInterval) clearInterval(heroSliderInterval);
-    heroSliderInterval = setInterval(() => {
-      if (!isHeroSliderPaused) {
-        nextHeroSlide();
-      }
-    }, SLIDE_DURATION);
-  }
-
-  function restartHeroSliderTimer() {
-    startHeroSliderTimer();
-  }
-
-  function resetProgressBar() {
-    progressStartTime = Date.now();
+  if (heroSliderProgressInterval) clearInterval(heroSliderProgressInterval);
+  heroSliderProgressInterval = setInterval(() => {
+    if (isHeroSliderPaused) return;
+    const elapsed = Date.now() - progressStartTime;
+    const progressPercent = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
     const progressFill = document.getElementById('hero-slider-progress');
     if (progressFill) {
-      progressFill.style.width = '0%';
+      progressFill.style.width = `${progressPercent}%`;
     }
+  }, 40);
+
+  if (heroSliderInterval) clearInterval(heroSliderInterval);
+  heroSliderInterval = setInterval(() => {
+    if (!isHeroSliderPaused) {
+      nextHeroSlide();
+    }
+  }, SLIDE_DURATION);
+}
+
+function restartHeroSliderTimer() {
+  startHeroSliderTimer();
+}
+
+function resetProgressBar() {
+  progressStartTime = Date.now();
+  const progressFill = document.getElementById('hero-slider-progress');
+  if (progressFill) {
+    progressFill.style.width = '0%';
+  }
+}
+
+function pauseHeroSlider() {
+  isHeroSliderPaused = true;
+}
+
+function resumeHeroSlider() {
+  isHeroSliderPaused = false;
+  progressStartTime = Date.now();
+}
+// ==========================================================================
+// 9. CAREERS FILTER ENGINE
+// ==========================================================================
+function filterJobs(dept, btnElement) {
+  const buttons = document.querySelectorAll('.career-filter-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  if (btnElement) {
+    btnElement.classList.add('active');
   }
 
-  function pauseHeroSlider() {
-    isHeroSliderPaused = true;
+  const jobCards = document.querySelectorAll('.job-card');
+  let visibleCount = 0;
+
+  jobCards.forEach(card => {
+    const cardDept = card.getAttribute('data-dept');
+    if (dept === 'all' || cardDept === dept) {
+      card.style.display = 'flex';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const countDisplay = document.getElementById('job-visible-count');
+  if (countDisplay) {
+    countDisplay.textContent = visibleCount;
   }
 
-  function resumeHeroSlider() {
-    isHeroSliderPaused = false;
-    progressStartTime = Date.now();
+  const emptyState = document.getElementById('jobs-empty');
+  if (emptyState) {
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
   }
-  // ==========================================================================
-  // 9. CAREERS FILTER ENGINE
-  // ==========================================================================
-  function filterJobs(dept, btnElement) {
-    const buttons = document.querySelectorAll('.career-filter-btn');
-    buttons.forEach(b => b.classList.remove('active'));
-    if (btnElement) {
-      btnElement.classList.add('active');
-    }
+}
 
-    const jobCards = document.querySelectorAll('.job-card');
-    let visibleCount = 0;
+// ==========================================================================
+// 10. JOB APPLICATION MODAL & WHATSAPP REDIRECTION FLOW
+// ==========================================================================
+let isSubmittingApplication = false;
 
-    jobCards.forEach(card => {
-      const cardDept = card.getAttribute('data-dept');
-      if (dept === 'all' || cardDept === dept) {
-        card.style.display = 'flex';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
+function openJobApplicationModal(positionName) {
+  isSubmittingApplication = false;
 
-    const countDisplay = document.getElementById('job-visible-count');
-    if (countDisplay) {
-      countDisplay.textContent = visibleCount;
-    }
-
-    const emptyState = document.getElementById('jobs-empty');
-    if (emptyState) {
-      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-    }
-  }
-
-  // ==========================================================================
-  // 10. JOB APPLICATION MODAL & WHATSAPP REDIRECTION FLOW
-  // ==========================================================================
-  let isSubmittingApplication = false;
-
-  function openJobApplicationModal(positionName) {
-    isSubmittingApplication = false;
-
-    const content = `
+  const content = `
     <div style="text-align: left;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
         <div style="width: 40px; height: 40px; background: #e0f2fe; color: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
@@ -2815,126 +2832,126 @@ function renderProductGrid() {
       </form>
     </div>
   `;
-    showModal(content);
+  showModal(content);
+}
+
+async function submitJobApplication(event, positionName) {
+  event.preventDefault();
+
+  if (isSubmittingApplication) return;
+
+  const errorBox = document.getElementById('app-form-error');
+  const submitBtn = document.getElementById('app-submit-btn');
+
+  if (errorBox) errorBox.style.display = 'none';
+
+  const name = document.getElementById('app-name')?.value.trim();
+  const phone = document.getElementById('app-phone')?.value.trim();
+  const email = document.getElementById('app-email')?.value.trim();
+
+  // Client-Side Validation
+  if (!name || !phone || !email) {
+    if (errorBox) {
+      errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
+      errorBox.style.display = 'block';
+    }
+    return;
   }
 
-  async function submitJobApplication(event, positionName) {
-    event.preventDefault();
-
-    if (isSubmittingApplication) return;
-
-    const errorBox = document.getElementById('app-form-error');
-    const submitBtn = document.getElementById('app-submit-btn');
-
-    if (errorBox) errorBox.style.display = 'none';
-
-    const name = document.getElementById('app-name')?.value.trim();
-    const phone = document.getElementById('app-phone')?.value.trim();
-    const email = document.getElementById('app-email')?.value.trim();
-
-    // Client-Side Validation
-    if (!name || !phone || !email) {
-      if (errorBox) {
-        errorBox.textContent = 'Mohon lengkapi seluruh kolom yang bertanda bintang (*).';
-        errorBox.style.display = 'block';
-      }
-      return;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    if (errorBox) {
+      errorBox.textContent = 'Format email tidak valid. Mohon masukkan email aktif Anda.';
+      errorBox.style.display = 'block';
     }
+    return;
+  }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      if (errorBox) {
-        errorBox.textContent = 'Format email tidak valid. Mohon masukkan email aktif Anda.';
-        errorBox.style.display = 'block';
-      }
-      return;
-    }
+  // Prevent duplicate submission & show loading UI
+  isSubmittingApplication = true;
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyiapkan WhatsApp...`;
+    submitBtn.style.opacity = '0.8';
+    submitBtn.style.cursor = 'not-allowed';
+  }
 
-    // Prevent duplicate submission & show loading UI
-    isSubmittingApplication = true;
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Menyiapkan WhatsApp...`;
-      submitBtn.style.opacity = '0.8';
-      submitBtn.style.cursor = 'not-allowed';
-    }
+  const payload = {
+    name: name,
+    phone: phone,
+    email: email,
+    position: positionName
+  };
 
-    const payload = {
-      name: name,
-      phone: phone,
-      email: email,
+  // Optional background sync to local server database if API endpoint is active
+  let result = {
+    success: true,
+    submittedAt: new Date().toISOString(),
+    status: 'Applied (WA CV Pending)',
+    candidate: {
+      name,
+      phone,
+      email,
       position: positionName
-    };
-
-    // Optional background sync to local server database if API endpoint is active
-    let result = {
-      success: true,
-      submittedAt: new Date().toISOString(),
-      status: 'Applied (WA CV Pending)',
-      candidate: {
-        name,
-        phone,
-        email,
-        position: positionName
-      }
-    };
-
-    try {
-      const response = await fetch('/api/careers/apply', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-      if (response.ok) {
-        const jsonRes = await response.json();
-        if (jsonRes) {
-          result = jsonRes;
-        }
-      }
-    } catch (err) {
-      console.log('Background API sync skipped, proceeding directly to WhatsApp:', err);
     }
+  };
 
-    // Generate WhatsApp Message
-    const waUrl = generateCareerWhatsAppUrl(payload);
-
-    // Trigger WhatsApp in new tab
-    try {
-      window.open(waUrl, '_blank');
-    } catch (e) {
-      console.log('Pop-up open triggered:', e);
+  try {
+    const response = await fetch('/api/careers/apply', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (response.ok) {
+      const jsonRes = await response.json();
+      if (jsonRes) {
+        result = jsonRes;
+      }
     }
-
-    // Render modal success & candidate instruction view
-    renderApplicationSuccessView(payload, waUrl);
+  } catch (err) {
+    console.log('Background API sync skipped, proceeding directly to WhatsApp:', err);
   }
 
-  function generateCareerWhatsAppUrl(payload) {
-    const waNumber = "6282372021970";
+  // Generate WhatsApp Message
+  const waUrl = generateCareerWhatsAppUrl(payload);
 
-    const lines = [
-      `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
-      ``,
-      `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi ${payload.position}.`,
-      ``,
-      `Berikut adalah ringkasan data diri saya:`,
-      `• Nama Lengkap: ${payload.name}`,
-      `• Nomor WhatsApp / Telp: ${payload.phone}`,
-      `• Email Aktif: ${payload.email}`,
-      ``,
-      `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
-      ``,
-      `Besar harapan saya untuk berkesempatan mengikuti proses rekrutmen di PT Sinergi Medika Utama. Terima kasih.`
-    ];
-
-    const fullText = lines.join('\n');
-    return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
+  // Trigger WhatsApp in new tab
+  try {
+    window.open(waUrl, '_blank');
+  } catch (e) {
+    console.log('Pop-up open triggered:', e);
   }
 
-  function renderApplicationSuccessView(payload, waUrl) {
-    const successHtml = `
+  // Render modal success & candidate instruction view
+  renderApplicationSuccessView(payload, waUrl);
+}
+
+function generateCareerWhatsAppUrl(payload) {
+  const waNumber = "6282372021970";
+
+  const lines = [
+    `Halo Tim Rekrutmen & HR PT Sinergi Medika Utama,`,
+    ``,
+    `Saya bermaksud mengajukan lamaran pekerjaan untuk posisi ${payload.position}.`,
+    ``,
+    `Berikut adalah ringkasan data diri saya:`,
+    `• Nama Lengkap: ${payload.name}`,
+    `• Nomor WhatsApp / Telp: ${payload.phone}`,
+    `• Email Aktif: ${payload.email}`,
+    ``,
+    `Bersama pesan ini, saya melampirkan berkas dokumen CV / Resume saya untuk ditinjau lebih lanjut oleh Tim Rekrutmen.`,
+    ``,
+    `Besar harapan saya untuk berkesempatan mengikuti proses rekrutmen di PT Sinergi Medika Utama. Terima kasih.`
+  ];
+
+  const fullText = lines.join('\n');
+  return `https://wa.me/${waNumber}?text=${encodeURIComponent(fullText)}`;
+}
+
+function renderApplicationSuccessView(payload, waUrl) {
+  const successHtml = `
     <div style="text-align: center; padding: 6px 4px;">
       <!-- Success Icon Badge -->
       <div style="width: 62px; height: 62px; background: #ecfdf5; color: #16a34a; border: 2px solid #bbf7d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 14px auto; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.15);">
@@ -3005,8 +3022,8 @@ function renderProductGrid() {
     </div>
   `;
 
-    showModal(successHtml);
-  }
+  showModal(successHtml);
+}
 
 
 
